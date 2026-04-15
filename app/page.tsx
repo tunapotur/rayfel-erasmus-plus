@@ -10,11 +10,40 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { ModeToggle } from "@/components/ModeToggle";
 
 export default function Home() {
   return (
     <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
       <div className="w-full max-w-sm">
+        <ModeToggle></ModeToggle>
+
+        <div className="flex flex-row justify-around py-2">
+          <div className="bg-sky-50 size-8 rounded"></div>
+          <div className="bg-sky-100 size-8 rounded"></div>
+          <div className="bg-sky-200 size-8 rounded"></div>
+          <div className="bg-sky-300 size-8 rounded"></div>
+          <div className="bg-sky-400 size-8 rounded"></div>
+          <div className="bg-sky-500 size-8 rounded"></div>
+          <div className="bg-sky-600 size-8 rounded"></div>
+          <div className="bg-sky-700 size-8 rounded"></div>
+          <div className="bg-sky-800 size-8 rounded"></div>
+          <div className="bg-sky-900 size-8 rounded"></div>
+          <div className="bg-sky-950 size-8 rounded"></div>
+        </div>
+
+        <div className="flex flex-row justify-around py-2">
+          <div className="bg-sky-500/10 size-8 rounded"></div>
+          <div className="bg-sky-500/20 size-8 rounded"></div>
+          <div className="bg-sky-500/30 size-8 rounded"></div>
+          <div className="bg-sky-500/40 size-8 rounded"></div>
+          <div className="bg-sky-500/50 size-8 rounded"></div>
+          <div className="bg-sky-500/60 size-8 rounded"></div>
+          <div className="bg-sky-500/70 size-8 rounded"></div>
+          <div className="bg-sky-500/80 size-8 rounded"></div>
+          <div className="bg-sky-500/90 size-8 rounded"></div>
+          <div className="bg-sky-500/100 size-8 rounded"></div>
+        </div>
         <Card className="w-full max-w-sm">
           <CardHeader>
             <CardTitle>Login to your account</CardTitle>
