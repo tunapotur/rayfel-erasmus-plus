@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -12,11 +14,15 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ModeToggle } from "@/components/ModeToggle";
 
-export default function Home() {
+export default function HomePage() {
+  const t = useTranslations("HomePage");
+
   return (
     <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
       <div className="w-full max-w-sm">
         <ModeToggle></ModeToggle>
+
+        <h1>{t("title")}</h1>
 
         <div className="flex flex-row justify-around py-2">
           <div className="bg-sky-50 size-8 rounded"></div>
