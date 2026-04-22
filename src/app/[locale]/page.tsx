@@ -1,3 +1,5 @@
+import { use } from "react";
+import { setRequestLocale } from "next-intl/server";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
@@ -14,7 +16,18 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ModeToggle } from "@/components/ModeToggle";
 
-export default function HomePage() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default function HomePage({ params }: Props) {
+  const { locale } = use(params);
+
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  // Once the request locale is set, you
+  // can call hooks from `next-intl`
   const t = useTranslations("HomePage");
 
   return (
