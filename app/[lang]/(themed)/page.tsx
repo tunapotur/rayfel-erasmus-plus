@@ -12,11 +12,36 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ModeToggle } from "@/components/ModeToggle";
 
-export default function Home() {
+import { getDictionary } from "@/lib/get-dictionary";
+import { Locale } from "@/i18n-config";
+import Counter from "@/components/counter";
+import LocaleSwitcher from "@/components/locale-switcher";
+import LocaleSelect from "@/components/LocalSelect";
+
+export default async function Home(props: {
+  params: Promise<{ lang: Locale }>;
+}) {
+  const { lang } = await props.params;
+  const dictionary = await getDictionary(lang);
+
   return (
     <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
       <div className="w-full max-w-sm">
         <ModeToggle></ModeToggle>
+
+        <div>
+          <LocaleSwitcher />
+          <LocaleSelect locale={lang} />
+
+          <div>
+            <p>Current locale: {lang}</p>
+            <p>
+              This text is rendered on the server:{" "}
+              {dictionary["server-component"].welcome}
+            </p>
+            <Counter dictionary={dictionary.counter} />
+          </div>
+        </div>
 
         <div className="flex flex-row justify-around py-2">
           <div className="bg-sky-50 size-8 rounded"></div>

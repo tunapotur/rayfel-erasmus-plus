@@ -1,0 +1,9 @@
+{
+  "server-component": {
+    "welcome": "Hoş Geldin"
+  },
+  "counter": {
+    "increment": "Arttır",
+    "decrement": "Azalt"
+  }
+}
