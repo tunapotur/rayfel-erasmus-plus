@@ -1,5 +1,9 @@
 {
   "HomePage": {
     "title": "Hallo Welt!"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, de {Deutsch} en {English} tr {Turkish} other {Unknown}}"
   }
 }

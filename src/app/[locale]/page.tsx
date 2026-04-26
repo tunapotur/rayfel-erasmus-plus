@@ -16,6 +16,8 @@ import { Locale, useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { use } from "react";
 
+import LocaleSwitcher from "@/components/LocaleSwitcher";
+
 export default function HomePage({ params }: PageProps<"/[locale]">) {
   const { locale } = use(params);
 
@@ -27,8 +29,13 @@ export default function HomePage({ params }: PageProps<"/[locale]">) {
   return (
     <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
       <div className="w-full max-w-sm">
-        <h1>{t("title")}</h1>
-        <ModeToggle></ModeToggle>
+        <div className="flex flex-row justify-around py-2">
+          <h1>{t("title")}</h1>
+
+          <LocaleSwitcher />
+
+          <ModeToggle></ModeToggle>
+        </div>
 
         <div className="flex flex-row justify-around py-2">
           <div className="bg-sky-50 size-8 rounded"></div>
