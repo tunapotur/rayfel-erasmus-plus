@@ -42,8 +42,8 @@ export default async function RootLayout(props: {
         "antialiased",
         geistSans.variable,
         geistMono.variable,
-        "font-sans",
         inter.variable,
+        "font-sans",
       )}
     >
       <body className="min-h-full flex flex-col">{children}</body>

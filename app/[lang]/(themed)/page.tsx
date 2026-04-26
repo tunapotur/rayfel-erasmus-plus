@@ -30,7 +30,7 @@ export default async function Home(props: {
         <ModeToggle></ModeToggle>
 
         <div>
-          <LocaleSwitcher />
+          {/* <LocaleSwitcher /> */}
           <LocaleSelect locale={lang} />
 
           <div>
