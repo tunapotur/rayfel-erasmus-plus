@@ -12,10 +12,22 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ModeToggle } from "@/components/ModeToggle";
 
-export default function Home() {
+import { Locale, useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
+
+export default function HomePage({ params }: PageProps<"/[locale]">) {
+  const { locale } = use(params);
+
+  // Enable static rendering
+  setRequestLocale(locale as Locale);
+
+  const t = useTranslations("HomePage");
+
   return (
     <div className="flex min-h-svh w-full items-center justify-center p-6 md:p-10">
       <div className="w-full max-w-sm">
+        <h1>{t("title")}</h1>
         <ModeToggle></ModeToggle>
 
         <div className="flex flex-row justify-around py-2">
