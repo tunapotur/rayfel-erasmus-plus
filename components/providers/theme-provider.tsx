@@ -17,7 +17,7 @@ const ThemeContext = createContext<{
   setTheme: (theme: Theme) => void;
 }>({ theme: "system", setTheme: () => {} });
 
-export function ThemeProvider({
+function ThemeProvider({
   children,
   attribute = "class",
   defaultTheme = "system",
@@ -65,4 +65,12 @@ export function ThemeProvider({
   );
 }
 
-export const useTheme = () => useContext(ThemeContext);
+// export const useTheme = () => useContext(ThemeContext);
+function useTheme() {
+  const context = useContext(ThemeContext);
+  if (context === undefined)
+    throw new Error("ThemeContext was used outside of ThemeProvider");
+  return context;
+}
+
+export { ThemeProvider, useTheme };
