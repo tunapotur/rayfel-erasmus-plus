@@ -2,6 +2,9 @@
   "HomePage": {
     "title": "Hello world!"
   },
+  "LocaleLayout": {
+    "title": "next-intl example"
+  },
   "LocaleSwitcher": {
     "label": "Change language",
     "locale": "{locale, select, de {Deutsch} en {English} tr {Turkish} other {Unknown}}"
