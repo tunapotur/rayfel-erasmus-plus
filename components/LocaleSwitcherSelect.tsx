@@ -39,7 +39,7 @@ export default function LocaleSwitcherSelect({
     <label
       className={clsx(
         "relative text-gray-400",
-        isPending && "transition-opacity [&:disabled]:opacity-30",
+        isPending && "transition-opacity disabled:opacity-30",
       )}
     >
       <p className="sr-only">{label}</p>
@@ -51,7 +51,7 @@ export default function LocaleSwitcherSelect({
       >
         {children}
       </select>
-      <span className="pointer-events-none absolute right-2 top-[8px]">⌄</span>
+      <span className="pointer-events-none absolute right-2 top-2">⌄</span>
     </label>
   );
 }
