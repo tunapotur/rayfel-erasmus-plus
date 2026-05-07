@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { ModeToggle } from "@/components/ModeToggle";
 
 const navLinks = [
   { label: "Ana Sayfa", href: "/", active: true },
@@ -14,40 +15,51 @@ const navLinks = [
   { label: "eTwinning", href: "/etwinning" },
 ];
 
+function Logo() {
+  return (
+    <Link href="/" className="flex items-center gap-2 shrink-0">
+      {/* Placeholder for logo image */}
+      <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
+        <span className="text-white text-xs font-bold">R</span>
+      </div>
+      <span className="font-semibold text-gray-900 text-[15px]">
+        Rayfel <span className="text-blue-600 font-bold">Erasmus+</span>
+      </span>
+    </Link>
+  );
+}
+
+function Navigation() {
+  return (
+    <nav className="hidden md:flex items-center gap-1">
+      {navLinks.map((link) => (
+        <Link
+          key={link.label}
+          href={link.href}
+          className={`px-3 py-1.5 text-sm rounded-md transition-colors ${
+            link.active
+              ? "text-primary font-semibold"
+              : "text-foreground hover:text-gray-900 hover:bg-gray-50"
+          }`}
+        >
+          {link.label}
+        </Link>
+      ))}
+    </nav>
+  );
+}
+
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b border-gray-100 shadow-sm">
+    <header className="sticky top-0 z-50 w-full shadow-sm bg-background">
       <div className=" mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            {/* Placeholder for logo image */}
-            <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
-              <span className="text-white text-xs font-bold">R</span>
-            </div>
-            <span className="font-semibold text-gray-900 text-[15px]">
-              Rayfel <span className="text-blue-600 font-bold">Erasmus+</span>
-            </span>
-          </Link>
+          <Logo />
+          <Navigation />
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className={`px-3 py-1.5 text-sm rounded-md transition-colors ${
-                  link.active
-                    ? "text-blue-600 font-semibold"
-                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
+          <ModeToggle></ModeToggle>
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center gap-2">

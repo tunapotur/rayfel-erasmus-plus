@@ -73,7 +73,7 @@ export default async function LocaleLayout({
         inter.variable,
       )}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-screen flex flex-col justify-center">
         <NextIntlClientProvider locale={locale}>
           <ThemeProvider
             attribute="class"
