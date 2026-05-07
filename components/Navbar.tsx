@@ -6,24 +6,27 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { ModeToggle } from "@/components/ModeToggle";
+import logo from "@/public/logo64.png";
 
 const navLinks = [
   { label: "Ana Sayfa", href: "/", active: true },
-  { label: "Hakkımızda", href: "/hakkimizda" },
-  { label: "Duyurular", href: "/duyurular" },
-  { label: "Haberler", href: "/haberler" },
+  { label: "Hakkımızda", href: "/about" },
+  { label: "Duyurular", href: "/announcements " },
+  { label: "Haberler", href: "/news" },
   { label: "eTwinning", href: "/etwinning" },
 ];
 
 function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2 shrink-0">
-      {/* Placeholder for logo image */}
-      <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center">
-        <span className="text-white text-xs font-bold">R</span>
+      {/* image */}
+      <div className="w-6 h-6 flex items-center justify-center">
+        <Image src={logo} alt="Rayfel Logo" />
       </div>
-      <span className="font-semibold text-gray-900 text-[15px]">
-        Rayfel <span className="text-blue-600 font-bold">Erasmus+</span>
+
+      {/* text */}
+      <span className="font-semibold">
+        Rayfel <span className="text-primary font-bold">Erasmus+</span>
       </span>
     </Link>
   );
@@ -76,7 +79,7 @@ export default function Navbar() {
               className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-5 rounded-lg"
               asChild
             >
-              <Link href="/kayit">Kayıt</Link>
+              <Link href="/signup">Kayıt</Link>
             </Button>
           </div>
 
@@ -116,7 +119,7 @@ export default function Navbar() {
                 className="flex-1 bg-blue-600 hover:bg-blue-700 text-white"
                 asChild
               >
-                <Link href="/kayit">Kayıt</Link>
+                <Link href="/signup">Kayıt</Link>
               </Button>
             </div>
           </div>

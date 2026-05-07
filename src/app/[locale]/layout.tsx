@@ -6,9 +6,9 @@ import { Locale, hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/src/i18n/routing";
 
-type Props = {
-  children: React.ReactNode;
-};
+// type Props = {
+//   children: React.ReactNode;
+// };
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 

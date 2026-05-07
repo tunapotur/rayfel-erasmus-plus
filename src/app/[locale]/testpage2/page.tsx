@@ -5,7 +5,7 @@ export default function HomePage() {
     <div className="flex justify-center">
       <div className="max-w-4xl ">
         <Navbar />
-        <div className="border-2 bg-amber-500">
+        <div className="border-2 border-amber-500 mt-12">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
             quisquam, nulla doloremque vitae voluptatibus suscipit atque, optio
