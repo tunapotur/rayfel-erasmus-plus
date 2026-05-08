@@ -42,7 +42,7 @@ function Navigation() {
           className={`px-3 py-1.5 text-sm rounded-md transition-colors ${
             link.active
               ? "text-primary font-semibold"
-              : "text-foreground hover:text-gray-900 hover:bg-gray-50"
+              : " hover:text-gray-900 hover:bg-gray-200/70"
           }`}
         >
           {link.label}
@@ -57,7 +57,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full shadow-sm bg-background">
-      <div className=" mx-auto px-4 sm:px-6">
+      <div className="mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           <Logo />
           <Navigation />
@@ -72,8 +72,9 @@ export default function Navbar() {
               className="text-gray-700 hover:text-gray-900 text-sm font-medium"
               asChild
             >
-              <Link href="/giris">Giriş Yap</Link>
+              <Link href="/login">Giriş Yap</Link>
             </Button>
+
             <Button
               size="sm"
               className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-5 rounded-lg"
@@ -82,12 +83,13 @@ export default function Navbar() {
               <Link href="/signup">Kayıt</Link>
             </Button>
           </div>
+          {/* Auth Buttons */}
 
           {/* Mobile toggle */}
           <button
             className="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100"
             onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Menüyü aç/kapat"
+            aria-label="Menu open/close"
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
