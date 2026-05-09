@@ -24,12 +24,13 @@ function ThemeProvider({
   enableSystem = true,
   disableTransitionOnChange = false,
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(defaultTheme);
+  const [theme, setTheme] = useState<Theme>(() => {
+    // Server'da localStorage yok, defaultTheme döndür
+    if (typeof window === "undefined") return defaultTheme;
 
-  useEffect(() => {
     const stored = localStorage.getItem("theme") as Theme | null;
-    if (stored) setTheme(stored);
-  }, []);
+    return stored ?? defaultTheme;
+  });
 
   useEffect(() => {
     const root = document.documentElement;

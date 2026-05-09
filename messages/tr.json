@@ -8,5 +8,13 @@
   "LocaleSwitcher": {
     "label": "Dil değiştirin",
     "locale": "{locale, select, de {Deutsch} en {English} tr {Turkish} other {Unknown}}"
-  }
+  },
+  "NavLinks": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "announcements": "Duyurular",
+    "news": "Haberler",
+    "eTwinning": "eTwinning"
+  },
+  "AuthButtons": { "login": "Giriş", "signup": "Kayıt" }
 }

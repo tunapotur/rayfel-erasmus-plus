@@ -8,5 +8,13 @@
   "LocaleSwitcher": {
     "label": "Sprache ändern",
     "locale": "{locale, select, de {Deutsch} en {English} tr {Turkish} other {Unknown}}"
-  }
+  },
+  "NavLinks": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "announcements": "Ankündigungen",
+    "news": "Nachrichten",
+    "eTwinning": "eTwinning"
+  },
+  "AuthButtons": { "login": "Anmelden", "signup": "Registrieren" }
 }

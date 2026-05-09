@@ -1,6 +1,6 @@
 import { useLocale, useTranslations } from "next-intl";
 import { routing } from "@/src/i18n/routing";
-import LocalSelect from "./LocalSelect";
+import LocalSelect from "./LocaleSwitcher";
 
 import { SelectItem } from "@/components/ui/select";
 
