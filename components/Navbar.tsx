@@ -83,7 +83,6 @@ export default function Navbar() {
               <Link href="/signup">Kayıt</Link>
             </Button>
           </div>
-          {/* Auth Buttons */}
 
           {/* Mobile toggle */}
           <button
