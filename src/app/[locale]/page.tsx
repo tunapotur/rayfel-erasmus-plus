@@ -28,7 +28,7 @@ function Logo() {
       </div>
 
       {/* text */}
-      <div className="font-semibold flex flex-col items-start leading-none">
+      <div className="font-semibold flex flex-col items-start leading-tight">
         <div>Rayfel</div>
         <div className="text-primary font-bold">Erasmus+</div>
       </div>
