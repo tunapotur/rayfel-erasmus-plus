@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { ModeToggle } from "@/components/ModeToggle";
 import logo from "@/public/logo64.png";
+import LocalSelect from "@/components/LocalSelect";
 
 const navLinks = [
   { label: "Ana Sayfa", href: "/", active: true },
@@ -74,6 +75,9 @@ function Navbar() {
         <Logo />
         <Navigation />
         <ModeToggle></ModeToggle>
+
+        <LocalSelect />
+
         <AuthButtons />
       </div>
     </header>
