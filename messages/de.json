@@ -6,7 +6,7 @@
     "title": "next-intl Beispiel"
   },
   "LocaleSwitcher": {
-    "label": "Change language",
+    "label": "Sprache ändern",
     "locale": "{locale, select, de {Deutsch} en {English} tr {Turkish} other {Unknown}}"
   }
 }

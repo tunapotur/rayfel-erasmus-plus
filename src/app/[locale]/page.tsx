@@ -7,7 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { ModeToggle } from "@/components/ModeToggle";
 import logo from "@/public/logo64.png";
-import LocalSelect from "@/components/LocalSelect";
+
+import LocaleSwitcher from "@/components/LocaleSwitcher";
+import LocalOperation from "@/components/LocalOperation";
 
 const navLinks = [
   { label: "Ana Sayfa", href: "/", active: true },
@@ -76,7 +78,8 @@ function Navbar() {
         <Navigation />
         <ModeToggle></ModeToggle>
 
-        <LocalSelect />
+        <LocalOperation />
+        <LocaleSwitcher />
 
         <AuthButtons />
       </div>
