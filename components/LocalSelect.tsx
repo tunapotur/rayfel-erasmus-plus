@@ -39,11 +39,7 @@ export default function LocalSelect({ children, defaultValue, label }: Props) {
   }
 
   return (
-    <Select
-      value={defaultValue}
-      onValueChange={onSelectChange}
-      disabled={isPending}
-    >
+    <Select onValueChange={onSelectChange} disabled={isPending}>
       <SelectTrigger className="max-w-48">
         <SelectValue placeholder={defaultValue} />
       </SelectTrigger>
