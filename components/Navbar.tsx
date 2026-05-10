@@ -82,11 +82,11 @@ function AuthButtons() {
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full shadow-sm px-4 bg-background">
-      <div className="flex items-center justify-between h-16">
+      <div className="flex items-center justify-between h-16 gap-3">
         <Logo />
         <Navigation />
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-3">
           <div className="flex items-center gap-1">
             <ModeToggle></ModeToggle>
             <LocalOperation />

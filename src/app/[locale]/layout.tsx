@@ -74,7 +74,7 @@ export default async function LocaleLayout({
         inter.variable,
       )}
     >
-      <body className="min-h-screen flex flex-col justify-center">
+      <body className="flex flex-col justify-center max-w-5xl">
         <NextIntlClientProvider locale={locale}>
           <ThemeProvider
             attribute="class"
@@ -83,7 +83,7 @@ export default async function LocaleLayout({
             disableTransitionOnChange
           >
             <div className="flex justify-center">
-              <div className="min-h-screen max-w-5xl ">
+              <div className="min-h-screen">
                 <Navbar />
                 {children}
               </div>
