@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { ScreenBreakpointsProvider } from "@/components/providers/screen-breakpoints-provider";
 import { notFound } from "next/navigation";
 import { Locale, hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -74,21 +75,23 @@ export default async function LocaleLayout({
         inter.variable,
       )}
     >
-      <body className="flex justify-center">
-        <NextIntlClientProvider locale={locale}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div className="min-w-full lg:min-w-5xl bg-amber-500 min-h-screen">
-              <Navbar />
-              {children}
-            </div>
-          </ThemeProvider>
-        </NextIntlClientProvider>
-      </body>
+      <ScreenBreakpointsProvider>
+        <body className="flex justify-center">
+          <NextIntlClientProvider locale={locale}>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <div className="min-w-full lg:min-w-5xl bg-amber-500 min-h-screen">
+                <Navbar />
+                {children}
+              </div>
+            </ThemeProvider>
+          </NextIntlClientProvider>
+        </body>
+      </ScreenBreakpointsProvider>
     </html>
   );
 }

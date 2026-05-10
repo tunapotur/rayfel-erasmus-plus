@@ -8,6 +8,7 @@ import logo from "@/public/logo64.png";
 import LocalOperation from "@/components/LocaleSwitch";
 import { useTranslations } from "next-intl";
 import { usePathname } from "@/src/i18n/navigation";
+import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider";
 // import { Menu, X } from "lucide-react";
 
 function Logo() {
@@ -81,6 +82,9 @@ function AuthButtons() {
 }
 
 export default function Navbar() {
+  const { isLgScreen } = useScreenBreakpoints();
+  console.log("Is Screen Lg: ", isLgScreen);
+
   return (
     <header className="sticky top-0 z-50 w-full shadow-sm px-4 bg-background">
       <div className="flex items-center justify-between min-h-18 gap-3 py-2">
