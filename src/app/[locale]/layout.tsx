@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Locale, hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/src/i18n/routing";
+import Navbar from "@/components/Navbar";
 
 // type Props = {
 //   children: React.ReactNode;
@@ -81,7 +82,12 @@ export default async function LocaleLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {children}
+            <div className="flex justify-center">
+              <div className="min-h-screen max-w-5xl ">
+                <Navbar />
+                {children}
+              </div>
+            </div>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

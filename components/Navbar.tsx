@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ModeToggle";
 import logo from "@/public/logo64.png";
 import LocalOperation from "@/components/LocaleSwitch";
-// import { Menu, X } from "lucide-react";
-
 import { useTranslations } from "next-intl";
+import { usePathname } from "@/src/i18n/navigation";
+// import { Menu, X } from "lucide-react";
 
 function Logo() {
   return (
@@ -29,30 +29,36 @@ function Logo() {
 
 function Navigation() {
   const t = useTranslations("NavLinks");
+  const pathname = usePathname();
 
   const navLinks = [
-    { label: t("home"), href: "/", active: true },
+    { label: t("home"), href: "/" },
     { label: t("about"), href: "/about" },
-    { label: t("announcements"), href: "/announcements " },
+    { label: t("announcements"), href: "/announcements" },
     { label: t("news"), href: "/news" },
     { label: t("eTwinning"), href: "/etwinning" },
   ];
 
   return (
     <nav className="flex items-center text-sm">
-      {navLinks.map((link) => (
-        <Link
-          key={link.label}
-          href={link.href}
-          className={`px-3 py-1.5 rounded-md ${
-            link.active
-              ? "text-primary font-semibold"
-              : " hover:text-gray-900 hover:bg-gray-100"
-          }`}
-        >
-          {link.label}
-        </Link>
-      ))}
+      {navLinks.map((link) => {
+        const isActive =
+          link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+
+        return (
+          <Link
+            key={link.href}
+            href={link.href}
+            className={`px-3 py-1.5 rounded-md transition-colors ${
+              isActive
+                ? "text-primary font-semibold"
+                : "hover:text-gray-900 hover:bg-gray-100"
+            }`}
+          >
+            {link.label}
+          </Link>
+        );
+      })}
     </nav>
   );
 }

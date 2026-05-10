@@ -1,3 +1,3 @@
-export default function HomePage() {
-  return <div>Under Construction</div>;
+export default function EtwinningPage() {
+  return <div>Etwinning Under Construction</div>;
 }

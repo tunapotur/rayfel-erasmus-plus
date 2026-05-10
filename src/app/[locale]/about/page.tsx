@@ -1,3 +1,3 @@
-export default function HomePage() {
-  return <div>Under Construction</div>;
+export default function AboutPage() {
+  return <div>About Under Construction</div>;
 }
