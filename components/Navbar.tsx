@@ -40,7 +40,8 @@ function Navigation() {
   ];
 
   return (
-    <nav className="flex items-center text-sm">
+    // <nav className="grid grid-cols-5 grid-rows-1 gap-1 justify-items-center">
+    <nav className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center lg:flex lg:items-center lg:flex-wrap">
       {navLinks.map((link) => {
         const isActive =
           link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
@@ -67,7 +68,7 @@ function AuthButtons() {
   const t = useTranslations("AuthButtons");
 
   return (
-    <div className="flex items-center gap-1">
+    <div className="flex items-center flex-col gap-1 lg:py-2 lg:flex-row">
       <Button variant="outline" asChild>
         <Link href="/login">{t("login")}</Link>
       </Button>
@@ -82,12 +83,12 @@ function AuthButtons() {
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full shadow-sm px-4 bg-background">
-      <div className="flex items-center justify-between h-16 gap-3">
+      <div className="flex items-center justify-between min-h-18 gap-3 py-2">
         <Logo />
         <Navigation />
 
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1">
+        <div className="flex items-center gap-3 flex-col sm:flex-row">
+          <div className="flex items-center flex-col gap-1 lg:py-2 md:flex-row">
             <ModeToggle></ModeToggle>
             <LocalOperation />
           </div>
