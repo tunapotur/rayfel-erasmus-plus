@@ -10,6 +10,7 @@ import { useTranslations } from "next-intl";
 import { usePathname } from "@/src/i18n/navigation";
 import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider";
 import { createContext, useContext, useState } from "react";
+
 // import { Menu, X } from "lucide-react";
 
 interface NavbarActionProviderProps {
@@ -48,7 +49,7 @@ function useNavbarAction(): NavbarActionContextType {
 
 function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-2 shrink-0">
+    <Link href="/" className={`flex items-center gap-2 shrink-0`}>
       {/* image */}
       <div className="size-7.5 flex items-center justify-center">
         <Image src={logo} alt="Rayfel Logo" />
@@ -76,8 +77,8 @@ function Navigation() {
     { label: t("eTwinning"), href: "/etwinning" },
   ];
 
-  function onClickHandler() {
-    console.log("Küçük ekranda tıklama oldu!");
+  function onClickHandlerNavLinks() {
+    console.log("Navigation Link Tıklandı!");
   }
 
   return (
@@ -95,7 +96,7 @@ function Navigation() {
                 ? "text-primary font-semibold"
                 : "hover:text-gray-900 hover:bg-gray-100"
             }`}
-            onClick={!isSmScreen ? onClickHandler : undefined}
+            onClick={isSmScreen ? undefined : onClickHandlerNavLinks}
           >
             {link.label}
           </Link>
@@ -107,6 +108,9 @@ function Navigation() {
 
 function AuthButtons() {
   const t = useTranslations("AuthButtons");
+  const { isSmScreen } = useScreenBreakpoints();
+
+  console.log("Deneme:", isSmScreen);
 
   return (
     <div className="flex items-center flex-col gap-1 lg:py-2 lg:flex-row">
@@ -132,16 +136,18 @@ function LocalModeButtons() {
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 w-full shadow-sm px-4 bg-background">
-      <div className="flex items-center justify-between min-h-18 gap-3 py-2">
-        <Logo />
-        <Navigation />
+    <NavbarActionProvider>
+      <header className="sticky top-0 z-50 w-full shadow-sm px-4 bg-background">
+        <div className="flex items-center justify-between min-h-18 gap-3 py-2">
+          <Logo />
+          <Navigation />
 
-        <div className="flex items-center gap-3 flex-col sm:flex-row">
-          <LocalModeButtons />
-          <AuthButtons />
+          <div className="flex items-center gap-3 flex-col sm:flex-row">
+            <LocalModeButtons />
+            <AuthButtons />
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </NavbarActionProvider>
   );
 }
