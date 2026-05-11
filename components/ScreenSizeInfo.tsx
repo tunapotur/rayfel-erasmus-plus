@@ -17,7 +17,9 @@ function ScreenSizeInfo() {
 
   const { label, info } = getScreenSize();
 
-  return <div>{`${label} Ekran şu anda ${info} boyutunda`}</div>;
+  return (
+    <div className="p-4 text-lg font-semibold">{`${label} Ekran şu anda ${info} boyutunda`}</div>
+  );
 }
 
 export default ScreenSizeInfo;

@@ -44,7 +44,7 @@ export default function LocalSelect({ children, defaultValue, label }: Props) {
       onValueChange={onSelectChange}
       disabled={isPending}
     >
-      <SelectTrigger className="max-w-48">
+      <SelectTrigger className="max-w-48 bg-background">
         <SelectValue>{defaultValue}</SelectValue>
       </SelectTrigger>
       <SelectContent>
