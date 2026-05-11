@@ -86,6 +86,15 @@ function AuthButtons() {
   );
 }
 
+function LocalModeButtons() {
+  return (
+    <div className="flex items-center flex-col gap-1 lg:py-2 md:flex-row">
+      <ModeToggle></ModeToggle>
+      <LocalOperation />
+    </div>
+  );
+}
+
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full shadow-sm px-4 bg-background">
@@ -94,10 +103,7 @@ export default function Navbar() {
         <Navigation />
 
         <div className="flex items-center gap-3 flex-col sm:flex-row">
-          <div className="flex items-center flex-col gap-1 lg:py-2 md:flex-row">
-            <ModeToggle></ModeToggle>
-            <LocalOperation />
-          </div>
+          <LocalModeButtons />
           <AuthButtons />
         </div>
       </div>
