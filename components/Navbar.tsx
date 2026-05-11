@@ -9,7 +9,42 @@ import LocalOperation from "@/components/LocaleSwitch";
 import { useTranslations } from "next-intl";
 import { usePathname } from "@/src/i18n/navigation";
 import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider";
+import { createContext, useContext, useState } from "react";
 // import { Menu, X } from "lucide-react";
+
+interface NavbarActionProviderProps {
+  children: React.ReactNode;
+}
+
+interface NavbarActionContextType {
+  isMenuOpen: boolean;
+  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const NavbarActionContext = createContext<NavbarActionContextType | undefined>(
+  undefined,
+);
+
+function NavbarActionProvider({ children }: NavbarActionProviderProps) {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  return (
+    <NavbarActionContext.Provider value={{ isMenuOpen, setMenuOpen }}>
+      {children}
+    </NavbarActionContext.Provider>
+  );
+}
+
+function useNavbarAction(): NavbarActionContextType {
+  const context = useContext(NavbarActionContext);
+  if (context === undefined)
+    throw new Error(
+      "NavbarActionContext was used outside of NavbarActionProvider",
+    );
+  return context;
+}
+
+// export { NavbarActionProvider, useNavbarAction };
 
 function Logo() {
   return (

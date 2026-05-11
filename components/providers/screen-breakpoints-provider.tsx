@@ -3,8 +3,6 @@
 import { createContext, useContext } from "react";
 import { useMediaQuery } from "react-responsive";
 
-const ScreenBreakpointsContext = createContext();
-
 // Tailwindcss breakpoints
 const tailwindBreakpoints = {
   sm: "(min-width: 640px)",
@@ -12,25 +10,41 @@ const tailwindBreakpoints = {
   lg: "(min-width: 1024px)",
   xl: "(min-width: 1280px)",
   xl2: "(min-width: 1536px)",
-};
+} as const;
 
-function ScreenBreakpointsProvider({ children }) {
+interface ScreenBreakpointsContextType {
+  isSmScreen: boolean;
+  isMdScreen: boolean;
+  isLgScreen: boolean;
+  isXlScreen: boolean;
+  isXl2Screen: boolean;
+}
+
+interface ScreenBreakpointsProviderProps {
+  children: React.ReactNode;
+}
+
+const ScreenBreakpointsContext = createContext<
+  ScreenBreakpointsContextType | undefined
+>(undefined);
+
+function ScreenBreakpointsProvider({ children }: ScreenBreakpointsProviderProps) {
   const isSmScreen = useMediaQuery({ query: tailwindBreakpoints.sm });
   const isMdScreen = useMediaQuery({ query: tailwindBreakpoints.md });
   const isLgScreen = useMediaQuery({ query: tailwindBreakpoints.lg });
-  const isXgScreen = useMediaQuery({ query: tailwindBreakpoints.xl });
+  const isXlScreen = useMediaQuery({ query: tailwindBreakpoints.xl });
   const isXl2Screen = useMediaQuery({ query: tailwindBreakpoints.xl2 });
 
   return (
     <ScreenBreakpointsContext.Provider
-      value={{ isSmScreen, isMdScreen, isLgScreen, isXgScreen, isXl2Screen }}
+      value={{ isSmScreen, isMdScreen, isLgScreen, isXlScreen, isXl2Screen }}
     >
       {children}
     </ScreenBreakpointsContext.Provider>
   );
 }
 
-function useScreenBreakpoints() {
+function useScreenBreakpoints(): ScreenBreakpointsContextType {
   const context = useContext(ScreenBreakpointsContext);
   if (context === undefined)
     throw new Error(
