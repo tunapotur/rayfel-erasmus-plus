@@ -31,6 +31,7 @@ function Logo() {
 function Navigation() {
   const t = useTranslations("NavLinks");
   const pathname = usePathname();
+  const { isSmScreen } = useScreenBreakpoints();
 
   const navLinks = [
     { label: t("home"), href: "/" },
@@ -40,8 +41,11 @@ function Navigation() {
     { label: t("eTwinning"), href: "/etwinning" },
   ];
 
+  function onClickHandler() {
+    console.log("Küçük ekranda tıklama oldu!");
+  }
+
   return (
-    // <nav className="grid grid-cols-5 grid-rows-1 gap-1 justify-items-center">
     <nav className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center lg:flex lg:items-center lg:flex-wrap">
       {navLinks.map((link) => {
         const isActive =
@@ -56,6 +60,7 @@ function Navigation() {
                 ? "text-primary font-semibold"
                 : "hover:text-gray-900 hover:bg-gray-100"
             }`}
+            onClick={!isSmScreen ? onClickHandler : undefined}
           >
             {link.label}
           </Link>
@@ -82,9 +87,6 @@ function AuthButtons() {
 }
 
 export default function Navbar() {
-  const { isLgScreen } = useScreenBreakpoints();
-  console.log("Is Screen Lg: ", isLgScreen);
-
   return (
     <header className="sticky top-0 z-50 w-full shadow-sm px-4 bg-background">
       <div className="flex items-center justify-between min-h-18 gap-3 py-2">
