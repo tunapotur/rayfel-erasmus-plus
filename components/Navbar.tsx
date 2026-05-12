@@ -69,6 +69,7 @@ function Navigation() {
   const t = useTranslations("NavLinks");
   const pathname = usePathname();
   const { isSmScreen } = useScreenBreakpoints();
+  const { setMobilMenuOpen } = useNavbarAction();
 
   const navLinks = [
     { label: t("home"), href: "/" },
@@ -79,7 +80,7 @@ function Navigation() {
   ];
 
   function onClickHandlerNavLinks() {
-    console.log("Navigation Link Tıklandı!");
+    setMobilMenuOpen(false);
   }
 
   return (
@@ -147,40 +148,48 @@ function MobilMenuButton() {
   );
 }
 
-export default function Navbar() {
+function NavbarOperations() {
   const { isSmScreen } = useScreenBreakpoints();
+  const { isMobilMenuOpen } = useNavbarAction();
 
   return (
-    <NavbarActionProvider>
-      <header className="sticky top-0 z-50 w-full shadow-sm sm:px-4 bg-background">
-        {isSmScreen ? (
-          <div className="flex items-center justify-between min-h-18 gap-3 py-2">
-            <Logo />
-            <Navigation />
+    <header className="sticky top-0 z-50 w-full shadow-sm sm:px-4 bg-background">
+      {isSmScreen ? (
+        <div className="flex items-center justify-between min-h-18 gap-3 py-2">
+          <Logo />
+          <Navigation />
 
-            <div className="flex items-center gap-3 flex-col lg:flex-row">
+          <div className="flex items-center gap-3 flex-col lg:flex-row">
+            <LocalModeButtons />
+            <AuthButtons />
+          </div>
+        </div>
+      ) : (
+        <div className="mx-auto px-4">
+          <div className="flex flex-row justify-between min-h-18">
+            <Logo />
+
+            <div className="flex items-center">
               <LocalModeButtons />
-              <AuthButtons />
+              <MobilMenuButton />
             </div>
           </div>
-        ) : (
-          <div className="mx-auto px-4">
-            <div className="flex flex-row justify-between min-h-18">
-              <Logo />
-
-              <div className="flex items-center">
-                <LocalModeButtons />
-                <MobilMenuButton />
-              </div>
-            </div>
-
+          {isMobilMenuOpen && (
             <div className="border-t border-gray-100 dark:border-gray-900 pb-4 flex flex-col">
               <Navigation />
               <AuthButtons />
             </div>
-          </div>
-        )}
-      </header>
+          )}
+        </div>
+      )}
+    </header>
+  );
+}
+
+export default function Navbar() {
+  return (
+    <NavbarActionProvider>
+      <NavbarOperations />
     </NavbarActionProvider>
   );
 }
