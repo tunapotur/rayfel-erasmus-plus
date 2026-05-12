@@ -50,12 +50,12 @@ function Logo() {
   return (
     <Link href="/" className="flex items-center gap-1 shrink-0">
       {/* image */}
-      <div className="size-3.5 md:size-7.5 flex items-center justify-center">
+      <div className="size-3.5 sm:size-7.5 flex items-center justify-center">
         <Image src={logo} alt="Rayfel Logo" />
       </div>
 
       {/* text */}
-      <div className="font-semibold flex md:gap-0 gap-1 md:flex-col items-start leading-tight">
+      <div className="font-semibold flex sm:gap-0 gap-1 sm:flex-col items-start leading-tight">
         <div>Rayfel</div>
         <div className="text-primary font-bold dark:text-blue-700">
           Erasmus+
@@ -85,7 +85,7 @@ function Navigation() {
 
   return (
     // <nav className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center lg:flex lg:items-center lg:flex-wrap">
-    <nav className="flex flex-col gap-2 py-4">
+    <nav className="flex flex-col gap-2 py-4 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:flex lg:flex-row">
       {navLinks.map((link) => {
         const isActive =
           link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
@@ -111,8 +111,9 @@ function Navigation() {
 
 function AuthButtons() {
   const t = useTranslations("AuthButtons");
+
   return (
-    <div className="flex items-center justify-between gap-4 lg:gap-1 lg:py-2 lg:flex-row">
+    <div className="flex items-center justify-between gap-4 sm:gap-1 sm:py-2 flex-row sm:flex-col lg:flex-row">
       <Button variant="outline" asChild className="grow">
         <Link href="/login">{t("login")}</Link>
       </Button>
@@ -155,11 +156,11 @@ function NavbarOperations() {
   return (
     <header className="sticky top-0 z-50 w-full shadow-sm sm:px-4 bg-background">
       {isSmScreen ? (
-        <div className="flex items-center justify-between min-h-18 gap-3 py-2">
+        <div className="flex items-center justify-between min-h-18 gap-1">
           <Logo />
           <Navigation />
 
-          <div className="flex items-center gap-3 flex-col lg:flex-row">
+          <div className="flex items-center gap-2 flex-col lg:flex-row">
             <LocalModeButtons />
             <AuthButtons />
           </div>
