@@ -1,3 +1,3 @@
 export default function NewsPage() {
-  return <div>NewsPage Under Construction</div>;
+  return <div>News Page Under Construction</div>;
 }

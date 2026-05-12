@@ -1,14 +1,11 @@
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-// import { ScreenBreakpointsProvider } from "@/components/providers/screen-breakpoints-provider";
-import { ScreenBreakpointsProvider } from "@/components/providers/screen-breakpoints-provider";
 import { notFound } from "next/navigation";
 import { Locale, hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/src/i18n/routing";
 import Navbar from "@/components/Navbar";
-import ScreenSizeInfo from "@/components/ScreenSizeInfo";
 
 // type Props = {
 //   children: React.ReactNode;
@@ -77,24 +74,21 @@ export default async function LocaleLayout({
         inter.variable,
       )}
     >
-      <ScreenBreakpointsProvider>
-        <body className="flex justify-center">
-          <NextIntlClientProvider locale={locale}>
-            <ThemeProvider
-              attribute="class"
-              defaultTheme="system"
-              enableSystem
-              disableTransitionOnChange
-            >
-              <div className="min-w-full lg:min-w-5xl bg-amber-500 min-h-screen">
-                <Navbar />
-                <ScreenSizeInfo />
-                {children}
-              </div>
-            </ThemeProvider>
-          </NextIntlClientProvider>
-        </body>
-      </ScreenBreakpointsProvider>
+      <body className="flex justify-center">
+        <NextIntlClientProvider locale={locale}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className="min-w-full lg:min-w-5xl bg-amber-500 min-h-screen">
+              <Navbar />
+              {children}
+            </div>
+          </ThemeProvider>
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }

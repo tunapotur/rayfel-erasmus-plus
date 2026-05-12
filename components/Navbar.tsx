@@ -8,8 +8,6 @@ import logo from "@/public/logo64.png";
 import LocalOperation from "@/components/LocaleSwitch";
 import { useTranslations } from "next-intl";
 import { usePathname } from "@/src/i18n/navigation";
-// import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider";
-import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider";
 import { createContext, useContext, useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -45,8 +43,6 @@ function useNavbarAction(): NavbarActionContextType {
   return context;
 }
 
-// export { NavbarActionProvider, useNavbarAction };
-
 function Logo() {
   return (
     <Link href="/" className="flex items-center gap-1 shrink-0">
@@ -71,8 +67,6 @@ function Navigation() {
   const pathname = usePathname();
   const { setMobilMenuOpen } = useNavbarAction();
 
-  const { isSmScreen } = useScreenBreakpoints();
-
   const navLinks = [
     { label: t("home"), href: "/" },
     { label: t("about"), href: "/about" },
@@ -80,10 +74,6 @@ function Navigation() {
     { label: t("news"), href: "/news" },
     { label: t("eTwinning"), href: "/etwinning" },
   ];
-
-  function onClickHandlerNavLinks() {
-    setMobilMenuOpen(false);
-  }
 
   return (
     <nav className="flex flex-col gap-2 py-4 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:flex lg:flex-row">
@@ -100,7 +90,7 @@ function Navigation() {
                 ? "text-primary dark:text-blue-600 font-semibold bg-primary/10 dark:bg-primary/30 sm:bg-background"
                 : "hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-500/30 dark:hover:text-gray-200"
             }`}
-            onClick={isSmScreen ? undefined : onClickHandlerNavLinks}
+            onClick={() => setMobilMenuOpen(false)}
           >
             {link.label}
           </Link>
@@ -112,14 +102,20 @@ function Navigation() {
 
 function AuthButtons() {
   const t = useTranslations("AuthButtons");
+  const { setMobilMenuOpen } = useNavbarAction();
 
   return (
     <div className="flex items-center justify-between gap-4 sm:gap-1 flex-row sm:flex-col lg:flex-row">
-      <Button variant="outline" asChild className="grow">
+      <Button
+        variant="outline"
+        asChild
+        className="grow"
+        onClick={() => setMobilMenuOpen(false)}
+      >
         <Link href="/login">{t("login")}</Link>
       </Button>
 
-      <Button asChild className="grow">
+      <Button asChild className="grow" onClick={() => setMobilMenuOpen(false)}>
         <Link href="/signup">{t("signup")}</Link>
       </Button>
     </div>
@@ -151,39 +147,38 @@ function MobilMenuButton() {
 }
 
 function NavbarOperations() {
-  const { isSmScreen } = useScreenBreakpoints();
   const { isMobilMenuOpen } = useNavbarAction();
 
   return (
     <header className="sticky top-0 z-50 w-full shadow-sm sm:px-4 bg-background">
-      {isSmScreen ? (
-        <div className="flex items-center justify-between min-h-18 gap-1 md:py-3 lg:py-0">
-          <Logo />
-          <Navigation />
+      {/* Web page menu */}
+      <div className="hidden sm:flex items-center justify-between min-h-18 gap-1 md:py-3 lg:py-0">
+        <Logo />
+        <Navigation />
 
-          <div className="flex items-center gap-2 flex-col lg:flex-row">
+        <div className="flex items-center gap-2 flex-col lg:flex-row">
+          <LocalModeButtons />
+          <AuthButtons />
+        </div>
+      </div>
+
+      {/* Mobil Menu */}
+      <div className="sm:hidden mx-auto px-4">
+        <div className="flex flex-row justify-between min-h-18">
+          <Logo />
+
+          <div className="flex items-center">
             <LocalModeButtons />
+            <MobilMenuButton />
+          </div>
+        </div>
+        {isMobilMenuOpen && (
+          <div className="border-t border-gray-100 dark:border-gray-900 pb-4 flex flex-col">
+            <Navigation />
             <AuthButtons />
           </div>
-        </div>
-      ) : (
-        <div className="mx-auto px-4">
-          <div className="flex flex-row justify-between min-h-18">
-            <Logo />
-
-            <div className="flex items-center">
-              <LocalModeButtons />
-              <MobilMenuButton />
-            </div>
-          </div>
-          {isMobilMenuOpen && (
-            <div className="border-t border-gray-100 dark:border-gray-900 pb-4 flex flex-col">
-              <Navigation />
-              <AuthButtons />
-            </div>
-          )}
-        </div>
-      )}
+        )}
+      </div>
     </header>
   );
 }
