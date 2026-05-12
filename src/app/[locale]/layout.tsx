@@ -1,7 +1,8 @@
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { ScreenBreakpointsProvider } from "@/components/providers/screen-breakpoints-provider";
+// import { ScreenBreakpointsProvider } from "@/components/providers/screen-breakpoints-provider";
+import { ScreenBreakpointsProvider } from "@/components/providers/screen-breakpoints-provider-native";
 import { notFound } from "next/navigation";
 import { Locale, hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";

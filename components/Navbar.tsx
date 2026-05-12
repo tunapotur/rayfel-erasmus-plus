@@ -8,7 +8,8 @@ import logo from "@/public/logo64.png";
 import LocalOperation from "@/components/LocaleSwitch";
 import { useTranslations } from "next-intl";
 import { usePathname } from "@/src/i18n/navigation";
-import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider";
+// import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider";
+import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider-native";
 import { createContext, useContext, useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -84,7 +85,6 @@ function Navigation() {
   }
 
   return (
-    // <nav className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center lg:flex lg:items-center lg:flex-wrap">
     <nav className="flex flex-col gap-2 py-4 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:flex lg:flex-row">
       {navLinks.map((link) => {
         const isActive =
@@ -113,7 +113,7 @@ function AuthButtons() {
   const t = useTranslations("AuthButtons");
 
   return (
-    <div className="flex items-center justify-between gap-4 sm:gap-1 sm:py-2 flex-row sm:flex-col lg:flex-row">
+    <div className="flex items-center justify-between gap-4 sm:gap-1 flex-row sm:flex-col lg:flex-row">
       <Button variant="outline" asChild className="grow">
         <Link href="/login">{t("login")}</Link>
       </Button>
@@ -156,7 +156,7 @@ function NavbarOperations() {
   return (
     <header className="sticky top-0 z-50 w-full shadow-sm sm:px-4 bg-background">
       {isSmScreen ? (
-        <div className="flex items-center justify-between min-h-18 gap-1">
+        <div className="flex items-center justify-between min-h-18 gap-1 md:py-3 lg:py-0">
           <Logo />
           <Navigation />
 

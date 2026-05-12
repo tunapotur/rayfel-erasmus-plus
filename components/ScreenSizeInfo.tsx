@@ -1,6 +1,6 @@
 "use client";
 
-import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider";
+import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider-native";
 
 function ScreenSizeInfo() {
   const { isSmScreen, isMdScreen, isLgScreen, isXlScreen, isXl2Screen } =
