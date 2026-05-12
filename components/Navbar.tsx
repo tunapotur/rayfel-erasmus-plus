@@ -9,7 +9,7 @@ import LocalOperation from "@/components/LocaleSwitch";
 import { useTranslations } from "next-intl";
 import { usePathname } from "@/src/i18n/navigation";
 // import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider";
-import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider-native";
+import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider";
 import { createContext, useContext, useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -69,8 +69,9 @@ function Logo() {
 function Navigation() {
   const t = useTranslations("NavLinks");
   const pathname = usePathname();
-  const { isSmScreen } = useScreenBreakpoints();
   const { setMobilMenuOpen } = useNavbarAction();
+
+  const { isSmScreen } = useScreenBreakpoints();
 
   const navLinks = [
     { label: t("home"), href: "/" },

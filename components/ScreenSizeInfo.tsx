@@ -1,6 +1,7 @@
 "use client";
 
-import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider-native";
+import { useScreenBreakpoints } from "./providers/screen-breakpoints-provider";
+import useWindowSize from "@/lib/useWindowSize";
 
 function ScreenSizeInfo() {
   const { isSmScreen, isMdScreen, isLgScreen, isXlScreen, isXl2Screen } =
@@ -17,8 +18,15 @@ function ScreenSizeInfo() {
 
   const { label, info } = getScreenSize();
 
+  const size = useWindowSize();
+
   return (
-    <div className="p-4 text-lg font-semibold">{`${label} Ekran şu anda ${info} boyutunda`}</div>
+    <div>
+      <div className="p-4 text-lg font-semibold">{`${label} Ekran şu anda ${info} boyutunda`}</div>
+      <div className="p-4 text-lg font-semibold text-red-700">
+        {size.width}px / {size.height}px
+      </div>
+    </div>
   );
 }
 
