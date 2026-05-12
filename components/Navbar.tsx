@@ -48,16 +48,18 @@ function useNavbarAction(): NavbarActionContextType {
 
 function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-2 shrink-0">
+    <Link href="/" className="flex items-center gap-1 shrink-0">
       {/* image */}
-      <div className="size-5 md:size-7.5 flex items-center justify-center">
+      <div className="size-3.5 md:size-7.5 flex items-center justify-center">
         <Image src={logo} alt="Rayfel Logo" />
       </div>
 
       {/* text */}
       <div className="font-semibold flex md:gap-0 gap-1 md:flex-col items-start leading-tight">
         <div>Rayfel</div>
-        <div className="text-primary font-bold">Erasmus+</div>
+        <div className="text-primary font-bold dark:text-blue-700">
+          Erasmus+
+        </div>
       </div>
     </Link>
   );
@@ -82,7 +84,7 @@ function Navigation() {
 
   return (
     // <nav className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center lg:flex lg:items-center lg:flex-wrap">
-    <nav className="flex flex-col py-4">
+    <nav className="flex flex-col gap-2 py-4">
       {navLinks.map((link) => {
         const isActive =
           link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
@@ -93,8 +95,8 @@ function Navigation() {
             href={link.href}
             className={`px-3 py-1.5 rounded-md transition-colors ${
               isActive
-                ? "text-primary font-semibold"
-                : "hover:text-gray-900 hover:bg-gray-100"
+                ? "text-primary dark:text-blue-600 font-semibold bg-primary/10 dark:bg-primary/30 sm:bg-background"
+                : "hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-500/30 dark:hover:text-gray-200"
             }`}
             onClick={isSmScreen ? undefined : onClickHandlerNavLinks}
           >
@@ -172,7 +174,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            <div className="border-t border-gray-100 pb-4 flex flex-col">
+            <div className="border-t border-gray-100 dark:border-gray-900 pb-4 flex flex-col">
               <Navigation />
               <AuthButtons />
             </div>
