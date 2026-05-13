@@ -77,7 +77,7 @@ function Navigation() {
   ];
 
   return (
-    <nav className="flex flex-col gap-2 py-4 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:flex lg:flex-row">
+    <nav className="flex flex-col gap-2 py-4 px-2 sm:grid md:grid-cols-4 sm:grid-cols-3 lg:flex lg:flex-row sm:items-center">
       {navLinks.map((link) => {
         const isActive =
           link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
@@ -86,7 +86,7 @@ function Navigation() {
           <Link
             key={link.href}
             href={link.href}
-            className={`px-3 py-1.5 rounded-md transition-colors ${
+            className={`px-3 py-1.5 rounded-md transition-colors sm:text-center sm:truncate sm:max-w-28 ${
               isActive
                 ? "text-primary dark:text-blue-600 font-semibold bg-primary/10 dark:bg-primary/30 sm:bg-background"
                 : "hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-500/30 dark:hover:text-gray-200"
@@ -106,7 +106,7 @@ function AuthButtons() {
   const { setMobilMenuOpen } = useNavbarAction();
 
   return (
-    <div className="flex items-center justify-between gap-4 sm:gap-1 flex-row sm:flex-col lg:flex-row">
+    <div className="flex items-center justify-between gap-4 sm:gap-2 sm:flex-col lg:flex-row flex-row">
       <Button
         variant="outline"
         asChild
