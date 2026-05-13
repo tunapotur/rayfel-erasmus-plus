@@ -10,6 +10,7 @@ import { useTranslations } from "next-intl";
 import { usePathname } from "@/src/i18n/navigation";
 import { createContext, useContext, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { useOutsideClick } from "@/lib/useOutsideClick";
 
 interface NavbarActionProviderProps {
   children: React.ReactNode;
@@ -147,10 +148,14 @@ function MobilMenuButton() {
 }
 
 function NavbarOperations() {
-  const { isMobilMenuOpen } = useNavbarAction();
+  const { isMobilMenuOpen, setMobilMenuOpen } = useNavbarAction();
+  const ref = useOutsideClick(() => setMobilMenuOpen(false));
 
   return (
-    <header className="sticky top-0 z-50 w-full shadow-sm sm:px-4 bg-background">
+    <header
+      ref={ref}
+      className="sticky top-0 z-50 w-full shadow-sm sm:px-4 bg-background"
+    >
       {/* Web page menu */}
       <div className="hidden sm:flex items-center justify-between min-h-18 gap-1 md:py-3 lg:py-0">
         <Logo />
