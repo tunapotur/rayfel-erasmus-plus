@@ -82,7 +82,7 @@ export default async function LocaleLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="max-w-5xl lg:mx-auto bg-amber-500 min-h-screen">
+            <div className="max-w-5xl lg:mx-auto min-h-screen">
               <Navbar />
               {children}
             </div>
