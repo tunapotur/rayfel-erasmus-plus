@@ -157,7 +157,7 @@ function NavbarOperations() {
       className="sticky top-0 z-50 w-full shadow-sm sm:px-4 bg-background"
     >
       {/* Web page menu */}
-      <div className="hidden sm:flex items-center justify-between min-h-18 gap-1 md:py-3 lg:py-0">
+      <div className="hidden sm:flex items-center justify-between min-h-18 gap-1 sm:py-3 lg:py-0">
         <Logo />
         <Navigation />
 
@@ -178,9 +178,11 @@ function NavbarOperations() {
           </div>
         </div>
         {isMobilMenuOpen && (
-          <div className="border-t border-gray-100 dark:border-gray-900 pb-4 flex flex-col">
-            <Navigation />
-            <AuthButtons />
+          <div className="absolute bg-background pb-4 flex flex-col left-0 right-0 px-4">
+            <div className="flex flex-col border-t border-gray-200 dark:border-gray-800">
+              <Navigation />
+              <AuthButtons />
+            </div>
           </div>
         )}
       </div>
