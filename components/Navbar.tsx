@@ -161,7 +161,7 @@ function NavbarOperations() {
     <>
       <header
         ref={ref}
-        className="sticky top-0 z-50 w-full shadow-sm sm:px-4 bg-background"
+        className="sticky top-0 z-50 w-full shadow-sm sm:px-4 bg-background lg:min-w-5xl"
       >
         {/* Web page menu */}
         <div className="hidden sm:flex items-center justify-between min-h-18 gap-1 sm:py-3 lg:py-0">
