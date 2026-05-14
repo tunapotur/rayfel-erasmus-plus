@@ -2,15 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import HeroPic from "@/public/hero_pic.jpeg";
-// src={HeroPic}
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[520px] md:min-h-[600px] overflow-hidden">
+    <section className="relative w-full min-h-130 md:min-h-150 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          // src="/images/hero-bg.jpg" // ← kendi görselini koy
           src={HeroPic}
           alt="Erasmus+ etkinlik görseli"
           fill
@@ -18,41 +16,39 @@ export default function Hero() {
           className="object-cover object-center"
           sizes="100vw"
         />
-        {/* Koyu gradient overlay - sol taraf daha opak */}
+        {/* Gradient overlay*/}
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/20" />
       </div>
 
-      {/* İçerik */}
-      <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 h-full flex items-center py-20 md:py-28">
-        <div className="max-w-[600px]">
-          {/* Başlık */}
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 h-full flex items-center py-20 md:py-28">
+        <div className="max-w-150">
+          {/* Header */}
           <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-5 drop-shadow-sm">
-            Dijital Okul Yeşil Eğitim
-            <br />
-            Gelecek Nesillerin
-            <br />
-            Öğrenme Modeli
+            <div>
+              Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli
+            </div>
           </h1>
 
-          {/* Açıklama */}
-          <p className="text-white/85 text-base md:text-lg leading-relaxed mb-8 max-w-[500px]">
+          {/* Text */}
+          <p className="text-white/85 text-base md:text-lg leading-relaxed mb-8 max-w-125">
             Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli isimli
             Erasmus+ projemizde yapacağımız etkinlikleri paylaşmak üzere
             kullandığımız web sitesine hoş geldiniz.
           </p>
 
-          {/* CTA Buton */}
+          {/* Buton */}
           <Link
-            href="/hakkimizda"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm md:text-base"
+            href="/about"
+            className="inline-flex items-center gap-2 bg-primary hover:bg-primary/80 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm md:text-base"
           >
-            Daha Fazla Bilgi
+            <span>Daha Fazla Bilgi</span>
             <ArrowRight size={16} />
           </Link>
         </div>
       </div>
 
-      {/* Alt kırpma etkisi */}
+      {/* Bottom effect */}
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
