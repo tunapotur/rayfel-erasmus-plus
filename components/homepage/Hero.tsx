@@ -1,15 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import HeroPic from "@/public/hero_pic.jpeg";
+// src={HeroPic}
 
 export default function Hero() {
   return (
     <section className="relative w-full min-h-[520px] md:min-h-[600px] overflow-hidden">
-
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-bg.jpg" // ← kendi görselini koy
+          // src="/images/hero-bg.jpg" // ← kendi görselini koy
+          src={HeroPic}
           alt="Erasmus+ etkinlik görseli"
           fill
           priority
@@ -23,7 +25,6 @@ export default function Hero() {
       {/* İçerik */}
       <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 h-full flex items-center py-20 md:py-28">
         <div className="max-w-[600px]">
-
           {/* Başlık */}
           <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-5 drop-shadow-sm">
             Dijital Okul Yeşil Eğitim
