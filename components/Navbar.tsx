@@ -152,41 +152,46 @@ function NavbarOperations() {
   const ref = useOutsideClick(() => setMobilMenuOpen(false));
 
   return (
-    <header
-      ref={ref}
-      className="sticky top-0 z-50 w-full shadow-sm sm:px-4 bg-background"
-    >
-      {/* Web page menu */}
-      <div className="hidden sm:flex items-center justify-between min-h-18 gap-1 sm:py-3 lg:py-0">
-        <Logo />
-        <Navigation />
-
-        <div className="flex items-center gap-2 flex-col lg:flex-row">
-          <LocalModeButtons />
-          <AuthButtons />
-        </div>
-      </div>
-
-      {/* Mobil Menu */}
-      <div className="sm:hidden mx-auto px-4">
-        <div className="flex flex-row justify-between min-h-18">
+    <>
+      <header
+        ref={ref}
+        className="sticky top-0 z-50 w-full shadow-sm sm:px-4 bg-background"
+      >
+        {/* Web page menu */}
+        <div className="hidden sm:flex items-center justify-between min-h-18 gap-1 sm:py-3 lg:py-0">
           <Logo />
+          <Navigation />
 
-          <div className="flex items-center">
+          <div className="flex items-center gap-2 flex-col lg:flex-row">
             <LocalModeButtons />
-            <MobilMenuButton />
+            <AuthButtons />
           </div>
         </div>
-        {isMobilMenuOpen && (
-          <div className="absolute bg-background pb-4 flex flex-col left-0 right-0 px-4">
-            <div className="flex flex-col border-t border-gray-200 dark:border-gray-800">
-              <Navigation />
-              <AuthButtons />
+
+        {/* Mobil Menu */}
+        <div className="sm:hidden mx-auto px-4">
+          <div className="flex flex-row justify-between min-h-18">
+            <Logo />
+
+            <div className="flex items-center">
+              <LocalModeButtons />
+              <MobilMenuButton />
             </div>
           </div>
-        )}
-      </div>
-    </header>
+          {isMobilMenuOpen && (
+            <div className="absolute bg-background pb-4 flex flex-col left-0 right-0 px-4">
+              <div className="flex flex-col border-t border-gray-200 dark:border-gray-800">
+                <Navigation />
+                <AuthButtons />
+              </div>
+            </div>
+          )}
+        </div>
+      </header>
+      {isMobilMenuOpen && (
+        <div className="fixed inset-0 z-30 flex items-center justify-center bg-gray-300/20 backdrop-blur-xs dark:bg-gray-600/50"></div>
+      )}
+    </>
   );
 }
 
