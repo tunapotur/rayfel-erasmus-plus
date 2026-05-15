@@ -8,7 +8,7 @@ import etwinning from "@/public/etwinning.png";
 export default function AboutPage() {
   const cards = [
     {
-      icon: rayfellogo, // ← kendi logonu koy
+      icon: rayfellogo, // ← Okul logosu
       iconAlt: "Rayfel logosu",
       title: "Rayfel",
       description:
@@ -54,7 +54,7 @@ export default function AboutPage() {
               key={card.title}
               className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex flex-col hover:shadow-md transition-shadow w-72"
             >
-              {/* İkon */}
+              {/* icon */}
               <div className="w-12 h-12 relative flex justify-center align-middle">
                 <Image
                   src={card.icon}
@@ -65,7 +65,7 @@ export default function AboutPage() {
                 />
               </div>
 
-              {/* İçerik */}
+              {/* content */}
               <div className="flex flex-col gap-2 flex-1">
                 <h3 className="text-gray-900 font-semibold text-base">
                   {card.title}
