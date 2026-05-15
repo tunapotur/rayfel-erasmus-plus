@@ -74,7 +74,7 @@ export default async function LocaleLayout({
         inter.variable,
       )}
     >
-      <body className="flex flex-col justify-center items-center">
+      <body className="flex flex-col lg:items-center">
         <NextIntlClientProvider locale={locale}>
           <ThemeProvider
             attribute="class"

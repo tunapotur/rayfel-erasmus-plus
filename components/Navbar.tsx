@@ -125,7 +125,7 @@ function AuthButtons() {
 
 function LocalModeButtons() {
   return (
-    <div className="flex items-center gap-1 flex-row">
+    <div className="flex items-center justify-between gap-2 sm:gap-2 sm:flex-col lg:flex-row flex-row">
       <ModeToggle></ModeToggle>
       <LocalOperation />
     </div>
@@ -168,7 +168,7 @@ function NavbarOperations() {
           <Logo />
           <Navigation />
 
-          <div className="flex items-center gap-2 flex-col lg:flex-row">
+          <div className="flex items-center gap-2">
             <LocalModeButtons />
             <AuthButtons />
           </div>
