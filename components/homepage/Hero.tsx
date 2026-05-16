@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import HeroPic from "@/public/hero_pic.jpeg";
+import HeroPic from "@/public/hero_pic.jpg";
 
 export default function Hero() {
   return (
