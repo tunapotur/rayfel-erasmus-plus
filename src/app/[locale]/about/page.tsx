@@ -16,28 +16,29 @@ function Hero() {
           src={HeroPic}
           alt="Erasmus+ etkinlik görseli"
           sizes="100vw"
-          className="w-full object-cover object-center"
+          className="w-full object-cover object-center z-2"
         />
+
         {/* Gradient overlay*/}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/20 z-3" />
       </div>
 
       {/* Content */}
-      <div className="absolute z-10 h-full pt-24 pl-12 flex flex-col max-w-160 gap-8">
-        {/* Header */}
-        <h1 className="text-gray-100 dark:text-gray-200 text-5xl font-bold leading-tight drop-shadow-sm">
+      <div className="absolute z-10 h-full sm:pt-24 sm:pl-12 flex flex-col sm:max-w-160 sm:gap-8 p-4 gap-2 w-[90%]">
+        <h1 className="text-gray-100 dark:text-gray-200 text-xl md:text-2xl lg:text-5xl font-bold leading-tight drop-shadow-sm">
           Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli
         </h1>
 
-        {/* Text */}
-        <p className="text-gray-200 dark:text-gray-300 text-lg leading-relaxed">
+        <p className="text-gray-200 dark:text-gray-300 lg:text-lg leading-relaxed text-sm w-[75%]">
           Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli isimli
           Erasmus+ projemizde yapacağımız etkinlikleri paylaşmak üzere
           kullandığımız web sitesine hoş geldiniz.
         </p>
 
-        {/* Buton */}
-        <Button asChild className="px-6 py-6 w-fit font-semibold text-md">
+        <Button
+          asChild
+          className="lg:px-6 lg:py-6 w-fit font-semibold lg:text-md text-xs"
+        >
           <Link href="/about">
             <span>Daha Fazla Bilgi</span>
             <ArrowRight size={24} />
@@ -46,7 +47,7 @@ function Hero() {
       </div>
 
       {/* Bottom effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-4" />
     </section>
   );
 }
@@ -129,7 +130,7 @@ function InfoCards() {
 
 export default function AboutPage() {
   return (
-    <div className="h-160 flex flex-col items-center relative z-15">
+    <div className="h-72 sm:h-96 md:h-120 lg:h-144 flex flex-col items-center relative z-15">
       <Hero />
       {/* <InfoCards /> */}
     </div>
