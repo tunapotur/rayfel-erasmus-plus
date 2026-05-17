@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import rayfellogo from "@/public/logo64.png";
-import erasmusplus from "@/public/erasmusplus.png";
-import etwinning from "@/public/etwinning.png";
+import logo_rayfel from "@/public/logo_rayfel.png";
+import logo_erasmus from "@/public/logo_erasmus.png";
+import logo_etwinning from "@/public/logo_etwinning.png";
 import HeroPic from "@/public/hero_pic.jpg";
 import { Button } from "@/components/ui/button";
 
@@ -24,7 +24,7 @@ function Hero() {
       </div>
 
       {/* Content */}
-      <div className="absolute z-10 h-full sm:pt-18 sm:pl-9 md:pt-24 md:pl-12 flex flex-col sm:max-w-160 sm:gap-8 p-8 gap-3 w-full sm:w-[90%] max-[400px]:p-4">
+      <div className="absolute z-10 h-full sm:pt-18 sm:pl-9 md:pt-18 md:pl-12 flex flex-col sm:max-w-160 sm:gap-8 p-8 gap-3 w-full sm:w-[90%] max-[400px]:p-4">
         <h1 className="text-gray-100 dark:text-gray-200 text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight drop-shadow-sm">
           Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli
         </h1>
@@ -55,61 +55,83 @@ function Hero() {
 function InfoCards() {
   const cards = [
     {
-      icon: rayfellogo, // ← Okul logosu
-      iconAlt: "Rayfel logosu",
       title: "Rayfel",
       description:
         "Okulumuz Lüleburgaz Ramazan Yaman Fen Lisesi web sitesini inceleyebilirsiniz.",
       href: "/",
-      iconFallback: "R",
-      iconBg: "bg-blue-600",
+      icon: {
+        logo: logo_rayfel,
+        alt: "Rayfel logosu",
+        title: "Rayfel",
+        fallback: "Ry",
+        background: "bg-orange-400",
+        size: "size-12",
+      },
     },
     {
-      icon: erasmusplus, // ← Erasmus+ logosu
-      iconAlt: "Erasmus+ logosu",
       title: "Erasmus+",
       description:
         "Erasmus+ hakkında detaylı bilgi için Erasmus+ web sitesini inceleyebilirsiniz.",
       href: "https://erasmus-plus.ec.europa.eu",
-      iconFallback: "E+",
-      iconBg: "bg-blue-500",
+      icon: {
+        logo: logo_erasmus,
+        alt: "Erasmus+ logosu",
+        title: "Erasmus+",
+        fallback: "E+",
+        background: "bg-blue-500",
+        size: "size-18",
+      },
     },
     {
-      icon: etwinning, // ← eTwinning logosu
-      iconAlt: "eTwinning logosu",
       title: "eTwinning",
       description:
         "eTwinning projeleri hakkında detaylı bilgi için eTwinning web sitesini inceleyebilirsiniz.",
       href: "https://www.etwinning.net",
-      iconFallback: "eT",
-      iconBg: "bg-green-600",
+      icon: {
+        logo: logo_etwinning,
+        alt: "eTwinning logosu",
+        title: "eTwinning",
+        fallback: "eT",
+        background: "bg-green-600",
+        size: "size-18",
+      },
     },
   ];
 
   return (
-    <section className="w-full -bottom-48 absolute z-10 flex flex-row justify-around flex-wrap gap-3">
+    <section className="w-full -bottom-56 absolute z-10 flex flex-row justify-around flex-wrap gap-3">
       {cards.map((card) => (
         <div
           key={card.title}
-          className="bg-background h-64 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm p-6 flex flex-col hover:shadow-md transition-shadow w-72"
+          className="bg-background dark:bg-gray-900 rounded-xl w-72 border border-gray-100 dark:border-gray-900 shadow-sm p-6 flex flex-col gap-4 hover:shadow-md transition-shadow"
         >
           {/* icon */}
-          <div className="w-12 h-12 relative flex justify-center align-middle">
-            <Image
-              src={card.icon}
-              alt={card.iconAlt}
-              width={48}
-              height={48}
-              className="object-contain"
-            />
+
+          <div className="size-18 flex items-center justify-start">
+            <div className={`${card.icon.size} relative`}>
+              {/* next/image ile logo — hata olursa fallback gösterilir */}
+              <div
+                className={`size-12 rounded-lg ${card.icon.background} flex items-center justify-center text-white font-bold text-sm`}
+              >
+                {card.icon.fallback}
+              </div>
+
+              <Image
+                src={card.icon.logo}
+                alt={card.icon.alt}
+                fill
+                sizes="64px"
+                className="object-contain dark:bg-gray-900"
+              />
+            </div>
           </div>
 
-          {/* content */}
-          <div className="flex flex-col gap-2 flex-1">
-            <h3 className="text-gray-900 font-semibold text-base">
+          {/* İçerik */}
+          <div className="flex flex-col gap-2">
+            <h3 className="text-gray-800 dark:text-gray-200 font-semibold text-base">
               {card.title}
             </h3>
-            <p className="text-gray-500 text-sm leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
               {card.description}
             </p>
           </div>
@@ -117,9 +139,9 @@ function InfoCards() {
           {/* Link */}
           <Link
             href={card.href}
-            className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-700 text-sm font-medium mt-auto transition-colors"
+            className="flex items-center gap-1.5 text-primary hover:text-primary/75 text-sm font-medium transition-colors mt-auto"
           >
-            İncele
+            <span>İncele</span>
             <ArrowRight size={14} />
           </Link>
         </div>
@@ -132,7 +154,7 @@ export default function AboutPage() {
   return (
     <div className="h-72 sm:h-96 md:h-120 lg:h-144 flex flex-col items-center relative z-15">
       <Hero />
-      {/* <InfoCards /> */}
+      <InfoCards />
     </div>
   );
 }
