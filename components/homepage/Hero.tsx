@@ -2,54 +2,51 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import HeroPic from "@/public/hero_pic.jpg";
+import { Button } from "../ui/button";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-130 md:min-h-150 overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src={HeroPic}
-          alt="Erasmus+ etkinlik görseli"
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-        />
-        {/* Gradient overlay*/}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/20" />
-      </div>
+    <section className="h-72 w-full sm:h-96 md:h-120 lg:h-144 flex flex-col items-center relative z-15">
+      <div className="relative size-full z-5 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src={HeroPic}
+            alt="Erasmus+ etkinlik görseli"
+            sizes="100vw"
+            className="w-full object-cover object-center z-2"
+          />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 h-full flex items-center py-20 md:py-28">
-        <div className="max-w-150">
-          {/* Header */}
-          <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-5 drop-shadow-sm">
-            <div>
-              Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli
-            </div>
+          {/* Gradient overlay*/}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/20 z-3" />
+        </div>
+
+        {/* Content */}
+        <div className="absolute z-10 h-full sm:pt-18 sm:pl-9 md:pt-18 md:pl-12 flex flex-col sm:max-w-160 sm:gap-8 p-8 gap-3 w-full sm:w-[90%] max-[400px]:p-4">
+          <h1 className="text-gray-100 dark:text-gray-200 text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight drop-shadow-sm">
+            Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli
           </h1>
 
-          {/* Text */}
-          <p className="text-white/85 text-base md:text-lg leading-relaxed mb-8 max-w-125">
+          <p className="text-gray-200 dark:text-gray-300 md:text-base lg:text-lg leading-relaxed text-sm w-full sm:w-[75%]">
             Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli isimli
             Erasmus+ projemizde yapacağımız etkinlikleri paylaşmak üzere
             kullandığımız web sitesine hoş geldiniz.
           </p>
 
-          {/* Buton */}
-          <Link
-            href="/about"
-            className="inline-flex items-center gap-2 bg-primary hover:bg-primary/80 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-sm md:text-base"
+          <Button
+            asChild
+            className="md:p-6 p-4 w-fit font-semibold md:text-base text-xs"
           >
-            <span>Daha Fazla Bilgi</span>
-            <ArrowRight size={16} />
-          </Link>
+            <Link href="/about">
+              <span>Daha Fazla Bilgi</span>
+              <ArrowRight size={24} />
+            </Link>
+          </Button>
         </div>
-      </div>
 
-      {/* Bottom effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent" />
+        {/* Bottom effect */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-4" />
+      </div>
     </section>
   );
 }
