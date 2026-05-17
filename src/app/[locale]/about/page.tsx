@@ -1,9 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import logo_rayfel from "@/public/logo_rayfel.png";
-import logo_erasmus from "@/public/logo_erasmus.png";
-import logo_etwinning from "@/public/logo_etwinning.png";
 import HeroPic from "@/public/hero_pic.jpg";
 import { Button } from "@/components/ui/button";
 
@@ -59,74 +56,29 @@ function InfoCards() {
       description:
         "Okulumuz Lüleburgaz Ramazan Yaman Fen Lisesi web sitesini inceleyebilirsiniz.",
       href: "/",
-      icon: {
-        logo: logo_rayfel,
-        alt: "Rayfel logosu",
-        title: "Rayfel",
-        fallback: "Ry",
-        background: "bg-orange-400",
-        size: "size-12",
-      },
     },
     {
       title: "Erasmus+",
       description:
         "Erasmus+ hakkında detaylı bilgi için Erasmus+ web sitesini inceleyebilirsiniz.",
       href: "https://erasmus-plus.ec.europa.eu",
-      icon: {
-        logo: logo_erasmus,
-        alt: "Erasmus+ logosu",
-        title: "Erasmus+",
-        fallback: "E+",
-        background: "bg-blue-500",
-        size: "size-18",
-      },
     },
     {
       title: "eTwinning",
       description:
         "eTwinning projeleri hakkında detaylı bilgi için eTwinning web sitesini inceleyebilirsiniz.",
       href: "https://www.etwinning.net",
-      icon: {
-        logo: logo_etwinning,
-        alt: "eTwinning logosu",
-        title: "eTwinning",
-        fallback: "eT",
-        background: "bg-green-600",
-        size: "size-18",
-      },
     },
   ];
 
   return (
-    <section className="w-full -bottom-56 absolute z-10 flex flex-row justify-around flex-wrap gap-3">
+    <section className="w-full -bottom-32 absolute z-10 flex flex-row justify-around flex-wrap gap-3">
       {cards.map((card) => (
         <div
           key={card.title}
           className="bg-background dark:bg-gray-900 rounded-xl w-72 border border-gray-100 dark:border-gray-900 shadow-sm p-6 flex flex-col gap-4 hover:shadow-md transition-shadow"
         >
-          {/* icon */}
-
-          <div className="size-18 flex items-center justify-start">
-            <div className={`${card.icon.size} relative`}>
-              {/* next/image ile logo — hata olursa fallback gösterilir */}
-              <div
-                className={`size-12 rounded-lg ${card.icon.background} flex items-center justify-center text-white font-bold text-sm`}
-              >
-                {card.icon.fallback}
-              </div>
-
-              <Image
-                src={card.icon.logo}
-                alt={card.icon.alt}
-                fill
-                sizes="64px"
-                className="object-contain dark:bg-gray-900"
-              />
-            </div>
-          </div>
-
-          {/* İçerik */}
+          {/* Content */}
           <div className="flex flex-col gap-2">
             <h3 className="text-gray-800 dark:text-gray-200 font-semibold text-base">
               {card.title}
