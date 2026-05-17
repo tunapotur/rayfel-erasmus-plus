@@ -6,45 +6,47 @@ import { Button } from "@/components/ui/button";
 
 function Hero() {
   return (
-    <section className="relative size-full z-5 overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <Image
-          src={HeroPic}
-          alt="Erasmus+ etkinlik görseli"
-          sizes="100vw"
-          className="w-full object-cover object-center z-2"
-        />
+    <section className="h-72 w-full sm:h-96 md:h-120 lg:h-144 flex flex-col items-center relative z-15">
+      <div className="relative size-full z-5 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src={HeroPic}
+            alt="Erasmus+ etkinlik görseli"
+            sizes="100vw"
+            className="w-full object-cover object-center z-2"
+          />
 
-        {/* Gradient overlay*/}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/20 z-3" />
+          {/* Gradient overlay*/}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/50 to-black/20 z-3" />
+        </div>
+
+        {/* Content */}
+        <div className="absolute z-10 h-full sm:pt-18 sm:pl-9 md:pt-18 md:pl-12 flex flex-col sm:max-w-160 sm:gap-8 p-8 gap-3 w-full sm:w-[90%] max-[400px]:p-4">
+          <h1 className="text-gray-100 dark:text-gray-200 text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight drop-shadow-sm">
+            Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli
+          </h1>
+
+          <p className="text-gray-200 dark:text-gray-300 md:text-base lg:text-lg leading-relaxed text-sm w-full sm:w-[75%]">
+            Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli isimli
+            Erasmus+ projemizde yapacağımız etkinlikleri paylaşmak üzere
+            kullandığımız web sitesine hoş geldiniz.
+          </p>
+
+          <Button
+            asChild
+            className="md:p-6 p-4 w-fit font-semibold md:text-base text-xs"
+          >
+            <Link href="/about">
+              <span>Daha Fazla Bilgi</span>
+              <ArrowRight size={24} />
+            </Link>
+          </Button>
+        </div>
+
+        {/* Bottom effect */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-4" />
       </div>
-
-      {/* Content */}
-      <div className="absolute z-10 h-full sm:pt-18 sm:pl-9 md:pt-18 md:pl-12 flex flex-col sm:max-w-160 sm:gap-8 p-8 gap-3 w-full sm:w-[90%] max-[400px]:p-4">
-        <h1 className="text-gray-100 dark:text-gray-200 text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight drop-shadow-sm">
-          Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli
-        </h1>
-
-        <p className="text-gray-200 dark:text-gray-300 md:text-base lg:text-lg leading-relaxed text-sm w-full sm:w-[75%]">
-          Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli isimli
-          Erasmus+ projemizde yapacağımız etkinlikleri paylaşmak üzere
-          kullandığımız web sitesine hoş geldiniz.
-        </p>
-
-        <Button
-          asChild
-          className="md:p-6 p-4 w-fit font-semibold md:text-base text-xs"
-        >
-          <Link href="/about">
-            <span>Daha Fazla Bilgi</span>
-            <ArrowRight size={24} />
-          </Link>
-        </Button>
-      </div>
-
-      {/* Bottom effect */}
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-4" />
     </section>
   );
 }
@@ -72,11 +74,11 @@ function InfoCards() {
   ];
 
   return (
-    <section className="w-full -bottom-32 absolute z-10 flex flex-row justify-around flex-wrap gap-3">
+    <section className="w-full flex flex-col gap-6 md:flex-row">
       {cards.map((card) => (
         <div
           key={card.title}
-          className="bg-background dark:bg-gray-900 rounded-xl w-72 border border-gray-100 dark:border-gray-900 shadow-sm p-6 flex flex-col gap-4 hover:shadow-md transition-shadow"
+          className="bg-background dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-900 shadow-sm p-6 flex flex-col gap-4 hover:shadow-md transition-shadow"
         >
           {/* Content */}
           <div className="flex flex-col gap-2">
@@ -104,7 +106,7 @@ function InfoCards() {
 
 export default function AboutPage() {
   return (
-    <div className="h-72 sm:h-96 md:h-120 lg:h-144 flex flex-col items-center relative z-15">
+    <div className="flex flex-col items-center gap-6">
       <Hero />
       <InfoCards />
     </div>
