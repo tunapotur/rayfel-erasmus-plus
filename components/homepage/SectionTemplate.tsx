@@ -3,7 +3,7 @@
 import { ReactNode } from "react";
 import SectionHeader from "./SectionHeader";
 import SectionName from "./SectionName";
-import ArrowLink, { ArrowLinkType } from "./ArrowLink";
+import ArrowLink, { ArrowLinkType } from "../ArrowLink";
 import { usePathname } from "@/src/i18n/navigation";
 
 interface SectionProps {

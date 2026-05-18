@@ -8,13 +8,13 @@ export default function HomePage() {
     <div className="flex flex-col">
       <Hero />
 
-      <div className="px-6 gap-16 flex flex-col mt-8">
+      <div className="px-4 gap-16 flex flex-col mt-8">
         <InfoCards />
         <About />
         <Announcements />
       </div>
 
-      <div className="flex flex-col h-128 w-full font-bold text-2xl items-center justify-center">
+      <div className="flex flex-col h-256 w-full font-bold text-2xl items-center justify-center">
         Silinecek Boşluk
       </div>
     </div>

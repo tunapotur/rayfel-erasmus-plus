@@ -1,7 +1,7 @@
 import about from "@/public/about.png";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
-import SectionTemplate from "../SectionTemplate";
+import SectionTemplate from "./SectionTemplate";
 
 const description =
   "Bu proje, öğrencilerimizin çevre bilinci ve dijital yetkinliklerini bütüncül bir yaklaşımla geliştirmeyi amaçlamaktadır. Proje kapsamında, sürdürülebilirlik kavramı yalnızca teorik bilgi olarak değil; günlük yaşamla ilişkilendirilen uygulamalı etkinliklerle ele alınacaktır.";
@@ -21,7 +21,7 @@ export default function About() {
     >
       <div className="flex flex-col md:flex-row items-center gap-4 md:gap-0">
         {/* Content */}
-        <div className="order-last md:order-first md:w-2/3 flex flex-col gap-4 md:pr-6 md:gap-0">
+        <div className="order-last md:order-first md:w-2/3 flex flex-col gap-4 md:pr-6">
           {/* Explanation - 2 paragraph */}
           <p className="text-muted-foreground text-base leading-relaxed">
             {description}
@@ -46,10 +46,11 @@ export default function About() {
 
         {/* Image */}
         <Image
-          className="orter-first md:order-last md:w-1/3 object-contain object-center rounded-2xl shadow-xl"
           src={about}
           alt="Dijital Okul Yeşil Eğitim projesi görseli"
           // fill
+          loading="eager"
+          className="orter-first md:order-last md:w-1/3 object-contain object-center rounded-2xl shadow-xl"
           sizes="100vw"
         />
       </div>
