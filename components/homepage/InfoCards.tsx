@@ -35,7 +35,7 @@ export default function InfoCards() {
             <h3 className="text-gray-800 dark:text-gray-200 font-semibold text-base">
               {card.title}
             </h3>
-            <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed">
               {card.description}
             </p>
           </div>
