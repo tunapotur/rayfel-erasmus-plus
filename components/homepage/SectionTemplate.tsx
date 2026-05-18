@@ -26,7 +26,7 @@ export default function SectionTemplate({
 
   return (
     <section
-      className={`flex flex-col gap-6 px-4 py-6 rounded-md ${bg ? bg : ""}`}
+      className={`flex flex-col gap-6 px-4 py-6 lg:rounded-md ${bg ? bg : ""}`}
     >
       <div className="flex flex-row justify-between items-center">
         <SectionName text={name} />
