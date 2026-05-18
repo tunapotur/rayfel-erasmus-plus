@@ -4,13 +4,13 @@ import About from "@/components/homepage/About";
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col gap-16">
-      <div className="flex flex-col items-center gap-6">
-        <Hero />
-        <InfoCards />
-      </div>
+    <div className="flex flex-col">
+      <Hero />
 
-      <About />
+      <div className="px-6 gap-16 flex flex-col mt-8">
+        <InfoCards />
+        <About />
+      </div>
 
       <div className="flex flex-col h-128 w-full font-bold text-2xl items-center justify-center">
         Silinecek Boşluk
