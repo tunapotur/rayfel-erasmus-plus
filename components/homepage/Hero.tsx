@@ -13,8 +13,10 @@ export default function Hero() {
           <Image
             src={HeroPic}
             alt="Erasmus+ etkinlik görseli"
-            sizes="100vw"
+            fill
+            loading="eager"
             className="w-full object-cover object-center z-2"
+            sizes="100vw"
           />
 
           {/* Gradient overlay*/}

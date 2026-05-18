@@ -1,8 +1,13 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import ArrowLink from "./ArrowLink";
+
+import { ArrowLinkType } from "./ArrowLink";
 
 interface CardProps {
-  card: { title: string; description: string; href: string };
+  card: {
+    title: string;
+    description: string;
+    link: ArrowLinkType;
+  };
 }
 
 export default function Card({ card }: CardProps) {
@@ -18,14 +23,7 @@ export default function Card({ card }: CardProps) {
         </p>
       </div>
 
-      {/* Link */}
-      <Link
-        href={card.href}
-        className="flex items-center gap-1.5 text-primary hover:text-primary/75 text-sm font-medium transition-colors mt-auto"
-      >
-        <span>İncele</span>
-        <ArrowRight size={14} />
-      </Link>
+      <ArrowLink link={card.link} />
     </div>
   );
 }
