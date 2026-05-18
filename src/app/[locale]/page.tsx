@@ -8,7 +8,7 @@ export default function HomePage() {
     <div className="flex flex-col">
       <Hero />
 
-      <div className="px-4 gap-16 flex flex-col mt-8">
+      <div className="gap-8 flex flex-col mt-8">
         <InfoCards />
         <About />
         <Announcements />
