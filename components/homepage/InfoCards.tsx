@@ -24,7 +24,7 @@ const cards = [
 
 export default function InfoCards() {
   return (
-    <section className="w-full flex flex-col gap-6 md:flex-row">
+    <section className="w-full flex flex-col px-6 sm:px-12 md:px-3 gap-6 md:flex-row">
       {cards.map((card) => (
         <div
           key={card.title}
