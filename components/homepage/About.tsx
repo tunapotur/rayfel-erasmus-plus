@@ -21,9 +21,9 @@ export default function About() {
         Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli
       </h3>
 
-      <div className="flex flex-row items-center">
+      <div className="flex flex-col md:flex-row items-center gap-4 md:gap-0">
         {/* Content */}
-        <div className="w-2/3 flex flex-col gap-4 pr-6">
+        <div className="order-last md:order-first md:w-2/3 flex flex-col gap-4 md:pr-6 md:gap-0">
           {/* Explanation - 2 paragraph */}
           <p className="text-muted-foreground text-base leading-relaxed">
             {description}
@@ -48,7 +48,7 @@ export default function About() {
 
         {/* Image */}
         <Image
-          className="w-1/3 object-contain object-center rounded-2xl shadow-xl"
+          className="orter-first md:order-last md:w-1/3 object-contain object-center rounded-2xl shadow-xl"
           src={about}
           alt="Dijital Okul Yeşil Eğitim projesi görseli"
           // fill
