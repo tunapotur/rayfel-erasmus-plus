@@ -4,7 +4,7 @@ import { Globe, Share2, Mail } from "lucide-react";
 import logo from "@/public/logo_rayfel.png";
 
 const quickLinks = [
-  { label: "Ramazan Yaman Fen Lisesi", href: "#", active: true },
+  { label: "Ramazan Yaman Fen Lisesi", href: "#" },
   { label: "Erasmus+", href: "#" },
   { label: "eTwinning", href: "#" },
 ];
@@ -55,11 +55,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className={`text-sm transition-colors hover:text-primary ${
-                      link.active
-                        ? "text-primary underline underline-offset-4"
-                        : "text-muted-foreground"
-                    }`}
+                    className={`text-sm transition-colors hover:text-primary text-muted-foreground`}
                   >
                     {link.label}
                   </Link>
