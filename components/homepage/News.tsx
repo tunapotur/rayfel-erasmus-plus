@@ -78,7 +78,7 @@ export default function News() {
       bg="bg-gray-100/50 dark:bg-gray-800/50"
       link={{ text: "Tüm Haberlerini Gör", href: "/news" }}
     >
-      <div className="w-full grid md:grid-cols-3 md:grid-rows-2 grid-cols-1 gap-3">
+      <div className="w-full grid md:grid-cols-3 md:grid-rows-2 grid-cols-1 gap-6">
         {cards.map((item) => (
           <Card key={item.title} card={item} />
         ))}
