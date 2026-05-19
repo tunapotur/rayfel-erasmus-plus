@@ -15,10 +15,6 @@ export default function HomePage() {
         <Announcements />
         <News />
       </div>
-
-      <div className="flex flex-col h-256 w-full font-bold text-2xl items-center justify-center">
-        Silinecek Boşluk
-      </div>
     </div>
   );
 }
