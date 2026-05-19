@@ -10,7 +10,7 @@ import Image from "next/image";
  * date: string | undefined;
  */
 
-enum Badge {
+export enum BadgeType {
   NEWS = "NEWS",
   MOBILITY = "MOBILITY",
   DISSEMINATION = "DISSEMINATION",
@@ -23,8 +23,30 @@ interface CardProps {
     link: ArrowLinkType;
     date?: string;
     image?: string;
-    badge?: Badge;
+    badge?: BadgeType;
   };
+}
+
+function Badge({ badge }: { badge: BadgeType }) {
+  const badgeColors: Record<BadgeType, string> = {
+    [BadgeType.NEWS]: "bg-blue-600 dark:bg-blue-700",
+    [BadgeType.MOBILITY]: "bg-amber-600 dark:bg-amber-700",
+    [BadgeType.DISSEMINATION]: "bg-green-600 dark:bg-green-700",
+  };
+
+  const badgeName: Record<BadgeType, string> = {
+    [BadgeType.NEWS]: "HABER",
+    [BadgeType.MOBILITY]: "HAREKETLİLİK",
+    [BadgeType.DISSEMINATION]: "YAYGINLAŞTIRMA",
+  };
+
+  return (
+    <div
+      className={`absolute rounded-xl px-3 py-3 text-[0.625rem] leading-0 top-3 left-3 text-gray-100 dark:text-gray-200 shadow-xl font-light ${badgeColors[badge]}`}
+    >
+      {badgeName[badge]}
+    </div>
+  );
 }
 
 export default function Card({ card }: CardProps) {
@@ -42,7 +64,7 @@ export default function Card({ card }: CardProps) {
             sizes="(max-width: 768px) 100vw, 33vw"
           />
 
-          {card.badge && <div>badge</div>}
+          {card.badge && <Badge badge={card.badge} />}
         </div>
       )}
       {/* Date */}

@@ -1,5 +1,5 @@
 import SectionTemplate from "./SectionTemplate";
-import Card from "../Card";
+import Card, { BadgeType } from "../Card";
 
 /**
  * HABER        → news
@@ -16,6 +16,7 @@ const cards = [
       "Erasmus+ kapsamında yürütülen yeni projemizle yeşil becerilerin eğitime entegrasyonu.",
     link: { text: "Devamını Oku", href: "#" },
     image: "/cards_samples/card_01.jpg",
+    badge: BadgeType.NEWS,
   },
   {
     tag: "News",
@@ -25,6 +26,7 @@ const cards = [
       "Sanat ve tasarım odaklı projelerimizin sergileneceği etkinlik için geri sayım başladı.",
     link: { text: "Devamını Oku", href: "#" },
     image: "/cards_samples/card_02.jpg",
+    badge: BadgeType.NEWS,
   },
   {
     tag: "Mobility",
@@ -34,6 +36,7 @@ const cards = [
       "Öğrencilerimiz sürdürülebilir enerji projeleriyle il genelinde düzenlenen yarışmada birinci oldu.",
     link: { text: "Devamını Oku", href: "#" },
     image: "/cards_samples/card_03.jpg",
+    badge: BadgeType.MOBILITY,
   },
   {
     tag: "Dissemination",
@@ -43,6 +46,7 @@ const cards = [
       "Robotik takımımız, önümüzdeki ay düzenlenecek olan milli lig müsabakaları için yoğun bir tempoyla çalışıyor.",
     link: { text: "Devamını Oku", href: "#" },
     image: "/cards_samples/card_04.jpg",
+    badge: BadgeType.DISSEMINATION,
   },
   {
     tag: "Mobility",
@@ -52,6 +56,7 @@ const cards = [
       "Okul genelinde başlatılan yeni geri dönüşüm projesiyle sıfır atık hedeflerimize bir adım daha yaklaşıyoruz.",
     link: { text: "Devamını Oku", href: "#" },
     image: "/cards_samples/card_05.jpg",
+    badge: BadgeType.MOBILITY,
   },
   {
     tag: "Dissemination",
@@ -61,6 +66,7 @@ const cards = [
       "Okulumuzdan mezun olup başarılı kariyerlere sahip isimler, tecrübelerini paylaşmak için öğrencilerle buluşuyor.",
     link: { text: "Devamını Oku", href: "#" },
     image: "/cards_samples/card_06.jpg",
+    badge: BadgeType.DISSEMINATION,
   },
 ];
 
