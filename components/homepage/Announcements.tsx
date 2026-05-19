@@ -7,28 +7,28 @@ const announcements = [
     title: "Bilim Şenliği Proje Başvuruları Başladı",
     description:
       "Yılın en büyük bilim şenliğinde yerinizi almak için projelerinizi sisteme yükleyebilirsiniz.",
-    link: { text: "İncele", href: "#" },
+    link: { text: "Devamını Oku", href: "#" },
   },
   {
     date: "16 Ocak 2024",
     title: "Yeni Mentorluk Programı Başvuruları Açıldı",
     description:
       "Proje ekiplerimizin profesyonel isimlerden alacağım mentörlük eğitimleri haftaya başlıyor.",
-    link: { text: "İncele", href: "#" },
+    link: { text: "Devamını Oku", href: "#" },
   },
   {
     date: "18 Ocak 2024",
     title: "Bölgesel Robotik Turnuvası Kaytıları Açıldı",
     description:
       "Bu yılki robotik turnuvasında okulumuzun temsil etmek isteyen takımlar için başvurular...",
-    link: { text: "İncele", href: "#" },
+    link: { text: "Devamını Oku", href: "#" },
   },
   {
     date: "20 Ocak 2024",
     title: "Kütüphane Çalışma Saatleri Güncellendi",
     description:
       "Sınav dönemi boyunca kütüphanemiz haftalık olarak gece 22:00'ye kadar hizmet verecektir.",
-    link: { text: "İncele", href: "#" },
+    link: { text: "Devamını Oku", href: "#" },
   },
 ];
 
@@ -37,7 +37,7 @@ export default function Announcements() {
     <SectionTemplate
       name="Güncel Duyurular"
       header="Duyurular"
-      link={{ text: "Tümünü Gör", href: "/announcements" }}
+      link={{ text: "Tüm Duyuruları Gör", href: "/announcements" }}
     >
       <div className="w-full flex flex-col gap-4 md:flex-row">
         {announcements.map((item) => (
