@@ -10,6 +10,12 @@ import Image from "next/image";
  * date: string | undefined;
  */
 
+/**
+ * HABER        → news
+ * HAREKETLİLİK → mobility
+ * YAYGINLAŞTIRMA → dissemination
+ */
+
 export enum BadgeType {
   NEWS = "NEWS",
   MOBILITY = "MOBILITY",

@@ -37,7 +37,7 @@ export default function Announcements() {
     <SectionTemplate
       name="Güncel Duyurular"
       header="Duyurular"
-      link={{ text: "Tüm Duyuruları Gör", href: "/announcements" }}
+      link={{ text: "Tümünü Gör", href: "/announcements" }}
     >
       <div className="w-full flex flex-col gap-4 md:flex-row">
         {announcements.map((item) => (

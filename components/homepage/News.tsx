@@ -1,12 +1,6 @@
 import SectionTemplate from "./SectionTemplate";
 import Card, { BadgeType } from "../Card";
 
-/**
- * HABER        → news
- * HAREKETLİLİK → mobility
- * YAYGINLAŞTIRMA → dissemination
- */
-
 const cards = [
   {
     tag: "News",
@@ -76,7 +70,7 @@ export default function News() {
       name="Haber Akışı"
       header="Haberler"
       bg="bg-gray-100/50 dark:bg-gray-800/50"
-      link={{ text: "Tüm Haberlerini Gör", href: "/news" }}
+      link={{ text: "Tümünü Gör", href: "/news" }}
     >
       <div className="w-full grid md:grid-cols-3 md:grid-rows-2 grid-cols-1 gap-6">
         {cards.map((item) => (
