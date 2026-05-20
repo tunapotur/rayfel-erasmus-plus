@@ -25,11 +25,11 @@ export default function Hero() {
 
         {/* Content */}
         <div className="absolute z-10 h-full sm:pt-18 sm:pl-9 md:pt-18 md:pl-12 flex flex-col sm:max-w-160 sm:gap-8 p-8 gap-3 w-full sm:w-[90%] max-[400px]:p-4">
-          <h1 className="text-gray-100 dark:text-gray-200 text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight drop-shadow-sm">
+          <h1 className="text-bright-header text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight drop-shadow-sm">
             Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli
           </h1>
 
-          <p className="text-gray-200 dark:text-gray-300 md:text-base lg:text-lg leading-relaxed text-sm w-full sm:w-[75%]">
+          <p className="text-bright-header md:text-base lg:text-lg leading-relaxed text-sm w-full sm:w-[75%]">
             Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli isimli
             Erasmus+ projemizde yapacağımız etkinlikleri paylaşmak üzere
             kullandığımız web sitesine hoş geldiniz.

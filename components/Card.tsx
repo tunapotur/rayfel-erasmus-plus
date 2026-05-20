@@ -48,7 +48,7 @@ function Badge({ badge }: { badge: BadgeType }) {
 
   return (
     <div
-      className={`absolute rounded-xl px-3 py-3 text-[0.625rem] leading-0 top-3 left-3 text-gray-100 dark:text-gray-200 shadow-xl font-light ${badgeColors[badge]}`}
+      className={`absolute rounded-xl px-3 py-3 text-[0.625rem] leading-0 top-3 left-3 text-bright-header shadow-xl font-light ${badgeColors[badge]}`}
     >
       {badgeName[badge]}
     </div>
