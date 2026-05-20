@@ -146,7 +146,7 @@ const announcements = [
 
 export default function AnnouncementsPage() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center mb-auto">
       <PageBadgeHeader
         topHeader="Platform Duyuruları"
         header="Duyurular"
