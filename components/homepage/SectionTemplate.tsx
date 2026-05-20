@@ -3,6 +3,7 @@
 import { ReactNode } from "react";
 import ArrowLink, { ArrowLinkType } from "../ArrowLink";
 import { usePathname } from "@/src/i18n/navigation";
+import SectionWrapper from "../SectionWrapper";
 
 interface SectionProps {
   children: ReactNode;
@@ -39,9 +40,7 @@ export default function SectionTemplate({
   const isActive = pathname.startsWith(link.href);
 
   return (
-    <section
-      className={`flex flex-col gap-6 px-4 py-6 lg:rounded-md ${hasBackground ? "bg-background-gray" : ""}`}
-    >
+    <SectionWrapper hasBackground={hasBackground}>
       <div className="flex flex-row justify-between items-center">
         <SectionName text={name} />
         {!isActive && <ArrowLink link={link} />}
@@ -49,6 +48,6 @@ export default function SectionTemplate({
 
       <SectionHeader text={header} />
       {children}
-    </section>
+    </SectionWrapper>
   );
 }
