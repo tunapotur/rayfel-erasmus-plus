@@ -16,7 +16,7 @@ import Image from "next/image";
  * YAYGINLAŞTIRMA → dissemination
  */
 
-export enum BadgeType {
+export enum CardBadgeType {
   NEWS = "NEWS",
   MOBILITY = "MOBILITY",
   DISSEMINATION = "DISSEMINATION",
@@ -29,21 +29,21 @@ interface CardProps {
     link: ArrowLinkType;
     date?: string;
     image?: string;
-    badge?: BadgeType;
+    badge?: CardBadgeType;
   };
 }
 
-function Badge({ badge }: { badge: BadgeType }) {
-  const badgeColors: Record<BadgeType, string> = {
-    [BadgeType.NEWS]: "bg-blue-600 dark:bg-blue-700",
-    [BadgeType.MOBILITY]: "bg-amber-600 dark:bg-amber-700",
-    [BadgeType.DISSEMINATION]: "bg-green-600 dark:bg-green-700",
+function CardBadge({ badge }: { badge: CardBadgeType }) {
+  const badgeColors: Record<CardBadgeType, string> = {
+    [CardBadgeType.NEWS]: "bg-blue-600 dark:bg-blue-700",
+    [CardBadgeType.MOBILITY]: "bg-amber-600 dark:bg-amber-700",
+    [CardBadgeType.DISSEMINATION]: "bg-green-600 dark:bg-green-700",
   };
 
-  const badgeName: Record<BadgeType, string> = {
-    [BadgeType.NEWS]: "HABER",
-    [BadgeType.MOBILITY]: "HAREKETLİLİK",
-    [BadgeType.DISSEMINATION]: "YAYGINLAŞTIRMA",
+  const badgeName: Record<CardBadgeType, string> = {
+    [CardBadgeType.NEWS]: "HABER",
+    [CardBadgeType.MOBILITY]: "HAREKETLİLİK",
+    [CardBadgeType.DISSEMINATION]: "YAYGINLAŞTIRMA",
   };
 
   return (
@@ -70,7 +70,7 @@ export default function Card({ card }: CardProps) {
             sizes="(max-width: 768px) 100vw, 33vw"
           />
 
-          {card.badge && <Badge badge={card.badge} />}
+          {card.badge && <CardBadge badge={card.badge} />}
         </div>
       )}
       {/* Date */}
