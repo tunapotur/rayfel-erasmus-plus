@@ -1,4 +1,5 @@
 import Card from "@/components/Card";
+import PageBadgeHeader from "@/components/PageBadgeHeader";
 
 const announcements = [
   {
@@ -146,21 +147,11 @@ const announcements = [
 export default function AnnouncementsPage() {
   return (
     <div className="flex flex-col items-center">
-      {/* Page Header */}
-      <div className="px-4 py-6 w-full">
-        <div className="shadow-sm p-6 bg-amber-500 dark:bg-amber-600 rounded-xl">
-          <h2 className="text-bright-header dark:text-gray-200 text-xs sm:text-base font-bold uppercase tracking-widest mb-2">
-            Platform Duyuruları
-          </h2>
-          <h1 className="text-bright-header mb-2 text-3xl md:text-5xl font-bold leading-tight drop-shadow-sm">
-            Duyurular
-          </h1>
-          <p className="text-bright-header leading-tight text-xs md:text-base md:w-[70%] lg:w-[50%]">
-            Proje başvuruları ve platformumuzdaki en yeni gelişmeleri buradan
-            takip edebilirsiniz.
-          </p>
-        </div>
-      </div>
+      <PageBadgeHeader
+        topHeader="Platform Duyuruları"
+        header="Duyurular"
+        content="Proje başvuruları ve platformumuzdaki en yeni gelişmeleri buradan takip edebilirsiniz."
+      />
 
       {/* Cards List */}
       <div className="w-full grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 px-4 py-6">
