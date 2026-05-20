@@ -3,7 +3,7 @@
 import { ReactNode } from "react";
 import ArrowLink, { ArrowLinkType } from "../ArrowLink";
 import { usePathname } from "@/src/i18n/navigation";
-import SectionWrapper from "../SectionWrapper";
+import SectionWrapper from "./SectionWrapper";
 
 interface SectionProps {
   children: ReactNode;
