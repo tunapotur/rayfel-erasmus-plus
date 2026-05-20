@@ -69,7 +69,7 @@ export default function News() {
     <SectionTemplate
       name="Haber Akışı"
       header="Haberler"
-      bg="bg-background-gray"
+      hasBackground
       link={{ text: "Tümünü Gör", href: "/news" }}
     >
       <div className="w-full grid md:grid-cols-3 md:grid-rows-2 grid-cols-1 gap-6">
