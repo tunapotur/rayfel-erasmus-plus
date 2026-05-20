@@ -83,7 +83,7 @@ export default async function LocaleLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="max-w-5xl min-h-screen">
+            <div className="max-w-5xl min-h-screen flex flex-col justify-between">
               <Navbar />
               {children}
               <Footer />
