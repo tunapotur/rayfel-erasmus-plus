@@ -1,30 +1,10 @@
 import Card from "@/components/Card";
-
-const cards = [
-  {
-    title: "Rayfel",
-    description:
-      "Okulumuz Lüleburgaz Ramazan Yaman Fen Lisesi web sitesini inceleyebilirsiniz.",
-    href: "#",
-  },
-  {
-    title: "Erasmus+",
-    description:
-      "Erasmus+ hakkında detaylı bilgi için Erasmus+ web sitesini inceleyebilirsiniz.",
-    href: "#",
-  },
-  {
-    title: "eTwinning",
-    description:
-      "eTwinning projeleri hakkında detaylı bilgi için eTwinning web sitesini inceleyebilirsiniz.",
-    href: "#",
-  },
-];
+import info_cards from "@/sample_data/info_cards";
 
 export default function InfoCards() {
   return (
     <section className="w-full flex flex-col gap-6 md:flex-row px-4">
-      {cards.map((card) => (
+      {info_cards.map((card) => (
         <Card key={card.title} card={card} />
       ))}
     </section>

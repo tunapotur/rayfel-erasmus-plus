@@ -1,6 +1,6 @@
 import { InfoType } from "@/lib/types/DataTypes";
 
-const cards: Array<InfoType> = [
+const info_cards: Array<InfoType> = [
   {
     id: 0,
     title: "Rayfel",
@@ -23,3 +23,5 @@ const cards: Array<InfoType> = [
     href: "#",
   },
 ];
+
+export default info_cards;
