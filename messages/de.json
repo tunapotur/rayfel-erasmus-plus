@@ -22,10 +22,46 @@
     "mobility": "mobilität",
     "dissemination": "verbreitung"
   },
-  "ArrowLinkText": {
-    "learnMore": "Mehr erfahren",
-    "readMore": "Weiterlesen",
-    "aboutUsPage": "Über uns",
-    "seeAll": "Alle anzeigen"
+  "CardLinkText": { "readMore": "Weiterlesen" },
+  "HeroSection": {
+    "header": "Digitale Schule Grüne Bildung: Das Lernmodell für zukünftige Generationen",
+    "content": "Willkommen auf unserer Website, auf der wir die Aktivitäten unseres Erasmus+-Projekts mit dem Titel 'Digitale Schule Grüne Bildung: Das Lernmodell für zukünftige Generationen' teilen.",
+    "linkText": "Mehr erfahren",
+    "imageAltText": "Veranstaltungsbild"
+  },
+  "AboutSection": {
+    "name": "Über uns",
+    "header": "Digitale Schule Grüne Bildung: Das Lernmodell für zukünftige Generationen",
+    "linkText": "Über uns Seite",
+    "imageAltText": "Visualisierung des Projekts Digitale Schule Grüne Bildung"
+  },
+  "AnnouncementsSection": {
+    "name": "Aktuelle Ankündigungen",
+    "header": "Ankündigungen",
+    "linkText": "Alle anzeigen"
+  },
+  "NewsSection": {
+    "name": "Newsfeed",
+    "header": "Neuigkeiten",
+    "linkText": "Alle anzeigen"
+  },
+  "footer": {
+    "rayfelProjectsHeader": "Rayfel Projekte",
+    "rayfelProjectsContent": "Das digitale Zuhause akademischer Projekte. Die Zukunft: Digitale Schule Grüne Bildung: Das Lernmodell für zukünftige Generationen",
+    "quickLinks": "Schnellzugriff",
+    "institutions": "Institutionen",
+    "followUs": "Folgen Sie uns",
+    "copyRight": "© 2026 Rayfel Projeler. Alle Rechte vorbehalten.",
+    "rayfelHighSchool": "Ramazan-Yaman-Naturwissenschaftliches Gymnasium"
+  },
+  "AnnouncementsPage": {
+    "topHeader": "Plattform-Ankündigungen",
+    "header": "Ankündigungen",
+    "content": "Hier können Sie Projektanträge und die neuesten Entwicklungen auf unserer Plattform mitverfolgen."
+  },
+  "NewsPage": {
+    "topHeader": "Plattform-Neuigkeiten",
+    "header": "Neuigkeiten",
+    "content": "Hier können Sie die neuesten Entwicklungen und Erfolgsgeschichten aus unseren Projekten mitverfolgen."
   }
 }

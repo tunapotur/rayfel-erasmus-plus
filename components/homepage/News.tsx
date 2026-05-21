@@ -1,14 +1,19 @@
+"use client";
+
 import SectionTemplate from "./SectionTemplate";
 import Card from "../Card";
-import news from "@/sample_data/news";
+import news from "@/sample_data_tr/news";
+import { useTranslations } from "next-intl";
 
 export default function News() {
+  const t = useTranslations("NewsSection");
+
   return (
     <SectionTemplate
-      name="Haber Akışı"
-      header="Haberler"
+      name={t("name")}
+      header={t("header")}
       hasBackground
-      linkText="Tümünü Gör"
+      linkText={t("linkText")}
       href="/news"
     >
       <div className="w-full grid md:grid-cols-3 md:grid-rows-2 grid-cols-1 gap-6">

@@ -1,15 +1,19 @@
+"use client";
+
 import Card from "@/components/Card";
 import PageBadgeHeader from "@/components/PageBadgeHeader";
-import news from "@/sample_data/news";
+import news from "@/sample_data_tr/news";
+import { useTranslations } from "next-intl";
 
 export default function NewsPage() {
+  const t = useTranslations("NewsPage");
+
   return (
     <div className="flex flex-col items-center mb-auto">
       <PageBadgeHeader
-        topHeader="Platform Haberleri"
-        header="Haberler"
-        content="Projelerimizden en son gelişmeleri ve başarı hikayelerimizi buradan takip edebilirsiniz."
-        news
+        topHeader={t("topHeader")}
+        header={t("header")}
+        content={t("content")}
       />
 
       {/* Announcements Cards List */}

@@ -22,10 +22,46 @@
     "mobility": "mobility",
     "dissemination": "dissemination"
   },
-  "ArrowLinkText": {
-    "learnMore": "Learn More",
-    "readMore": "Read More",
-    "aboutUsPage": "About Us Page",
-    "seeAll": "See All"
+  "CardLinkText": { "readMore": "Read More" },
+  "HeroSection": {
+    "header": "Digital School Green Education: The Learning Model for Future Generations",
+    "content": "Welcome to our website, which we use to share the activities of our Erasmus+ project titled 'Digital School Green Education: The Learning Model for Future Generations'.",
+    "linkText": "Learn more",
+    "imageAltText": "Erasmus+ event image"
+  },
+  "AboutSection": {
+    "name": "About Us",
+    "header": "Digital School Green Education The Learning Model for Future Generations",
+    "linkText": "About Us Page",
+    "imageAltText": "Digital School Green Education project visual"
+  },
+  "AnnouncementsSection": {
+    "name": "Current Announcements",
+    "header": "Announcements",
+    "linkText": "View All"
+  },
+  "NewsSection": {
+    "name": "News Feed",
+    "header": "News",
+    "linkText": "View All"
+  },
+  "footer": {
+    "rayfelProjectsHeader": "Rayfel Projects",
+    "rayfelProjectsContent": "The digital home of academic projects. Future: Digital School Green Education: The Learning Model for Future Generations",
+    "quickLinks": "Quick Access",
+    "institutions": "institutions",
+    "followUs": "Follow Us",
+    "copyRight": "© 2026 Rayfel Projects. All rights reserved.",
+    "rayfelHighSchool": "Ramazan Yaman Science High School"
+  },
+  "AnnouncementsPage": {
+    "topHeader": "Platform Announcements",
+    "header": "Announcements",
+    "content": "You can follow project applications and the latest developments on our platform here."
+  },
+  "NewsPage": {
+    "topHeader": "Platform News",
+    "header": "News",
+    "content": "You can follow the latest developments and success stories from our projects here."
   }
 }

@@ -71,7 +71,7 @@ function CardBadge({ card_NewsType }: { card_NewsType: string }) {
 }
 
 export default function Card({ card }: CardProps) {
-  const t = useTranslations("ArrowLinkText");
+  const t = useTranslations("CardLinkText");
 
   return (
     <div className="bg-background dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-900 shadow-sm p-6 flex flex-col gap-2 hover:shadow-md transition-shadow">

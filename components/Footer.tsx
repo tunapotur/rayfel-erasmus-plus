@@ -1,27 +1,16 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { Globe, Share2, Mail } from "lucide-react";
+// 1. Lucide ikonlarının tamamını Icons takma adıyla import ediyoruz
+import { icons } from "lucide-react";
 import logo from "@/public/logo_rayfel.png";
-
-const quickLinks = [
-  { label: "Ramazan Yaman Fen Lisesi", href: "#" },
-  { label: "Erasmus+", href: "#" },
-  { label: "eTwinning", href: "#" },
-];
-
-const institutions = [
-  { label: "Erasmus Avrupa Komisyonu", href: "#" },
-  { label: "Türkiye Ulusal Ajansı", href: "#" },
-  { label: "Esep eTwinning", href: "#" },
-];
-
-const socialLinks = [
-  { icon: Globe, href: "#", label: "Website" },
-  { icon: Share2, href: "#", label: "Sosyal Medya" },
-  { icon: Mail, href: "#", label: "E-posta" },
-];
+import footer_data from "@/sample_data_tr/footer";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+
   return (
     <footer className="bg-background-gray mt-24">
       {/* Main Footer */}
@@ -38,24 +27,25 @@ export default function Footer() {
                 className="object-contain"
               />
               <span className="font-bold text-base text-foreground">
-                Rayfel Projeler
+                {t("rayfelProjectsHeader")}
               </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Akademik projelerin dijital evi. Geleceği Dijital Okul Yeşil
-              Eğitim Gelecek Nesillerin Öğrenme Modeli
+              {t("rayfelProjectsContent")}
             </p>
           </div>
 
           {/* Col 2 — Hızlı Erişim */}
           <div className="flex flex-col gap-4">
-            <h4 className="font-bold text-sm text-foreground">Hızlı Erişim</h4>
+            <h4 className="font-bold text-sm text-foreground">
+              {t("quickLinks")}
+            </h4>
             <ul className="flex flex-col gap-2.5">
-              {quickLinks.map((link) => (
+              {footer_data.quickLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className={`text-sm transition-colors hover:text-primary text-muted-foreground`}
+                    className="text-sm transition-colors hover:text-primary text-muted-foreground"
                   >
                     {link.label}
                   </Link>
@@ -66,9 +56,11 @@ export default function Footer() {
 
           {/* Col 3 — Kurumlar */}
           <div className="flex flex-col gap-4">
-            <h4 className="font-bold text-sm text-foreground">Kurumlar</h4>
+            <h4 className="font-bold text-sm text-foreground">
+              {t("institutions")}
+            </h4>
             <ul className="flex flex-col gap-2.5">
-              {institutions.map((link) => (
+              {footer_data.institutions.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
@@ -84,19 +76,24 @@ export default function Footer() {
           {/* Col 4 — Bizi Takip Edin */}
           <div className="flex flex-col gap-4">
             <h4 className="font-bold text-sm text-foreground">
-              Bizi Takip Edin
+              {t("followUs")}
             </h4>
             <div className="flex items-center gap-2">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
-                <Link
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-200 dark:bg-gray-800 text-muted-foreground hover:text-primary hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
-                >
-                  <Icon size={16} />
-                </Link>
-              ))}
+              {footer_data.socialLinks.map(({ iconName, href, label }) => {
+                // Tipi en başta kısıtladığımız için TypeScript burada hata vermez, tamamen güvenli kabul eder.
+                const IconComponent = icons[iconName];
+
+                return (
+                  <Link
+                    key={label}
+                    href={href}
+                    aria-label={label}
+                    className="flex items-center justify-center w-10 h-10 rounded-lg bg-gray-200 dark:bg-gray-800 text-muted-foreground hover:text-primary hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
+                  >
+                    {IconComponent ? <IconComponent size={16} /> : null}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -107,11 +104,9 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="max-w-5xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
-        <p className="text-muted-foreground text-sm">
-          © 2026 Rayfel Projeler. Tüm hakları saklıdır.
-        </p>
+        <p className="text-muted-foreground text-sm">{t("copyRight")}</p>
         <p className="text-muted-foreground text-xs tracking-widest uppercase">
-          Ramazan Yaman Fen Lisesi
+          {t("rayfelHighSchool")}
         </p>
       </div>
     </footer>

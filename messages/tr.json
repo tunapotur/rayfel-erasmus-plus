@@ -22,10 +22,46 @@
     "mobility": "hareketlilik",
     "dissemination": "yaygınlaştırma"
   },
-  "ArrowLinkText": {
-    "learnMore": "Daha Fazla Bilgi",
-    "readMore": "Devamını Oku",
-    "aboutUsPage": "Hakkımızda Sayfası",
-    "seeAll": "Tümünü Gör"
+  "CardLinkText": { "readMore": "Devamını Oku" },
+  "HeroSection": {
+    "imageAltText": "Erasmus+ etkinlik görseli",
+    "header": "Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli",
+    "content": "Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli isimli Erasmus+ projemizde yapacağımız etkinlikleri paylaşmak üzere kullandığımız web sitesine hoş geldiniz.",
+    "linkText": "Daha fazla bilgi"
+  },
+  "AboutSection": {
+    "name": "Hakkımızda",
+    "header": "Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli",
+    "linkText": "Hakkımızda Sayfası",
+    "imageAltText": "Dijital Okul Yeşil Eğitim projesi görseli"
+  },
+  "AnnouncementsSection": {
+    "name": "Güncel Duyurular",
+    "header": "Duyurular",
+    "linkText": "Tümünü Gör"
+  },
+  "NewsSection": {
+    "name": "Haber Akışı",
+    "header": "Haberler",
+    "linkText": "Tümünü Gör"
+  },
+  "footer": {
+    "rayfelProjectsHeader": "Rayfel Projeler",
+    "rayfelProjectsContent": "Akademik projelerin dijital evi. Geleceği Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli",
+    "quickLinks": "Quick Access",
+    "institutions": "Kurumlar",
+    "followUs": "Bizi Takip Edin",
+    "copyRight": "© 2026 Rayfel Projeler. Tüm hakları saklıdır.",
+    "rayfelHighSchool": "Ramazan Yaman Fen Lisesi"
+  },
+  "AnnouncementsPage": {
+    "topHeader": "Platform Duyuruları",
+    "header": "Duyurular",
+    "content": "Proje başvuruları ve platformumuzdaki en yeni gelişmeleri buradan takip edebilirsiniz."
+  },
+  "NewsPage": {
+    "topHeader": "Platform Haberleri",
+    "header": "Haberler",
+    "content": "Projelerimizden en son gelişmeleri ve başarı hikayelerimizi buradan takip edebilirsiniz."
   }
 }

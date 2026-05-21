@@ -1,23 +1,20 @@
+"use client";
+
 import about from "@/public/about.png";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import SectionTemplate from "./SectionTemplate";
-
-const description =
-  "Bu proje, öğrencilerimizin çevre bilinci ve dijital yetkinliklerini bütüncül bir yaklaşımla geliştirmeyi amaçlamaktadır. Proje kapsamında, sürdürülebilirlik kavramı yalnızca teorik bilgi olarak değil; günlük yaşamla ilişkilendirilen uygulamalı etkinliklerle ele alınacaktır.";
-
-const highlights = [
-  "Çevre dostu uygulamaların okul ortamında yaygınlaştırılması,",
-  "Öğrencilerin dijital araçlar ile üretim yapmalarının sağlanması",
-  "Erasmus+ iş birlikleri ile farklı ülkelerden okullarla ortak çalışmalar,",
-];
+import about_section from "@/sample_data_tr/about_section";
+import { useTranslations } from "next-intl";
 
 export default function About() {
+  const t = useTranslations("AboutSection");
+
   return (
     <SectionTemplate
-      name="Hakkımızda"
-      header="Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli"
-      linkText="Hakkımızda Sayfası"
+      name={t("name")}
+      header={t("header")}
+      linkText={t("linkText")}
       href="/about"
       hasBackground
     >
@@ -26,12 +23,12 @@ export default function About() {
         <div className="order-last md:order-first md:w-2/3 flex flex-col gap-4 md:pr-6">
           {/* Explanation - 2 paragraph */}
           <p className="text-muted-foreground text-base leading-relaxed">
-            {description}
+            {about_section.description}
           </p>
 
           {/* List */}
           <ul className="flex flex-col gap-3">
-            {highlights.map((item, index) => (
+            {about_section.highlights.map((item, index) => (
               <li
                 key={index}
                 className="flex items-start gap-3 text-muted-foreground text-sm"
@@ -49,7 +46,7 @@ export default function About() {
         {/* Image */}
         <Image
           src={about}
-          alt="Dijital Okul Yeşil Eğitim projesi görseli"
+          alt={t("imageAltText")}
           // fill
           loading="eager"
           className="orter-first md:order-last md:w-1/3 object-contain object-center rounded-2xl shadow-xl"
