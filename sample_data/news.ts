@@ -1,12 +1,4 @@
-export interface NewsType {
-  id: number;
-  newsType: string;
-  date: string;
-  title: string;
-  description: string;
-  href: string;
-  image: string;
-}
+import { NewsType } from "@/lib/types/DataTypes";
 
 const news: Array<NewsType> = [
   {
