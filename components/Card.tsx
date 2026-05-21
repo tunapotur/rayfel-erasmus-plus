@@ -13,7 +13,7 @@ import { useTranslations } from "next-intl";
  * date: string | undefined;
  */
 
-export enum NewsType {
+enum NewsType {
   NEWS = "news",
   MOBILITY = "mobility",
   DISSEMINATION = "dissemination",

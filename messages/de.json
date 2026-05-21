@@ -21,5 +21,11 @@
     "news": "nachrichten",
     "mobility": "mobilität",
     "dissemination": "verbreitung"
+  },
+  "arrowLinkText": {
+    "learnMore": "Mehr erfahren",
+    "readMore": "Weiterlesen",
+    "aboutUsPage": "Über uns",
+    "seeAll": "Alle anzeigen"
   }
 }

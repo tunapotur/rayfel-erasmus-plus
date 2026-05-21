@@ -21,5 +21,11 @@
     "news": "haberler",
     "mobility": "hareketlilik",
     "dissemination": "yaygınlaştırma"
+  },
+  "arrowLinkText": {
+    "learnMore": "Daha Fazla Bilgi",
+    "readMore": "Devamını Oku",
+    "aboutUsPage": "Hakkımızda Sayfası",
+    "seeAll": "Tümünü Gör"
   }
 }

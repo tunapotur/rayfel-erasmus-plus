@@ -21,5 +21,11 @@
     "news": "news",
     "mobility": "mobility",
     "dissemination": "dissemination"
+  },
+  "arrowLinkText": {
+    "learnMore": "Learn More",
+    "readMore": "Read More",
+    "aboutUsPage": "About Us Page",
+    "seeAll": "See All"
   }
 }
