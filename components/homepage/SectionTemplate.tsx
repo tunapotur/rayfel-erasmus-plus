@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import ArrowLink, { ArrowLinkType } from "../ArrowLink";
+import ArrowLink from "../ArrowLink";
 import { usePathname } from "@/src/i18n/navigation";
 import SectionWrapper from "./SectionWrapper";
 
@@ -9,8 +9,9 @@ interface SectionProps {
   children: ReactNode;
   name: string;
   header: string;
+  linkText: string;
+  href: string;
   hasBackground?: boolean;
-  link: ArrowLinkType;
 }
 
 function SectionName({ text }: { text: string }) {
@@ -33,17 +34,18 @@ export default function SectionTemplate({
   children,
   name,
   header,
+  href,
+  linkText,
   hasBackground,
-  link,
 }: SectionProps) {
   const pathname = usePathname();
-  const isActive = pathname.startsWith(link.href);
+  const isActive = pathname.startsWith(href);
 
   return (
     <SectionWrapper hasBackground={hasBackground}>
       <div className="flex flex-row justify-between items-center">
         <SectionName text={name} />
-        {!isActive && <ArrowLink link={link} />}
+        {!isActive && <ArrowLink text={linkText} href={href} />}
       </div>
 
       <SectionHeader text={header} />

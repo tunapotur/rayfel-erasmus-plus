@@ -5,19 +5,19 @@ const cards = [
     title: "Rayfel",
     description:
       "Okulumuz Lüleburgaz Ramazan Yaman Fen Lisesi web sitesini inceleyebilirsiniz.",
-    link: { text: "İncele", href: "#" },
+    href: "#",
   },
   {
     title: "Erasmus+",
     description:
       "Erasmus+ hakkında detaylı bilgi için Erasmus+ web sitesini inceleyebilirsiniz.",
-    link: { text: "İncele", href: "#" },
+    href: "#",
   },
   {
     title: "eTwinning",
     description:
       "eTwinning projeleri hakkında detaylı bilgi için eTwinning web sitesini inceleyebilirsiniz.",
-    link: { text: "İncele", href: "#" },
+    href: "#",
   },
 ];
 

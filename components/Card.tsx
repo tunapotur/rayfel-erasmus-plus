@@ -1,9 +1,8 @@
 "use client";
 
-import ArrowLink from "./ArrowLink";
-import { ArrowLinkType } from "./ArrowLink";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import ArrowLink from "./ArrowLink";
 
 /**
  * ✅ Önerilen
@@ -23,7 +22,7 @@ interface CardProps {
   card: {
     title: string;
     description: string;
-    link: ArrowLinkType;
+    href: string;
     date?: string;
     image?: string;
     newsType?: string;
@@ -72,6 +71,8 @@ function CardBadge({ card_NewsType }: { card_NewsType: string }) {
 }
 
 export default function Card({ card }: CardProps) {
+  const t = useTranslations("ArrowLinkText");
+
   return (
     <div className="bg-background dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-900 shadow-sm p-6 flex flex-col gap-2 hover:shadow-md transition-shadow">
       {/* Image */}
@@ -106,7 +107,7 @@ export default function Card({ card }: CardProps) {
         </p>
       </div>
 
-      <ArrowLink link={card.link} />
+      <ArrowLink text={t("readMore")} href={card.href} />
     </div>
   );
 }

@@ -17,8 +17,9 @@ export default function About() {
     <SectionTemplate
       name="Hakkımızda"
       header="Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli"
+      linkText="Hakkımızda Sayfası"
+      href="/about"
       hasBackground
-      link={{ text: "Hakkımızda Sayfası", href: "/about" }}
     >
       <div className="flex flex-col md:flex-row items-center gap-4 md:gap-0">
         {/* Content */}

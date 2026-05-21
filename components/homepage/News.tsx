@@ -8,7 +8,7 @@ const cards = [
     title: "Sürdürülebilir Eğitim Modelleri",
     description:
       "Erasmus+ kapsamında yürütülen yeni projemizle yeşil becerilerin eğitime entegrasyonu.",
-    link: { text: "Devamını Oku", href: "#" },
+    href: "#",
     image: "/cards_samples/card_01.jpg",
   },
   {
@@ -17,7 +17,7 @@ const cards = [
     title: "Yazılım Atölyesi Kayıtları Açıldı",
     description:
       "Sanat ve tasarım odaklı projelerimizin sergileneceği etkinlik için geri sayım başladı.",
-    link: { text: "Devamını Oku", href: "#" },
+    href: "#",
     image: "/cards_samples/card_02.jpg",
   },
   {
@@ -26,7 +26,7 @@ const cards = [
     title: "Fen Projeleri Yarışmasında Birincilik",
     description:
       "Öğrencilerimiz sürdürülebilir enerji projeleriyle il genelinde düzenlenen yarışmada birinci oldu.",
-    link: { text: "Devamını Oku", href: "#" },
+    href: "#",
     image: "/cards_samples/card_03.jpg",
   },
   {
@@ -35,7 +35,7 @@ const cards = [
     title: "Milli Robotik Ligi Hazırlıkları",
     description:
       "Robotik takımımız, önümüzdeki ay düzenlenecek olan milli lig müsabakaları için yoğun bir tempoyla çalışıyor.",
-    link: { text: "Devamını Oku", href: "#" },
+    href: "#",
     image: "/cards_samples/card_04.jpg",
   },
   {
@@ -44,7 +44,7 @@ const cards = [
     title: "Geri Dönüşüm Kampanyası Başladı",
     description:
       "Okul genelinde başlatılan yeni geri dönüşüm projesiyle sıfır atık hedeflerimize bir adım daha yaklaşıyoruz.",
-    link: { text: "Devamını Oku", href: "#" },
+    href: "#",
     image: "/cards_samples/card_05.jpg",
   },
   {
@@ -53,7 +53,7 @@ const cards = [
     title: "Mezunlarla Kariyer Söyleşileri",
     description:
       "Okulumuzdan mezun olup başarılı kariyerlere sahip isimler, tecrübelerini paylaşmak için öğrencilerle buluşuyor.",
-    link: { text: "Devamını Oku", href: "#" },
+    href: "#",
     image: "/cards_samples/card_06.jpg",
   },
 ];
@@ -64,7 +64,8 @@ export default function News() {
       name="Haber Akışı"
       header="Haberler"
       hasBackground
-      link={{ text: "Tümünü Gör", href: "/news" }}
+      linkText="Tümünü Gör"
+      href="/news"
     >
       <div className="w-full grid md:grid-cols-3 md:grid-rows-2 grid-cols-1 gap-6">
         {cards.map((item) => (
