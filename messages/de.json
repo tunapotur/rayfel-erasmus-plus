@@ -16,5 +16,10 @@
     "news": "Nachrichten",
     "eTwinning": "eTwinning"
   },
-  "AuthButtons": { "login": "Anmelden", "signup": "Registrieren" }
+  "AuthButtons": { "login": "Anmelden", "signup": "Registrieren" },
+  "NewsType": {
+    "news": "nachrichten",
+    "mobility": "mobilität",
+    "dissemination": "verbreitung"
+  }
 }

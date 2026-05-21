@@ -1,6 +1,9 @@
+"use client";
+
 import ArrowLink from "./ArrowLink";
 import { ArrowLinkType } from "./ArrowLink";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 /**
  * ✅ Önerilen
@@ -8,12 +11,6 @@ import Image from "next/image";
  *
  * Aynı şey, daha uzun
  * date: string | undefined;
- */
-
-/**
- * HABER        → news
- * HAREKETLİLİK → mobility
- * YAYGINLAŞTIRMA → dissemination
  */
 
 export enum NewsType {
@@ -33,7 +30,22 @@ interface CardProps {
   };
 }
 
+/** Burada Ne Yaptık?
+Object.values(NewsType): Bu kod bize arka planda ["news", "mobility", "dissemination"] şeklinde bir string dizisi verir.
+
+.includes(...): Dışarıdan gelen string'in bu dizide yer alıp almadığını kontrol eder.
+
+as NewsType: TypeScript'e "Merak etme, ben bu string'in NewsType enum'ına ait bir değer olduğunu doğruladım, bunu o tiple kabul et" demiş oluyoruz (Type Assertion).
+
+💡 Küçük Bir İpucu (Best Practice): Eğer bu fonksiyonu (muhtemelen bir React bileşeni) çağıran yerler de senin kontrolündeyse, fonksiyonun parametresini direkt string yapmak yerine NewsType veya NewsType değerlerinin bir birleşimi (union) yapmak işi kökten çözer:
+
+function CardBadge_v2({ card_NewsType }: { card_NewsType: NewsType })
+
+Böylece fonksiyonun içine daha en baştan yanlış bir string gönderilmesini TypeScript derleme aşamasında engellemiş olursun.
+ */
 function CardBadge({ card_NewsType }: { card_NewsType: string }) {
+  const t = useTranslations("NewsType");
+
   // 1. Gelen string değerin, NewsType enum'ının değerlerinden biri olup olmadığını kontrol ediyoruz
   const isValidNewsType = Object.values(NewsType).includes(
     card_NewsType as NewsType,
@@ -50,17 +62,11 @@ function CardBadge({ card_NewsType }: { card_NewsType: string }) {
     [NewsType.DISSEMINATION]: "bg-green-600 dark:bg-green-700",
   };
 
-  const badgeName: Record<NewsType, string> = {
-    [NewsType.NEWS]: "HABER",
-    [NewsType.MOBILITY]: "HAREKETLİLİK",
-    [NewsType.DISSEMINATION]: "YAYGINLAŞTIRMA",
-  };
-
   return (
     <div
       className={`absolute rounded-xl px-3 py-3 text-[0.625rem] leading-0 top-3 left-3 text-bright-header shadow-xl font-light ${badgeColors[cardBadge]}`}
     >
-      {badgeName[cardBadge]}
+      {t(cardBadge).toUpperCase()}
     </div>
   );
 }

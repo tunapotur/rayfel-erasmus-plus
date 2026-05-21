@@ -16,5 +16,10 @@
     "news": "News",
     "eTwinning": "eTwinning"
   },
-  "AuthButtons": { "login": "Log In", "signup": "Sign Up" }
+  "AuthButtons": { "login": "Log In", "signup": "Sign Up" },
+  "NewsType": {
+    "news": "news",
+    "mobility": "mobility",
+    "dissemination": "dissemination"
+  }
 }

@@ -16,5 +16,10 @@
     "news": "Haberler",
     "eTwinning": "eTwinning"
   },
-  "AuthButtons": { "login": "Giriş", "signup": "Kayıt" }
+  "AuthButtons": { "login": "Giriş", "signup": "Kayıt" },
+  "NewsType": {
+    "news": "haberler",
+    "mobility": "hareketlilik",
+    "dissemination": "yaygınlaştırma"
+  }
 }
