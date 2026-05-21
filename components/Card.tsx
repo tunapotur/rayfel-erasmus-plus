@@ -16,10 +16,10 @@ import Image from "next/image";
  * YAYGINLAŞTIRMA → dissemination
  */
 
-export enum CardBadgeType {
-  NEWS = "NEWS",
-  MOBILITY = "MOBILITY",
-  DISSEMINATION = "DISSEMINATION",
+export enum NewsType {
+  NEWS = "news",
+  MOBILITY = "mobility",
+  DISSEMINATION = "dissemination",
 }
 
 interface CardProps {
@@ -29,28 +29,38 @@ interface CardProps {
     link: ArrowLinkType;
     date?: string;
     image?: string;
-    badge?: CardBadgeType;
+    newsType?: string;
   };
 }
 
-function CardBadge({ badge }: { badge: CardBadgeType }) {
-  const badgeColors: Record<CardBadgeType, string> = {
-    [CardBadgeType.NEWS]: "bg-blue-600 dark:bg-blue-700",
-    [CardBadgeType.MOBILITY]: "bg-amber-600 dark:bg-amber-700",
-    [CardBadgeType.DISSEMINATION]: "bg-green-600 dark:bg-green-700",
+function CardBadge({ card_NewsType }: { card_NewsType: string }) {
+  // 1. Gelen string değerin, NewsType enum'ının değerlerinden biri olup olmadığını kontrol ediyoruz
+  const isValidNewsType = Object.values(NewsType).includes(
+    card_NewsType as NewsType,
+  );
+
+  // 2. Eğer geçerli bir değerse enum türüne cast ediyoruz (dönüştürüyoruz), değilse bir fallback (varsayılan) belirliyoruz
+  const cardBadge: NewsType = isValidNewsType
+    ? (card_NewsType as NewsType)
+    : NewsType.NEWS; // Gelen string hatalıysa varsayılan olarak NEWS atadık
+
+  const badgeColors: Record<NewsType, string> = {
+    [NewsType.NEWS]: "bg-blue-600 dark:bg-blue-700",
+    [NewsType.MOBILITY]: "bg-amber-600 dark:bg-amber-700",
+    [NewsType.DISSEMINATION]: "bg-green-600 dark:bg-green-700",
   };
 
-  const badgeName: Record<CardBadgeType, string> = {
-    [CardBadgeType.NEWS]: "HABER",
-    [CardBadgeType.MOBILITY]: "HAREKETLİLİK",
-    [CardBadgeType.DISSEMINATION]: "YAYGINLAŞTIRMA",
+  const badgeName: Record<NewsType, string> = {
+    [NewsType.NEWS]: "HABER",
+    [NewsType.MOBILITY]: "HAREKETLİLİK",
+    [NewsType.DISSEMINATION]: "YAYGINLAŞTIRMA",
   };
 
   return (
     <div
-      className={`absolute rounded-xl px-3 py-3 text-[0.625rem] leading-0 top-3 left-3 text-bright-header shadow-xl font-light ${badgeColors[badge]}`}
+      className={`absolute rounded-xl px-3 py-3 text-[0.625rem] leading-0 top-3 left-3 text-bright-header shadow-xl font-light ${badgeColors[cardBadge]}`}
     >
-      {badgeName[badge]}
+      {badgeName[cardBadge]}
     </div>
   );
 }
@@ -70,7 +80,7 @@ export default function Card({ card }: CardProps) {
             sizes="(max-width: 768px) 100vw, 33vw"
           />
 
-          {card.badge && <CardBadge badge={card.badge} />}
+          {card.newsType && <CardBadge card_NewsType={card.newsType} />}
         </div>
       )}
       {/* Date */}
