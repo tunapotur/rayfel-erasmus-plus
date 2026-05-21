@@ -14,6 +14,7 @@ export default function NewsPage() {
         topHeader={t("topHeader")}
         header={t("header")}
         content={t("content")}
+        news
       />
 
       {/* Announcements Cards List */}
