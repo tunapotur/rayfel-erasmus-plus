@@ -1,5 +1,3 @@
-"use client";
-
 import Card from "@/components/Card";
 
 import PageWrapper from "@/components/PageWrapper";
