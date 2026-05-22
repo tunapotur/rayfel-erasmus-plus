@@ -3,16 +3,11 @@ import Card from "@/components/Card";
 import AnnouncementsPagination from "@/components/AnnouncementsPagination";
 import announcements from "@/sample_data_tr/announcements";
 import { redirect } from "next/navigation";
+import { PageProps } from "@/lib/types/DataTypes";
 
 const ITEMS_PER_PAGE = 9;
 
-interface AnnouncementsPageProps {
-  searchParams: Promise<{ page?: string }>;
-}
-
-export default async function AnnouncementsPage({
-  searchParams,
-}: AnnouncementsPageProps) {
+export default async function AnnouncementsPage({ searchParams }: PageProps) {
   const { page } = await searchParams;
 
   const totalPages = Math.ceil(announcements.length / ITEMS_PER_PAGE);
