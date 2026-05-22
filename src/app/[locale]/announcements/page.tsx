@@ -1,27 +1,47 @@
-"use client";
-
+import PageWrapper from "@/components/PageWrapper";
 import Card from "@/components/Card";
-import PageBadgeHeader from "@/components/PageBadgeHeader";
+import AnnouncementsPagination from "@/components/AnnouncementsPagination";
 import announcements from "@/sample_data_tr/announcements";
-import { useTranslations } from "next-intl";
+import { redirect } from "next/navigation";
 
-export default function AnnouncementsPage() {
-  const t = useTranslations("AnnouncementsPage");
+const ITEMS_PER_PAGE = 9;
+
+interface AnnouncementsPageProps {
+  searchParams: Promise<{ page?: string }>;
+}
+
+export default async function AnnouncementsPage({
+  searchParams,
+}: AnnouncementsPageProps) {
+  const { page } = await searchParams;
+
+  const totalPages = Math.ceil(announcements.length / ITEMS_PER_PAGE);
+  const pageNumber = parseInt(page ?? "");
+
+  // Geçersiz veya eksik page parametresi → ?page=1'e yönlendir
+  if (!page || isNaN(pageNumber) || pageNumber < 1 || pageNumber > totalPages) {
+    redirect(`/announcements?page=1`);
+  }
+
+  const startIndex = (pageNumber - 1) * ITEMS_PER_PAGE;
+  const currentAnnouncements = announcements.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE,
+  );
 
   return (
-    <div className="flex flex-col items-center mb-auto">
-      <PageBadgeHeader
-        topHeader={t("topHeader")}
-        header={t("header")}
-        content={t("content")}
-      />
-
+    <PageWrapper pageText="AnnouncementsPage">
       {/* Announcements Cards List */}
       <div className="w-full grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 px-4 py-6">
-        {announcements.map((item) => (
+        {currentAnnouncements.map((item) => (
           <Card key={item.title} card={item} />
         ))}
       </div>
-    </div>
+
+      <AnnouncementsPagination
+        currentPage={pageNumber}
+        totalPages={totalPages}
+      />
+    </PageWrapper>
   );
 }
