@@ -7,11 +7,9 @@ import { useTranslations } from "next-intl";
 export default function PageWrapper({
   children,
   pageText,
-  news,
 }: {
   children: ReactNode;
   pageText: string;
-  news?: boolean;
 }) {
   const t = useTranslations(pageText);
 
@@ -21,7 +19,7 @@ export default function PageWrapper({
         topHeader={t("topHeader")}
         header={t("header")}
         content={t("content")}
-        news={news}
+        news={pageText === "NewsPage" ? true : false}
       />
       {children}
     </div>
