@@ -63,5 +63,6 @@
     "topHeader": "Platform Haberleri",
     "header": "Haberler",
     "content": "Projelerimizden en son gelişmeleri ve başarı hikayelerimizi buradan takip edebilirsiniz."
-  }
+  },
+  "pagination": { "previous": "Önceki", "next": "İleri" }
 }

@@ -14,6 +14,6 @@ export interface NewsType extends AnnouncementsType {
   image: string;
 }
 
-export interface PageProps {
+export interface SearchParamsPageProps {
   searchParams: Promise<{ page?: string }>;
 }

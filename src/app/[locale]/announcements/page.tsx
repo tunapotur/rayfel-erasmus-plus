@@ -1,28 +1,24 @@
 import PageWrapper from "@/components/PageWrapper";
 import Card from "@/components/Card";
-import AnnouncementsPagination from "@/components/AnnouncementsPagination";
+import PaginationOperations from "@/components/PaginationOperations";
 import announcements from "@/sample_data_tr/announcements";
-import { redirect } from "next/navigation";
-import { PageProps } from "@/lib/types/DataTypes";
+import { SearchParamsPageProps } from "@/lib/types/DataTypes";
+import resolvePagination from "@/lib/resolvePagination";
 
 const ITEMS_PER_PAGE = 9;
 
-export default async function AnnouncementsPage({ searchParams }: PageProps) {
-  const { page } = await searchParams;
+export default async function AnnouncementsPage({
+  searchParams,
+}: SearchParamsPageProps) {
+  const [totalPages, pageNumber, startIndex, endIndex] =
+    await resolvePagination(
+      "announcements",
+      searchParams,
+      ITEMS_PER_PAGE,
+      announcements.length,
+    );
 
-  const totalPages = Math.ceil(announcements.length / ITEMS_PER_PAGE);
-  const pageNumber = parseInt(page ?? "");
-
-  // Geçersiz veya eksik page parametresi → ?page=1'e yönlendir
-  if (!page || isNaN(pageNumber) || pageNumber < 1 || pageNumber > totalPages) {
-    redirect(`/announcements?page=1`);
-  }
-
-  const startIndex = (pageNumber - 1) * ITEMS_PER_PAGE;
-  const currentAnnouncements = announcements.slice(
-    startIndex,
-    startIndex + ITEMS_PER_PAGE,
-  );
+  const currentAnnouncements = announcements.slice(startIndex, endIndex);
 
   return (
     <PageWrapper pageText="AnnouncementsPage">
@@ -33,9 +29,10 @@ export default async function AnnouncementsPage({ searchParams }: PageProps) {
         ))}
       </div>
 
-      <AnnouncementsPagination
+      <PaginationOperations
         currentPage={pageNumber}
         totalPages={totalPages}
+        pageLink="announcements"
       />
     </PageWrapper>
   );

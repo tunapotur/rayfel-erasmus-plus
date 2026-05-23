@@ -63,5 +63,6 @@
     "topHeader": "Plattform-Neuigkeiten",
     "header": "Neuigkeiten",
     "content": "Hier können Sie die neuesten Entwicklungen und Erfolgsgeschichten aus unseren Projekten mitverfolgen."
-  }
+  },
+  "pagination": { "previous": "Vorherige", "next": "Nächste" }
 }

@@ -63,5 +63,6 @@
     "topHeader": "Platform News",
     "header": "News",
     "content": "You can follow the latest developments and success stories from our projects here."
-  }
+  },
+  "pagination": { "previous": "Previous", "next": "Next" }
 }
