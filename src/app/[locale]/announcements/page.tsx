@@ -1,9 +1,10 @@
 import PageWrapper from "@/components/PageWrapper";
 import Card from "@/components/Card";
 import PaginationOperations from "@/components/PaginationOperations";
-import announcements from "@/sample_data_tr/announcements";
 import { SearchParamsPageProps } from "@/lib/types/DataTypes";
 import resolvePagination from "@/lib/resolvePagination";
+
+import announcements from "@/sample_data_tr/announcements";
 
 const ITEMS_PER_PAGE = 9;
 
@@ -23,12 +24,13 @@ export default async function AnnouncementsPage({
   return (
     <PageWrapper pageText="AnnouncementsPage">
       {/* Announcements Cards List */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 px-4 py-6">
+      <div className="col3-cards-grid">
         {currentAnnouncements.map((item) => (
           <Card key={item.title} card={item} />
         ))}
       </div>
 
+      {/* Pagination  */}
       <PaginationOperations
         currentPage={pageNumber}
         totalPages={totalPages}
