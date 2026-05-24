@@ -2,7 +2,7 @@
 
 import SectionTemplate from "./SectionTemplate";
 import { useTranslations } from "next-intl";
-import Card_v2 from "../Card_v2";
+import Card_v2 from "../Card";
 import contents_announcements from "@/sample_data/contents_announcements";
 
 export default function Announcements() {

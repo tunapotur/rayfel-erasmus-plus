@@ -1,4 +1,4 @@
-import Card_v2 from "../Card_v2";
+import Card_v2 from "../Card";
 import contents_info from "@/sample_data/contents_info";
 
 export default function InfoCards() {

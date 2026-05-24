@@ -2,22 +2,25 @@ export interface SearchParamsPageProps {
   searchParams: Promise<{ page?: string }>;
 }
 
-export type contentType =
-  | "info"
-  | "announcement"
-  | "news"
-  | "mobility"
-  | "dissemination";
+export const CONTENT_TYPES = [
+  "info",
+  "announcement",
+  "news",
+  "mobility",
+  "dissemination",
+] as const;
+export type CONTENT_TYPE = (typeof CONTENT_TYPES)[number];
 
-export type languageType = "en" | "de" | "tr";
+export const LANGUAGE_TYPES = ["en", "de", "tr"] as const;
+export type LANGUAGE_TYPE = (typeof LANGUAGE_TYPES)[number];
 
 export interface Content {
   id: number;
-  type: contentType;
+  type: CONTENT_TYPE;
   title: string;
   description: string;
   href: string;
-  language: languageType;
+  language: LANGUAGE_TYPE;
   date?: string;
   headline_image?: string;
   mainText?: string;
