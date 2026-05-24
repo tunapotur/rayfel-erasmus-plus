@@ -1,6 +1,6 @@
-import { InfoType } from "@/lib/types/DataTypes";
+import { InfoCard } from "@/lib/types/DataTypes";
 
-const info_cards: Array<InfoType> = [
+const info_cards: Array<InfoCard> = [
   {
     id: 0,
     title: "Rayfel",

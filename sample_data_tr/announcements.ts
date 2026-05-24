@@ -1,6 +1,6 @@
-import { AnnouncementsType } from "@/lib/types/DataTypes";
+import { AnnouncementsCard } from "@/lib/types/DataTypes";
 
-const announcements: Array<AnnouncementsType> = [
+const announcements: Array<AnnouncementsCard> = [
   {
     id: 0,
     date: "12 Ocak 2024",

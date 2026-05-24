@@ -1,6 +1,6 @@
-import { NewsType } from "@/lib/types/DataTypes";
+import { NewsCard } from "@/lib/types/DataTypes";
 
-const news: Array<NewsType> = [
+const news: Array<NewsCard> = [
   {
     id: 0,
     newsType: "news",

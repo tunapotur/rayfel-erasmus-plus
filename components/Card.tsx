@@ -3,6 +3,12 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import ArrowLink from "./ArrowLink";
+import {
+  InfoCard,
+  AnnouncementsCard,
+  NewsCard,
+  NewsType,
+} from "@/lib/types/DataTypes";
 
 /**
  * ✅ Önerilen
@@ -12,71 +18,46 @@ import ArrowLink from "./ArrowLink";
  * date: string | undefined;
  */
 
-enum NewsType {
-  NEWS = "news",
-  MOBILITY = "mobility",
-  DISSEMINATION = "dissemination",
-}
+type CardProps = InfoCard | AnnouncementsCard | NewsCard;
 
-interface CardProps {
-  card: {
-    title: string;
-    description: string;
-    href: string;
-    date?: string;
-    image?: string;
-    newsType?: string;
-  };
-}
-
-/** Burada Ne Yaptık?
-Object.values(NewsType): Bu kod bize arka planda ["news", "mobility", "dissemination"] şeklinde bir string dizisi verir.
-
-.includes(...): Dışarıdan gelen string'in bu dizide yer alıp almadığını kontrol eder.
-
-as NewsType: TypeScript'e "Merak etme, ben bu string'in NewsType enum'ına ait bir değer olduğunu doğruladım, bunu o tiple kabul et" demiş oluyoruz (Type Assertion).
-
-💡 Küçük Bir İpucu (Best Practice): Eğer bu fonksiyonu (muhtemelen bir React bileşeni) çağıran yerler de senin kontrolündeyse, fonksiyonun parametresini direkt string yapmak yerine NewsType veya NewsType değerlerinin bir birleşimi (union) yapmak işi kökten çözer:
-
-function CardBadge_v2({ card_NewsType }: { card_NewsType: NewsType })
-
-Böylece fonksiyonun içine daha en baştan yanlış bir string gönderilmesini TypeScript derleme aşamasında engellemiş olursun.
+/**
+ * Type guard fonksiyonları
+ * Type predicate - boolean döner
+ * VE TypeScript'e tip bilgisi verir
  */
-function CardBadge({ card_NewsType }: { card_NewsType: string }) {
+function isNewsCard(card: CardProps): card is NewsCard {
+  return "newsType" in card;
+}
+
+function isAnnouncementsCard(card: CardProps): card is AnnouncementsCard {
+  return "date" in card;
+}
+
+function CardBadge({ card_NewsType }: { card_NewsType: NewsType }) {
   const t = useTranslations("NewsType");
 
-  // 1. Gelen string değerin, NewsType enum'ının değerlerinden biri olup olmadığını kontrol ediyoruz
-  const isValidNewsType = Object.values(NewsType).includes(
-    card_NewsType as NewsType,
-  );
-
-  // 2. Eğer geçerli bir değerse enum türüne cast ediyoruz (dönüştürüyoruz), değilse bir fallback (varsayılan) belirliyoruz
-  const cardBadge: NewsType = isValidNewsType
-    ? (card_NewsType as NewsType)
-    : NewsType.NEWS; // Gelen string hatalıysa varsayılan olarak NEWS atadık
-
   const badgeColors: Record<NewsType, string> = {
-    [NewsType.NEWS]: "bg-blue-600 dark:bg-blue-700",
-    [NewsType.MOBILITY]: "bg-amber-600 dark:bg-amber-700",
-    [NewsType.DISSEMINATION]: "bg-green-600 dark:bg-green-700",
+    ["news"]: "bg-blue-600 dark:bg-blue-700",
+    ["mobility"]: "bg-amber-600 dark:bg-amber-700",
+    ["dissemination"]: "bg-green-600 dark:bg-green-700",
   };
 
   return (
     <div
-      className={`absolute rounded-xl px-3 py-3 text-[0.625rem] leading-0 top-3 left-3 text-bright-header shadow-xl font-light ${badgeColors[cardBadge]}`}
+      className={`absolute rounded-xl px-3 py-3 text-[0.625rem] leading-0 top-3 left-3 text-bright-header shadow-xl font-light ${badgeColors[card_NewsType]}`}
     >
-      {t(cardBadge).toUpperCase()}
+      {t(card_NewsType).toUpperCase()}
     </div>
   );
 }
 
-export default function Card({ card }: CardProps) {
+export default function Card({ card }: { card: CardProps }) {
   const t = useTranslations("CardLinkText");
 
   return (
     <div className="bg-background dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-900 shadow-sm p-6 flex flex-col gap-2 hover:shadow-md transition-shadow">
-      {/* Image */}
-      {card.image && (
+      {/* Image - sadece NewsCard'da var */}
+      {isNewsCard(card) && card.image && (
         <div className="relative w-full h-48 rounded-lg overflow-hidden">
           <Image
             src={card.image}
@@ -90,14 +71,14 @@ export default function Card({ card }: CardProps) {
           {card.newsType && <CardBadge card_NewsType={card.newsType} />}
         </div>
       )}
-      {/* Date */}
-      {card.date && (
+      {/* Date - AnnouncementsCard ve NewsCard'da var */}
+      {isAnnouncementsCard(card) && card.date && (
         <div className="text-muted-foreground text-[0.65rem] leading-none tracking-tight font-light">
           {card.date}
         </div>
       )}
 
-      {/* Content */}
+      {/* Content - hepsinde var */}
       <div className="flex flex-col gap-2">
         <h3 className="text-gray-800 dark:text-gray-200 font-semibold text-base">
           {card.title}

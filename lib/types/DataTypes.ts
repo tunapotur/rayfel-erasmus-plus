@@ -1,16 +1,18 @@
-export interface InfoType {
+export interface InfoCard {
   id: number;
   title: string;
   description: string;
   href: string;
 }
 
-export interface AnnouncementsType extends InfoType {
+export interface AnnouncementsCard extends InfoCard {
   date: string;
 }
 
-export interface NewsType extends AnnouncementsType {
-  newsType: string;
+export type NewsType = "news" | "mobility" | "dissemination";
+
+export interface NewsCard extends AnnouncementsCard {
+  newsType: NewsType;
   image: string;
 }
 
