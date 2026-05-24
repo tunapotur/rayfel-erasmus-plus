@@ -5,7 +5,7 @@ import Link from "next/link";
 // 1. Lucide ikonlarının tamamını Icons takma adıyla import ediyoruz
 import { icons } from "lucide-react";
 import logo from "@/public/logo_rayfel.png";
-import footer_data from "@/sample_data_tr/footer";
+import footer_data from "@/sample_data/footer";
 import { useTranslations } from "next-intl";
 
 export default function Footer() {

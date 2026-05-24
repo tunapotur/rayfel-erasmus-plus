@@ -4,7 +4,7 @@ import about from "@/public/about.png";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import SectionTemplate from "./SectionTemplate";
-import about_section from "@/sample_data_tr/about_section";
+import about_section from "@/sample_data/about_section";
 import { useTranslations } from "next-intl";
 
 export default function About() {

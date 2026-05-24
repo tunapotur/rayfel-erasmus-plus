@@ -4,7 +4,7 @@ import PaginationOperations from "@/components/PaginationOperations";
 import { SearchParamsPageProps } from "@/lib/types/DataTypes";
 import resolvePagination from "@/lib/resolvePagination";
 
-import news from "@/sample_data_tr/news";
+import news from "@/sample_data/news";
 
 const ITEMS_PER_PAGE = 6;
 

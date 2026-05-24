@@ -2,7 +2,7 @@
 
 import SectionTemplate from "./SectionTemplate";
 import Card from "../Card";
-import news from "@/sample_data_tr/news";
+import news from "@/sample_data/news";
 import { useTranslations } from "next-intl";
 
 export default function News() {

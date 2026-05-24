@@ -1,5 +1,5 @@
 import Card from "@/components/Card";
-import info_cards from "@/sample_data_tr/info_cards";
+import info_cards from "@/sample_data/info_cards";
 
 export default function InfoCards() {
   return (

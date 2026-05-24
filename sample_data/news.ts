@@ -9,7 +9,7 @@ const news: Array<NewsCard> = [
     description:
       "Erasmus+ kapsamında yürütülen yeni projemizle yeşil becerilerin eğitime entegrasyonu.",
     href: "#",
-    image: "/cards_samples/card_01.jpg",
+    image: "/sample_images/headline_images/card_01.jpg",
   },
   {
     id: 1,
@@ -19,7 +19,7 @@ const news: Array<NewsCard> = [
     description:
       "Sanat ve tasarım odaklı projelerimizin sergileneceği etkinlik için geri sayım başladı.",
     href: "#",
-    image: "/cards_samples/card_02.jpg",
+    image: "/sample_images/headline_images/card_02.jpg",
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const news: Array<NewsCard> = [
     description:
       "Öğrencilerimiz sürdürülebilir enerji projeleriyle il genelinde düzenlenen yarışmada birinci oldu.",
     href: "#",
-    image: "/cards_samples/card_03.jpg",
+    image: "/sample_images/headline_images/card_03.jpg",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const news: Array<NewsCard> = [
     description:
       "Robotik takımımız, önümüzdeki ay düzenlenecek olan milli lig müsabakaları için yoğun bir tempoyla çalışıyor.",
     href: "#",
-    image: "/cards_samples/card_04.jpg",
+    image: "/sample_images/headline_images/card_04.jpg",
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ const news: Array<NewsCard> = [
     description:
       "Okul genelinde başlatılan yeni geri dönüşüm projesiyle sıfır atık hedeflerimize bir adım daha yaklaşıyoruz.",
     href: "#",
-    image: "/cards_samples/card_05.jpg",
+    image: "/sample_images/headline_images/card_05.jpg",
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const news: Array<NewsCard> = [
     description:
       "Okulumuzdan mezun olup başarılı kariyerlere sahip isimler, tecrübelerini paylaşmak için öğrencilerle buluşuyor.",
     href: "#",
-    image: "/cards_samples/card_06.jpg",
+    image: "/sample_images/headline_images/card_06.jpg",
   },
   {
     id: 6,
@@ -69,7 +69,7 @@ const news: Array<NewsCard> = [
     description:
       "Eğitimde yapay zeka araçlarının kullanımı ve etik standartlar üzerine kapsamlı bir seminer düzenlendi.",
     href: "#",
-    image: "/cards_samples/card_07.jpg",
+    image: "/sample_images/headline_images/card_07.jpg",
   },
   {
     id: 7,
@@ -79,7 +79,7 @@ const news: Array<NewsCard> = [
     description:
       "Yurt dışı staj hareketliliklerini artırmak amacıyla paydaş kurumlarla bütçe ve kota planlaması yapıldı.",
     href: "#",
-    image: "/cards_samples/card_08.jpg",
+    image: "/sample_images/headline_images/card_08.jpg",
   },
   {
     id: 8,
@@ -89,7 +89,7 @@ const news: Array<NewsCard> = [
     description:
       "Genç girişimcilerin teknoloji odaklı iş fikirlerini yatırımcılara sunduğu panelin sonuç raporu yayınlandı.",
     href: "#",
-    image: "/cards_samples/card_09.jpg",
+    image: "/sample_images/headline_images/card_09.jpg",
   },
   {
     id: 9,
@@ -99,7 +99,7 @@ const news: Array<NewsCard> = [
     description:
       "Güneş ve rüzgar enerjisi sistemlerinin incelenebileceği yeni laboratuvarımız öğrencilerin hizmetine sunuldu.",
     href: "#",
-    image: "/cards_samples/card_10.jpg",
+    image: "/sample_images/headline_images/card_10.jpg",
   },
   {
     id: 10,
@@ -109,7 +109,7 @@ const news: Array<NewsCard> = [
     description:
       "Öğrenci grubumuz, kültürel miras ve gastronomi odaklı değişim programı kapsamında Roma'ya hareket etti.",
     href: "#",
-    image: "/cards_samples/card_11.jpg",
+    image: "/sample_images/headline_images/card_11.jpg",
   },
   {
     id: 11,
@@ -119,7 +119,7 @@ const news: Array<NewsCard> = [
     description:
       "Tarih ve sanat kulüplerinin ortaklaşa hazırladığı 'Yüzyıllık Miras' temalı fotoğraf sergisi açıldı.",
     href: "#",
-    image: "/cards_samples/card_12.jpg",
+    image: "/sample_images/headline_images/card_12.jpg",
   },
   {
     id: 12,
@@ -129,7 +129,7 @@ const news: Array<NewsCard> = [
     description:
       "Öğrencilerin dijital ortamlarda güvenle var olabilmeleri için siber zorbalık ve veri güvenliği eğitimi verildi.",
     href: "#",
-    image: "/cards_samples/card_13.jpg",
+    image: "/sample_images/headline_images/card_13.jpg",
   },
   {
     id: 13,
@@ -139,7 +139,7 @@ const news: Array<NewsCard> = [
     description:
       "Mühendislik bölümü öğretmenlerimiz, endüstri 4.0 uygulamalarını yerinde incelemek üzere Münih'i ziyaret etti.",
     href: "#",
-    image: "/cards_samples/card_14.jpg",
+    image: "/sample_images/headline_images/card_14.jpg",
   },
   {
     id: 14,
@@ -149,7 +149,7 @@ const news: Array<NewsCard> = [
     description:
       "Geçtiğimiz dönem kabul edilen tüm TÜBİTAK araştırma projelerinin yer aldığı özet kitapçık dijitalde yayında.",
     href: "#",
-    image: "/cards_samples/card_15.jpg",
+    image: "/sample_images/headline_images/card_15.jpg",
   },
   {
     id: 15,
@@ -159,7 +159,7 @@ const news: Array<NewsCard> = [
     description:
       "Geniş bir katılım ve coşkulu bir atmosferle yeni eğitim-öğretim yılının ilk ders zili çaldı.",
     href: "#",
-    image: "/cards_samples/card_16.jpg",
+    image: "/sample_images/headline_images/card_16.jpg",
   },
   {
     id: 16,
@@ -169,7 +169,7 @@ const news: Array<NewsCard> = [
     description:
       "Eğitmenlerimiz, modern dil öğretim teknikleri üzerine düzenlenen 2 haftalık kurs için Madrid'e gitti.",
     href: "#",
-    image: "/cards_samples/card_01.jpg",
+    image: "/sample_images/headline_images/card_01.jpg",
   },
   {
     id: 17,
@@ -179,7 +179,7 @@ const news: Array<NewsCard> = [
     description:
       "Yıl boyunca çevre ve insan odaklı projelerde aktif rol oynayan gönüllü ekiplerimize plaketleri sunuldu.",
     href: "#",
-    image: "/cards_samples/card_02.jpg",
+    image: "/sample_images/headline_images/card_02.jpg",
   },
   {
     id: 18,
@@ -189,7 +189,7 @@ const news: Array<NewsCard> = [
     description:
       "Dünya çapındaki binlerce akademik yayına ve e-kitaba ücretsiz erişim sağlayan yeni sistem entegre edildi.",
     href: "#",
-    image: "/cards_samples/card_03.jpg",
+    image: "/sample_images/headline_images/card_03.jpg",
   },
   {
     id: 19,
@@ -199,7 +199,7 @@ const news: Array<NewsCard> = [
     description:
       "İdari kadromuz, kurumsal yönetim ve dijital arşivleme süreçlerini incelemek üzere Paris Üniversitesinde.",
     href: "#",
-    image: "/cards_samples/card_04.jpg",
+    image: "/sample_images/headline_images/card_04.jpg",
   },
   {
     id: 20,
@@ -209,7 +209,7 @@ const news: Array<NewsCard> = [
     description:
       "Belediyeler ortaklığıyla yürütülen akıllı ulaşım ve lojistik projesinin kapanış çıktısı kamuoyuyla paylaşıldı.",
     href: "#",
-    image: "/cards_samples/card_05.jpg",
+    image: "/sample_images/headline_images/card_05.jpg",
   },
   {
     id: 21,
@@ -219,7 +219,7 @@ const news: Array<NewsCard> = [
     description:
       "Yaz tatili boyunca devam eden kodlama ve 3D tasarım kamplarına katılan öğrenciler sertifikalarını aldı.",
     href: "#",
-    image: "/cards_samples/card_06.jpg",
+    image: "/sample_images/headline_images/card_06.jpg",
   },
   {
     id: 22,
@@ -229,7 +229,7 @@ const news: Array<NewsCard> = [
     description:
       "Gençlik kulübümüz, 'Kültürlerarası Diyalog' temalı gençlik değişimi projesi için Krakow'da çalışmalara başladı.",
     href: "#",
-    image: "/cards_samples/card_07.jpg",
+    image: "/sample_images/headline_images/card_07.jpg",
   },
   {
     id: 23,
@@ -239,7 +239,7 @@ const news: Array<NewsCard> = [
     description:
       "Tüm eğitim materyallerine uzaktan erişim imkanı sunan yerli web tabanlı LMS yazılımı kullanıma sunuldu.",
     href: "#",
-    image: "/cards_samples/card_08.jpg",
+    image: "/sample_images/headline_images/card_08.jpg",
   },
   {
     id: 24,
@@ -249,7 +249,7 @@ const news: Array<NewsCard> = [
     description:
       "Genetik Araştırmalar Merkezi bünyesinde kurulacak yeni DNA dizileme birimi için fon onaylandı.",
     href: "#",
-    image: "/cards_samples/card_09.jpg",
+    image: "/sample_images/headline_images/card_09.jpg",
   },
   {
     id: 25,
@@ -259,7 +259,7 @@ const news: Array<NewsCard> = [
     description:
       "Ziraat odaklı çalışma grubumuz, dikey tarım ve topraksız üretim teknolojilerini incelemek üzere Amsterdam'da.",
     href: "#",
-    image: "/cards_samples/card_10.jpg",
+    image: "/sample_images/headline_images/card_10.jpg",
   },
   {
     id: 26,
@@ -269,7 +269,7 @@ const news: Array<NewsCard> = [
     description:
       "Gelecek ay düzenlenecek olan iş ve staj fuarına katılacak firmaların listesi ve etkinlik takvimi açıklandı.",
     href: "#",
-    image: "/cards_samples/card_11.jpg",
+    image: "/sample_images/headline_images/card_11.jpg",
   },
   {
     id: 27,
@@ -279,7 +279,7 @@ const news: Array<NewsCard> = [
     description:
       "Müzik topluluğumuzun klasik batı müziği ve çok sesli koro eserlerinden oluşan konseri büyük beğeni topladı.",
     href: "#",
-    image: "/cards_samples/card_12.jpg",
+    image: "/sample_images/headline_images/card_12.jpg",
   },
   {
     id: 28,
@@ -289,7 +289,7 @@ const news: Array<NewsCard> = [
     description:
       "Deniz biyolojisi ekibimiz, Atlantik kıyılarında mikroplastik kirliliğini ölçmek üzere Lizbon'a uçtu.",
     href: "#",
-    image: "/cards_samples/card_13.jpg",
+    image: "/sample_images/headline_images/card_13.jpg",
   },
   {
     id: 29,
@@ -299,7 +299,7 @@ const news: Array<NewsCard> = [
     description:
       "Sağlık personeli rehberliğinde hazırlanan 'Gençlerde Doğru Beslenme Alışkanlıkları' broşürü dağıtıldı.",
     href: "#",
-    image: "/cards_samples/card_14.jpg",
+    image: "/sample_images/headline_images/card_14.jpg",
   },
   {
     id: 30,
@@ -309,7 +309,7 @@ const news: Array<NewsCard> = [
     description:
       "Dönem birincilerimizin konuşmaları ve kep atma seremonisi eşliğinde bir mezuniyet dönemini daha geride bıraktık.",
     href: "#",
-    image: "/cards_samples/card_15.jpg",
+    image: "/sample_images/headline_images/card_15.jpg",
   },
   {
     id: 31,
@@ -319,7 +319,7 @@ const news: Array<NewsCard> = [
     description:
       "Tarih bölümü öğrencilerimiz Akropolis ve çevresindeki kazı alanlarında yürütülen yaz okuluna katılıyor.",
     href: "#",
-    image: "/cards_samples/card_16.jpg",
+    image: "/sample_images/headline_images/card_16.jpg",
   },
   {
     id: 32,
@@ -329,7 +329,7 @@ const news: Array<NewsCard> = [
     description:
       "Görme ve işitme engelli bireylerin günlük hayatını kolaylaştıran öğrenci tasarımı prototipler sergilendi.",
     href: "#",
-    image: "/cards_samples/card_01.jpg",
+    image: "/sample_images/headline_images/card_01.jpg",
   },
   {
     id: 33,
@@ -339,7 +339,7 @@ const news: Array<NewsCard> = [
     description:
       "Büyük veri analizi ve tahmine dayalı modelleme üzerine 48 saat sürecek olan ödüllü hackathon maratonu başladı.",
     href: "#",
-    image: "/cards_samples/card_02.jpg",
+    image: "/sample_images/headline_images/card_02.jpg",
   },
   {
     id: 34,
@@ -349,7 +349,7 @@ const news: Array<NewsCard> = [
     description:
       "Kurum yöneticilerimiz bulut bilişim ve veri güvenliği entegrasyonu paneli için Prag'da temaslarda bulundu.",
     href: "#",
-    image: "/cards_samples/card_03.jpg",
+    image: "/sample_images/headline_images/card_03.jpg",
   },
   {
     id: 35,
@@ -359,7 +359,7 @@ const news: Array<NewsCard> = [
     description:
       "Ağaçlandırma çalışmalarımızın 5 yıllık gelişim grafiğini ve karbon ayak izi azalım raporunu yayınladık.",
     href: "#",
-    image: "/cards_samples/card_04.jpg",
+    image: "/sample_images/headline_images/card_04.jpg",
   },
   {
     id: 36,
@@ -369,7 +369,7 @@ const news: Array<NewsCard> = [
     description:
       "Gönüllü tiyatro ekibimizin sahneye koyduğu dönem oyunu salonu tamamen dolduran seyircilerden tam not aldı.",
     href: "#",
-    image: "/cards_samples/card_05.jpg",
+    image: "/sample_images/headline_images/card_05.jpg",
   },
   {
     id: 37,
@@ -379,7 +379,7 @@ const news: Array<NewsCard> = [
     description:
       "Uluslararası İlişkiler kulübümüz, Avrupa Parlamentosu simülasyon eğitimine katılmak üzere Brüksel'e ulaştı.",
     href: "#",
-    image: "/cards_samples/card_06.jpg",
+    image: "/sample_images/headline_images/card_06.jpg",
   },
   {
     id: 38,
@@ -389,7 +389,7 @@ const news: Array<NewsCard> = [
     description:
       "Kuluçka merkezimizden çıkan başarılı start-up hikayelerinin yer aldığı ilham verici video serisi yayında.",
     href: "#",
-    image: "/cards_samples/card_07.jpg",
+    image: "/sample_images/headline_images/card_07.jpg",
   },
   {
     id: 39,
@@ -399,7 +399,7 @@ const news: Array<NewsCard> = [
     description:
       "Endüstriyel parça üretimi ve hızlı prototipleme yapabilen yüksek hassasiyetli 3 yeni yazıcı envantere eklendi.",
     href: "#",
-    image: "/cards_samples/card_08.jpg",
+    image: "/sample_images/headline_images/card_08.jpg",
   },
   {
     id: 40,
@@ -409,7 +409,7 @@ const news: Array<NewsCard> = [
     description:
       "Spor akademisi ekibimiz, dağ arama kurtarma ve kış sports güvenliği eğitimi için Innsbruck'ta.",
     href: "#",
-    image: "/cards_samples/card_09.jpg",
+    image: "/sample_images/headline_images/card_09.jpg",
   },
   {
     id: 41,
@@ -419,7 +419,7 @@ const news: Array<NewsCard> = [
     description:
       "Rehberlik servisimiz tarafından ebeveynler için hazırlanan akran zorbalığı algılama ve önleme el kitabı basıldı.",
     href: "#",
-    image: "/cards_samples/card_10.jpg",
+    image: "/sample_images/headline_images/card_10.jpg",
   },
   {
     id: 42,
@@ -429,7 +429,7 @@ const news: Array<NewsCard> = [
     description:
       "Geleneksel hale gelen kurumlar arası satranç turnuvasında zorlu maçların ardından birincilik kupası sahibini buldu.",
     href: "#",
-    image: "/cards_samples/card_11.jpg",
+    image: "/sample_images/headline_images/card_11.jpg",
   },
   {
     id: 43,
@@ -439,7 +439,7 @@ const news: Array<NewsCard> = [
     description:
       "Matematik ve fen bilimleri zümresi öğretmenlerimiz Budapeşte'de düzenlenen STEM workshop çalıştayına katıldı.",
     href: "#",
-    image: "/cards_samples/card_12.jpg",
+    image: "/sample_images/headline_images/card_12.jpg",
   },
   {
     id: 44,
@@ -449,7 +449,7 @@ const news: Array<NewsCard> = [
     description:
       "Güneş paneli tasarımı yapan öğrencilerin hazırladığı bilgilendirici infografik afişler panolardaki yerini aldı.",
     href: "#",
-    image: "/cards_samples/card_13.jpg",
+    image: "/sample_images/headline_images/card_13.jpg",
   },
   {
     id: 45,
@@ -459,7 +459,7 @@ const news: Array<NewsCard> = [
     description:
       "Kursiyerlerimizin sokak fotoğrafçılığı temasıyla tarihi semtlerde çektiği en iyi kareler oylamaya açıldı.",
     href: "#",
-    image: "/cards_samples/card_14.jpg",
+    image: "/sample_images/headline_images/card_14.jpg",
   },
   {
     id: 46,
@@ -469,7 +469,7 @@ const news: Array<NewsCard> = [
     description:
       "Gönüllü ekibimiz, dezavantajlı çocuklara yönelik sanatsal etkinlikler düzenlemek üzere Bükreş'e gitti.",
     href: "#",
-    image: "/cards_samples/card_15.jpg",
+    image: "/sample_images/headline_images/card_15.jpg",
   },
   {
     id: 47,
@@ -479,7 +479,7 @@ const news: Array<NewsCard> = [
     description:
       "Dil laboratuvarı tarafından geliştirilen gerçek zamanlı çeviri eklentisinin test aşaması raporları sunuldu.",
     href: "#",
-    image: "/cards_samples/card_16.jpg",
+    image: "/sample_images/headline_images/card_16.jpg",
   },
 ];
 
