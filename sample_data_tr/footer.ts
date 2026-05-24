@@ -25,14 +25,23 @@ interface FooterData {
 
 const footer_data: FooterData = {
   quickLinks: [
-    { label: "Ramazan Yaman Fen Lisesi", href: "#" },
-    { label: "Erasmus+", href: "#" },
-    { label: "eTwinning", href: "#" },
+    {
+      label: "Ramazan Yaman Fen Lisesi",
+      href: "https://ramazanyamanfenlisesi.meb.k12.tr",
+    },
+    { label: "Erasmus+", href: "https://erasmus-plus.ec.europa.eu" },
+    { label: "eTwinning", href: "https://school-education.ec.europa.eu" },
   ],
   institutions: [
-    { label: "Erasmus Avrupa Komisyonu", href: "#" },
-    { label: "Türkiye Ulusal Ajansı", href: "#" },
-    { label: "Esep eTwinning", href: "#" },
+    {
+      label: "Erasmus Avrupa Komisyonu",
+      href: "https://erasmus-plus.ec.europa.eu/",
+    },
+    { label: "Türkiye Ulusal Ajansı", href: "https://www.ua.gov.tr" },
+    {
+      label: "Esep eTwinning",
+      href: "https://school-education.ec.europa.eu/en/etwinning/projects/etwinning-esep/twinspace",
+    },
   ],
   socialLinks: [
     { iconName: "Globe", href: "#", label: "Website" },
