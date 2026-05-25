@@ -14,7 +14,9 @@ export async function generateStaticParams() {
   return [{ slug: articleData.slug }];
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { slug } = await params;
   if (slug !== articleData.slug) return {};
   return {
@@ -30,7 +32,7 @@ export default async function HaberDetayPage({ params }: PageProps) {
   if (slug !== articleData.slug) notFound();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background mb-auto">
       {/* Breadcrumb nav */}
       <nav className="border-b border-border bg-card">
         <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 sm:px-6">

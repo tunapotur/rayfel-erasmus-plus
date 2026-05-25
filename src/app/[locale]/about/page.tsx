@@ -2,7 +2,7 @@ import About from "@/components/homepage/About";
 
 export default function AboutPage() {
   return (
-    <div className="mb-auto mt-12">
+    <div className="mb-auto mt-12 min-h-screen">
       <About />
     </div>
   );

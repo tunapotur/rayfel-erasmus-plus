@@ -14,7 +14,7 @@ export default function PageWrapper({
   const t = useTranslations(pageText);
 
   return (
-    <div className="flex flex-col items-center mb-auto">
+    <div className="flex flex-col items-center mb-auto min-h-screen">
       <PageBadgeHeader
         topHeader={t("topHeader")}
         header={t("header")}
