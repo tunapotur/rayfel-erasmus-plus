@@ -32,7 +32,7 @@ function CardBadge({ card_NewsType }: { card_NewsType: CONTENT_TYPE }) {
 
   return (
     <div
-      className={`absolute rounded-xl px-3 py-3 text-[0.625rem] leading-0 top-3 left-3 text-bright-header shadow-xl font-light ${badgeColors[card_NewsType] ?? ""}`}
+      className={`absolute rounded-sm px-2.5 py-0.5 text-[0.625rem] uppercase tracking-widest top-3 left-3 text-bright-header font-bold ${badgeColors[card_NewsType] ?? ""}`}
     >
       {t(card_NewsType).toUpperCase()}
     </div>

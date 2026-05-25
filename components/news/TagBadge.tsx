@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import type { TagType } from "@/types/news";
+import type { TagType } from "@/lib/types/news";
 
 const tagConfig: Record<TagType, { label: string; className: string }> = {
   haber: {
@@ -28,7 +28,7 @@ export function TagBadge({ tag, className }: TagBadgeProps) {
       className={cn(
         "inline-block rounded-sm px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest",
         config.className,
-        className
+        className,
       )}
     >
       {config.label}

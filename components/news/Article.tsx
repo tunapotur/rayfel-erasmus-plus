@@ -9,7 +9,7 @@ interface ArticleProps {
 
 export function Article({ article }: ArticleProps) {
   return (
-    <article className="min-w-0">
+    <article>
       {/* Date + Tag */}
       <div className="mb-4 flex items-center gap-3">
         <div className="flex items-center gap-2.5">
