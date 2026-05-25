@@ -87,7 +87,7 @@
   --foreground: oklch(0.145 0 0);
 
   /* User Definitions */
-  --background-gray: oklch(96.7% 0.003 264.542 /50%); /* gray-100/50 */
+  --background-gray: oklch(96.7% 0.003 264.542); /* gray-100 */
   --bright-header: oklch(96.7% 0.003 264.542); /* gray-100 */
 }
 
@@ -125,7 +125,7 @@
   --sidebar-ring: oklch(0.556 0 0);
 
   /* User definitions */
-  --background-gray: oklch(27.8% 0.033 256.848 /50%); /* gray-800/50 */
+  --background-gray: oklch(27.8% 0.033 256.848); /*gray-800*/
   --bright-header: oklch(92.8% 0.006 264.531); /* gray-200 */
 }
 
