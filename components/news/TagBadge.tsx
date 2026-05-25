@@ -26,7 +26,7 @@ export function TagBadge({ tag, className }: TagBadgeProps) {
   return (
     <span
       className={cn(
-        "inline-block rounded-sm px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest",
+        "inline-block rounded-sm px-2.5 py-0.5 text-[10px] font-bold tracking-widest uppercase",
         config.className,
         className,
       )}

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { TagBadge } from "./TagBadge";
 import { CodeScreenPlaceholder } from "./CodeScreenPlaceholder";
 import type { NewsArticle } from "@/lib/types/news";
+import { NewsBadge } from "../NewsBadge";
 
 interface ArticleProps {
   article: NewsArticle;
@@ -13,21 +13,21 @@ export function Article({ article }: ArticleProps) {
       {/* Date + Tag */}
       <div className="mb-4 flex items-center gap-3">
         <div className="flex items-center gap-2.5">
-          <span className="block h-0.5 w-7 rounded-full bg-primary" />
-          <span className="text-xs font-bold uppercase tracking-widest text-primary">
+          <span className="bg-primary block h-0.5 w-7 rounded-full" />
+          <span className="text-primary text-xs font-bold tracking-widest uppercase">
             {article.date}
           </span>
         </div>
-        <TagBadge tag={article.tag} />
+        <NewsBadge BADGE_TYPE={"news"} />
       </div>
 
       {/* Title */}
-      <h1 className="mb-6 font-serif text-4xl font-extrabold leading-tight tracking-tight text-foreground md:text-5xl">
+      <h1 className="text-foreground mb-6 font-serif text-4xl leading-tight font-extrabold tracking-tight md:text-5xl">
         {article.title}
       </h1>
 
       {/* Lead / highlighted quote */}
-      <div className="mb-7 rounded-r-xl border-l-4 border-primary bg-primary/8 px-5 py-4 text-[15px] leading-relaxed text-foreground">
+      <div className="border-primary bg-primary/8 text-foreground mb-7 rounded-r-xl border-l-4 px-5 py-4 text-[15px] leading-relaxed">
         {article.leadText}
       </div>
 
@@ -35,24 +35,24 @@ export function Article({ article }: ArticleProps) {
       <CodeScreenPlaceholder />
 
       {/* Section title */}
-      <h2 className="mb-4 font-serif text-[1.35rem] font-bold text-foreground">
+      <h2 className="text-foreground mb-4 font-serif text-[1.35rem] font-bold">
         {article.sectionTitle}
       </h2>
 
       {/* Body */}
       <div className="space-y-4">
         {article.content.map((paragraph, i) => (
-          <p key={i} className="text-[15.5px] leading-[1.8] text-foreground/85">
+          <p key={i} className="text-foreground/85 text-[15.5px] leading-[1.8]">
             {paragraph}
           </p>
         ))}
       </div>
 
       {/* Divider + Back link */}
-      <hr className="my-8 border-border" />
+      <hr className="border-border my-8" />
       <Link
         href="/haberler"
-        className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-all duration-200 hover:gap-3"
+        className="text-primary inline-flex items-center gap-1.5 text-sm font-semibold transition-all duration-200 hover:gap-3"
       >
         ← Geri Dön
       </Link>
