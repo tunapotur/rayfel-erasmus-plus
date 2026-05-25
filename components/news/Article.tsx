@@ -3,21 +3,15 @@ import { CodeScreenPlaceholder } from "./CodeScreenPlaceholder";
 import type { NewsArticle } from "@/lib/types/news";
 import { NewsBadge } from "../NewsBadge";
 
-interface ArticleProps {
-  article: NewsArticle;
-}
-
-export function Article({ article }: ArticleProps) {
+export function Article({ article }: { article: NewsArticle }) {
   return (
     <article>
-      {/* Date + Tag */}
+      {/* Date + NewsBadge */}
       <div className="mb-4 flex items-center gap-3">
-        <div className="flex items-center gap-2.5">
-          <span className="bg-primary block h-0.5 w-7 rounded-full" />
-          <span className="text-primary text-xs font-bold tracking-widest uppercase">
-            {article.date}
-          </span>
-        </div>
+        <span className="bg-primary block h-0.5 w-7 rounded-full" />
+        <span className="text-primary text-xs font-bold tracking-widest uppercase">
+          {article.date}
+        </span>
         <NewsBadge BADGE_NEWS_TYPE={"news"} />
       </div>
 
@@ -27,7 +21,7 @@ export function Article({ article }: ArticleProps) {
       </h1>
 
       {/* Lead / highlighted quote */}
-      <div className="border-primary bg-primary/8 text-foreground mb-7 rounded-r-xl border-l-4 px-5 py-4 text-[15px] leading-relaxed">
+      <div className="border-primary bg-primary/8 text-foreground mb-7 rounded-r-xl border-l-4 px-5 py-4 text-base leading-relaxed">
         {article.leadText}
       </div>
 
@@ -42,7 +36,7 @@ export function Article({ article }: ArticleProps) {
       {/* Body */}
       <div className="space-y-4">
         {article.content.map((paragraph, i) => (
-          <p key={i} className="text-foreground/85 text-[15.5px] leading-[1.8]">
+          <p key={i} className="text-foreground/85 text-base leading-[1.8]">
             {paragraph}
           </p>
         ))}
