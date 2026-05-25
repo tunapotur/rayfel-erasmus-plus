@@ -1,4 +1,4 @@
-import type { NewsArticle, NewsItem } from "@/types/news";
+import type { NewsArticle, NewsItem } from "./types/news";
 
 export const sidebarNews: NewsItem[] = [
   {
@@ -81,8 +81,7 @@ export const articleData: NewsArticle = {
     "Rayfel Projeler kapsamında gelenekselleşen Bilim Şenliği için bu yılki başvuru süreci resmen açılmıştır. Tüm öğrencilerimizi yenilikçi fikirleriyle geleceği şekillendirmeye davet ediyoruz.",
   excerpt:
     "Rayfel Projeler kapsamında gelenekselleşen Bilim Şenliği için bu yılki başvuru süreci resmen açılmıştır.",
-  sectionTitle:
-    "Sürdürülebilir Eğitim Modelleri Nerelerde Kullanılabilir",
+  sectionTitle: "Sürdürülebilir Eğitim Modelleri Nerelerde Kullanılabilir",
   content: [
     'Akademik mükemmeliyet ve inovasyon odaklı eğitim vizyonumuzun bir parçası olan Bilim Şenliği, öğrencilerimizin teorik bilgilerini pratiğe dökme, problem çözme yeteneklerini geliştirme ve bilimsel metodolojiyi içselleştirme fırsatı sunmaktadır. Bu yılki temamız "Sürdürülebilir Teknoloji ve Toplumsal Fayda" olarak belirlenmiştir.',
     "Projeler bireysel veya en fazla 3 kişiden oluşan gruplar halinde sunulabilir. Değerlendirme komitemiz projeleri; özgünlük, uygulanabilirlik, metodolojik doğruluk ve sunum kalitesi olmak üzere dört ana başlıkta inceleyecektir. Başvuruların eksiksiz bir proje taslağı ve ön rapor ile birlikte yapılması gerekmektedir.",
