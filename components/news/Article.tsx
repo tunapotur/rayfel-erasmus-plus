@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { TagBadge } from "./TagBadge";
 import { CodeScreenPlaceholder } from "./CodeScreenPlaceholder";
-import type { NewsArticle } from "@/types/news";
+import type { NewsArticle } from "@/lib/types/news";
 
 interface ArticleProps {
   article: NewsArticle;

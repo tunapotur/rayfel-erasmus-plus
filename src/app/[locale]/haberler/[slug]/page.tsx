@@ -50,7 +50,7 @@ export default async function HaberDetayPage({ params }: PageProps) {
       </nav>
 
       {/* Page body */}
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_21rem] lg:items-start px-4 py-10 sm:px-6 lg:px-8">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_22rem] lg:items-start px-4 py-10 sm:px-6 lg:px-8">
         <Article article={articleData} />
         <NewsSidebar items={sidebarNews} />
       </div>
