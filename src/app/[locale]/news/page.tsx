@@ -30,11 +30,13 @@ export default async function NewsPage({
       </div>
 
       {/* Pagination  */}
-      <PaginationOperations
-        currentPage={pageNumber}
-        totalPages={totalPages}
-        pageLink="news"
-      />
+      {contents_news.length > ITEMS_PER_PAGE && (
+        <PaginationOperations
+          currentPage={pageNumber}
+          totalPages={totalPages}
+          pageLink="news"
+        />
+      )}
     </PageWrapper>
   );
 }

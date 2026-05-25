@@ -33,11 +33,13 @@ export default async function AnnouncementsPage({
       </div>
 
       {/* Pagination  */}
-      <PaginationOperations
-        currentPage={pageNumber}
-        totalPages={totalPages}
-        pageLink="announcements"
-      />
+      {contents_announcements.length > ITEMS_PER_PAGE && (
+        <PaginationOperations
+          currentPage={pageNumber}
+          totalPages={totalPages}
+          pageLink="announcements"
+        />
+      )}
     </PageWrapper>
   );
 }
