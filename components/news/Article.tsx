@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { CodeScreenPlaceholder } from "./CodeScreenPlaceholder";
 import type { NewsArticle } from "@/lib/types/news";
 import { NewsBadge } from "../NewsBadge";
+import ArrowLink from "../ArrowLink";
 
 export function Article({ article }: { article: NewsArticle }) {
   return (
@@ -21,7 +21,7 @@ export function Article({ article }: { article: NewsArticle }) {
       </h1>
 
       {/* Lead / highlighted quote */}
-      <div className="border-primary bg-primary/8 text-foreground mb-7 rounded-r-xl border-l-4 px-5 py-4 text-base leading-relaxed">
+      <div className="border-primary bg-background-gray text-foreground mb-7 rounded-r-xl border-l-4 px-5 py-4 text-base leading-relaxed">
         {article.leadText}
       </div>
 
@@ -44,12 +44,7 @@ export function Article({ article }: { article: NewsArticle }) {
 
       {/* Divider + Back link */}
       <hr className="border-border my-8" />
-      <Link
-        href="/haberler"
-        className="text-primary inline-flex items-center gap-1.5 text-sm font-semibold transition-all duration-200 hover:gap-3"
-      >
-        ← Geri Dön
-      </Link>
+      <ArrowLink text={"Geri Dön"} href="/news" isArrowLeft />
     </article>
   );
 }

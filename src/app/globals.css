@@ -142,5 +142,5 @@
 }
 
 @utility col3-cards-grid {
-  @apply w-full grid grid-cols-1 md:grid-cols-3 gap-6 px-4 py-6;
+  @apply grid w-full grid-cols-1 gap-6 px-4 py-6 md:grid-cols-3;
 }
