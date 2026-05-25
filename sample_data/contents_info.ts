@@ -1,9 +1,8 @@
-import { Content } from "@/lib/types/DataTypes";
+import type { INFO } from "@/lib/types/DataTypes";
 
-const contents_info: Array<Content> = [
+const contents_info: Array<INFO> = [
   {
     id: 0,
-    type: "info",
     title: "Rayfel",
     description:
       "Okulumuz Lüleburgaz Ramazan Yaman Fen Lisesi web sitesini inceleyebilirsiniz.",
@@ -12,7 +11,6 @@ const contents_info: Array<Content> = [
   },
   {
     id: 1,
-    type: "info",
     title: "Erasmus+",
     description:
       "Erasmus+ hakkında detaylı bilgi için Erasmus+ web sitesini inceleyebilirsiniz.",
@@ -21,7 +19,6 @@ const contents_info: Array<Content> = [
   },
   {
     id: 2,
-    type: "info",
     title: "eTwinning",
     description:
       "eTwinning projeleri hakkında detaylı bilgi için eTwinning web sitesini inceleyebilirsiniz.",

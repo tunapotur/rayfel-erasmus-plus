@@ -2,7 +2,7 @@
 
 import SectionTemplate from "./SectionTemplate";
 import { useTranslations } from "next-intl";
-import Card_v2 from "../Card";
+import Card from "../Card";
 import contents_announcements from "@/sample_data/contents_announcements";
 
 export default function Announcements() {
@@ -15,9 +15,9 @@ export default function Announcements() {
       linkText={t("linkText")}
       href="/announcements"
     >
-      <div className="w-full flex flex-col gap-4 md:flex-row">
+      <div className="flex w-full flex-col gap-4 md:flex-row">
         {contents_announcements.slice(0, 4).map((item) => (
-          <Card_v2 key={item.title} card={item} />
+          <Card key={item.title} card={item} />
         ))}
       </div>
     </SectionTemplate>

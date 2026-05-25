@@ -18,7 +18,7 @@ export function Article({ article }: ArticleProps) {
             {article.date}
           </span>
         </div>
-        <NewsBadge BADGE_TYPE={"news"} />
+        <NewsBadge BADGE_NEWS_TYPE={"news"} />
       </div>
 
       {/* Title */}
