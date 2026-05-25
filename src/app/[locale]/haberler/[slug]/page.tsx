@@ -35,26 +35,24 @@ export default async function HaberDetayPage({ params }: PageProps) {
     <div className="min-h-screen bg-background mb-auto">
       {/* Breadcrumb nav */}
       <nav className="border-b border-border bg-card">
-        <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 px-4 sm:px-6">
+        <div className="mx-auto flex h-14 items-center gap-2 px-4 sm:px-6">
           <Link
-            href="/haberler"
-            className="text-[11px] font-bold uppercase tracking-widest text-muted-foreground transition-colors hover:text-primary"
+            href="/news"
+            className="text-[0.7rem] font-bold uppercase tracking-widest text-muted-foreground transition-colors hover:text-primary"
           >
             Haberler
           </Link>
           <span className="text-muted-foreground/40 text-xs">/</span>
-          <span className="text-[11px] font-bold uppercase tracking-widest text-primary truncate">
+          <span className="text-[0.7rem] font-bold uppercase tracking-widest text-primary truncate">
             {articleData.title}
           </span>
         </div>
       </nav>
 
       {/* Page body */}
-      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_340px] lg:items-start">
-          <Article article={articleData} />
-          <NewsSidebar items={sidebarNews} />
-        </div>
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_21rem] lg:items-start px-4 py-10 sm:px-6 lg:px-8">
+        <Article article={articleData} />
+        <NewsSidebar items={sidebarNews} />
       </div>
     </div>
   );
