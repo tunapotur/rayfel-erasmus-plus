@@ -42,12 +42,12 @@ export default function Card({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
         </div>
       )}
 
-      {/* Content - hepsinde var */}
+      {/* Content */}
       <div className="flex flex-col gap-2">
         <h3 className="text-base font-semibold text-gray-800 dark:text-gray-200">
           {card.title}
         </h3>
-        <p className="text-muted-foreground text-sm leading-relaxed">
+        <p className="text-muted-foreground line-clamp-4 text-sm leading-relaxed">
           {card.description}
         </p>
       </div>

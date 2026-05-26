@@ -64,5 +64,9 @@
     "header": "Haberler",
     "content": "Projelerimizden en son gelişmeleri ve başarı hikayelerimizi buradan takip edebilirsiniz."
   },
-  "pagination": { "previous": "Önceki", "next": "İleri" }
+  "pagination": { "previous": "Önceki", "next": "İleri" },
+  "ContentSidebarHeader": {
+    "news": "Diğer Haberler",
+    "announcement": "Diğer Duyurular"
+  }
 }

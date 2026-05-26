@@ -34,23 +34,23 @@ export function Card_Sidebar({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
       {/* Body */}
       <div className="flex flex-col gap-1 p-3">
         {/* Date & Badge */}
-        <div className="flex items-center gap-2">
-          {/* Date */}
-          {announcement?.date && (
+        {announcement?.date && (
+          <div className="flex items-center gap-2">
+            {/* Date */}
             <span className="text-muted-foreground text-[10px] font-semibold tracking-wide uppercase">
               {announcement.date}
             </span>
-          )}
 
-          {/* Badge */}
-          {news?.type && <NewsBadge BADGE_NEWS_TYPE={news.type} />}
-        </div>
+            {/* Badge */}
+            {news?.type && <NewsBadge BADGE_NEWS_TYPE={news.type} />}
+          </div>
+        )}
 
-        <h3 className="text-foreground group-hover:text-primary text-[13px] leading-snug font-semibold transition-colors">
+        <h3 className="text-foreground group-hover:text-primary text-[0.8rem] leading-snug font-semibold transition-colors">
           {card.title}
         </h3>
 
-        <p className="text-muted-foreground line-clamp-2 text-[12px] leading-relaxed">
+        <p className="text-muted-foreground line-clamp-2 text-[0.75rem] leading-relaxed">
           {card.description}
         </p>
       </div>

@@ -1,4 +1,4 @@
-import type { NewsArticle, NewsItem } from "./types/news";
+import type { NewsArticle, NewsItem } from "./news";
 
 export const sidebarNews: NewsItem[] = [
   {

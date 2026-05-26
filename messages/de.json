@@ -64,5 +64,9 @@
     "header": "Neuigkeiten",
     "content": "Hier können Sie die neuesten Entwicklungen und Erfolgsgeschichten aus unseren Projekten mitverfolgen."
   },
-  "pagination": { "previous": "Vorherige", "next": "Nächste" }
+  "pagination": { "previous": "Vorherige", "next": "Nächste" },
+  "ContentSidebarHeader": {
+    "news": "Weitere Nachrichten",
+    "announcement": "Weitere Ankündigungen"
+  }
 }

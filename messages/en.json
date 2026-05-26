@@ -64,5 +64,9 @@
     "header": "News",
     "content": "You can follow the latest developments and success stories from our projects here."
   },
-  "pagination": { "previous": "Previous", "next": "Next" }
+  "pagination": { "previous": "Previous", "next": "Next" },
+  "ContentSidebarHeader": {
+    "news": "Other News",
+    "announcement": "Other Announcements"
+  }
 }

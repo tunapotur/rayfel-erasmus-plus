@@ -1,17 +1,28 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { Card_Sidebar } from "../Card_Sidebar";
-import type { NEWS } from "@/lib/types/DataTypes";
+import {
+  ANNOUNCEMENT,
+  NEWS,
+  isANNOUNCEMENT,
+  isNEWS,
+} from "@/lib/types/DataTypes";
 
-interface NewsSidebarProps {
-  items: Array<NEWS>;
-}
+export function ContentSidebar({
+  items,
+}: {
+  items: Array<ANNOUNCEMENT | NEWS>;
+}) {
+  const t = useTranslations("ContentSidebarHeader");
 
-export function NewsSidebar({ items }: NewsSidebarProps) {
   return (
     <aside className="w-full">
       {/* Sidebar title with decorative line */}
       <div className="mb-5 flex items-center gap-3">
         <h2 className="text-foreground font-serif text-xl font-bold whitespace-nowrap">
-          Diğer Haberler
+          {isANNOUNCEMENT(items[0]) && t("announcement")}
+          {isNEWS(items[0]) && t("news")}
         </h2>
         <div className="bg-foreground h-0.5 w-full rounded-full" />
       </div>

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Article } from "@/components/news/Article";
-import { NewsSidebar } from "@/components/news/NewsSidebar";
-import { sidebarNews } from "@/lib/data";
+import { Article } from "@/components/content/Article";
+import { ContentSidebar } from "@/components/content/ContentSidebar";
 import contents_news from "@/sample_data/contents_news";
 
 interface PageProps {
@@ -70,7 +69,7 @@ export default async function HaberDetayPage({ params }: PageProps) {
       {/* Page body */}
       <div className="grid grid-cols-1 gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_22rem] lg:items-start lg:px-8">
         <Article article={contents_news[0]} />
-        <NewsSidebar items={contents_news.slice(0, 6)} />
+        <ContentSidebar items={contents_news.slice(0, 6)} />
       </div>
     </div>
   );
