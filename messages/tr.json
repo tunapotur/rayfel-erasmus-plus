@@ -55,7 +55,7 @@
     "topHeader": "Platform Duyuruları",
     "header": "Duyurular",
     "content": "Proje başvuruları ve platformumuzdaki en yeni gelişmeleri buradan takip edebilirsiniz.",
-    "href": "/announcement"
+    "href": "/announcements"
   },
   "NewsPage": {
     "topHeader": "Platform Haberleri",

@@ -55,7 +55,7 @@
     "topHeader": "Plattform-Ankündigungen",
     "header": "Ankündigungen",
     "content": "Hier können Sie Projektanträge und die neuesten Entwicklungen auf unserer Plattform mitverfolgen.",
-    "href": "/announcement"
+    "href": "/announcements"
   },
   "NewsPage": {
     "topHeader": "Plattform-Neuigkeiten",

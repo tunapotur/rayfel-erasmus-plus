@@ -1,7 +1,7 @@
 "use client";
 
-import { useTranslations } from "next-intl";
 import { Card_Sidebar } from "../Card_Sidebar";
+import { useTranslations } from "next-intl";
 import {
   ANNOUNCEMENT,
   NEWS,
