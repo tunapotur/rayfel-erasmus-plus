@@ -15,4 +15,5 @@ export interface NewsArticle extends NewsItem {
   leadText: string;
   content: string[]; // paragraphs
   sectionTitle: string;
+  headline_image: string;
 }

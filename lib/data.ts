@@ -87,4 +87,5 @@ export const articleData: NewsArticle = {
     "Projeler bireysel veya en fazla 3 kişiden oluşan gruplar halinde sunulabilir. Değerlendirme komitemiz projeleri; özgünlük, uygulanabilirlik, metodolojik doğruluk ve sunum kalitesi olmak üzere dört ana başlıkta inceleyecektir. Başvuruların eksiksiz bir proje taslağı ve ön rapor ile birlikte yapılması gerekmektedir.",
     "Öğrencilerimiz danışman öğretmenlerinden rehberlik alabilir ve okul laboratuvarlarımızı proje hazırlık süreci boyunca aktif olarak kullanabilirler. Detaylı teknik şartnameye okul yönetim sistemimiz üzerinden ulaşabilirsiniz. Başarılar dileriz!",
   ],
+  headline_image: "/sample_images/headline_images/card_01.jpg",
 };

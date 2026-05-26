@@ -1,7 +1,7 @@
-import { CodeScreenPlaceholder } from "./CodeScreenPlaceholder";
 import type { NewsArticle } from "@/lib/types/news";
 import { NewsBadge } from "../NewsBadge";
 import ArrowLink from "../ArrowLink";
+import Image from "next/image";
 
 export function Article({ article }: { article: NewsArticle }) {
   return (
@@ -25,13 +25,19 @@ export function Article({ article }: { article: NewsArticle }) {
         {article.leadText}
       </div>
 
+      {/* TODO: Bu Image üzerinde çalış. Slug değeri değiştirilecek */}
       {/* Hero image placeholder */}
-      <CodeScreenPlaceholder />
-
-      {/* Section title */}
-      <h2 className="text-foreground mb-4 font-serif text-[1.35rem] font-bold">
-        {article.sectionTitle}
-      </h2>
+      <div className="mb-7 flex overflow-hidden shadow-lg">
+        <Image
+          src={article.headline_image}
+          alt="Slug"
+          loading="eager"
+          className="rounded-xl object-cover object-center"
+          sizes="(max-width: 768px) 100vw, 33vw"
+          width={640}
+          height={640}
+        />
+      </div>
 
       {/* Body */}
       <div className="space-y-4">
