@@ -7,7 +7,7 @@ const news: Array<NEWS> = [
     title: "Sürdürülebilir Eğitim Modelleri",
     description:
       "Erasmus+ kapsamında yürütülen yeni projemizle yeşil becerilerin eğitime entegrasyonu.",
-    href: "#",
+    href: "/news/surdurulebilir-egitim-modelleri",
     language: "tr",
     date: "12 Temmuz 2024",
     mainText: [
@@ -24,7 +24,7 @@ const news: Array<NEWS> = [
     title: "Yazılım Atölyesi Kayıtları Açıldı",
     description:
       "Sanat ve tasarım odaklı projelerimizin sergileneceği etkinlik için geri sayım başladı.",
-    href: "#",
+    href: "/news/yazilim-atolyesi-kayitlari-acildi",
     language: "tr",
     date: "28 Aralık 2023",
     mainText: [
@@ -41,7 +41,7 @@ const news: Array<NEWS> = [
     title: "Fen Projeleri Yarışmasında Birincilik",
     description:
       "Öğrencilerimiz sürdürülebilir enerji projeleriyle il genelinde düzenlenen yarışmada birinci oldu.",
-    href: "#",
+    href: "/news/fen-projeleri-yarismasinda-birincilik",
     language: "tr",
     date: "20 Aralık 2023",
     mainText: [
@@ -58,7 +58,7 @@ const news: Array<NEWS> = [
     title: "Milli Robotik Ligi Hazırlıkları",
     description:
       "Robotik takımımız, önümüzdeki ay düzenlenecek olan milli lig müsabakaları için yoğun bir tempoyla çalışıyor.",
-    href: "#",
+    href: "/news/milli-robotik-ligi-hazirliklari",
     language: "tr",
     date: "15 Aralık 2023",
     mainText: [
@@ -75,7 +75,7 @@ const news: Array<NEWS> = [
     title: "Geri Dönüşüm Kampanyası Başladı",
     description:
       "Okul genelinde başlatılan yeni geri dönüşüm projesiyle sıfır atık hedeflerimize bir adım daha yaklaşıyoruz.",
-    href: "#",
+    href: "/news/geri-donusum-kampanyasi-basladi",
     language: "tr",
     date: "10 Aralık 2023",
     mainText: [
@@ -92,7 +92,7 @@ const news: Array<NEWS> = [
     title: "Mezunlarla Kariyer Söyleşileri",
     description:
       "Okulumuzdan mezun olup başarılı kariyerlere sahip isimler, tecrübelerini paylaşmak için öğrencilerle buluşuyor.",
-    href: "#",
+    href: "/news/mezunlarla-kariyer-soylesileri",
     language: "tr",
     date: "05 Aralık 2023",
     mainText: [
@@ -109,7 +109,7 @@ const news: Array<NEWS> = [
     title: "Yapay Zeka Harvard Semineri",
     description:
       "Eğitimde yapay zeka araçlarının kullanımı ve etik standartlar üzerine kapsamlı bir seminer düzenlendi.",
-    href: "#",
+    href: "/news/yapay-zeka-harvard-semineri",
     language: "tr",
     date: "01 Aralık 2023",
     mainText: [
