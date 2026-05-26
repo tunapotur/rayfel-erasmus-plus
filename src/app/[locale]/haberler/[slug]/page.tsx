@@ -70,7 +70,7 @@ export default async function HaberDetayPage({ params }: PageProps) {
       {/* Page body */}
       <div className="grid grid-cols-1 gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_22rem] lg:items-start lg:px-8">
         <Article article={contents_news[0]} />
-        <NewsSidebar items={sidebarNews} />
+        <NewsSidebar items={contents_news.slice(0, 6)} />
       </div>
     </div>
   );

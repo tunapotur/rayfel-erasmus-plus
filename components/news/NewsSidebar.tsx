@@ -1,8 +1,8 @@
 import { NewsCard } from "./NewsCard";
-import type { NewsItem } from "@/types/news";
+import type { NEWS } from "@/lib/types/DataTypes";
 
 interface NewsSidebarProps {
-  items: NewsItem[];
+  items: Array<NEWS>;
 }
 
 export function NewsSidebar({ items }: NewsSidebarProps) {
@@ -10,10 +10,10 @@ export function NewsSidebar({ items }: NewsSidebarProps) {
     <aside className="w-full">
       {/* Sidebar title with decorative line */}
       <div className="mb-5 flex items-center gap-3">
-        <h2 className="font-serif text-xl font-bold text-foreground whitespace-nowrap">
+        <h2 className="text-foreground font-serif text-xl font-bold whitespace-nowrap">
           Diğer Haberler
         </h2>
-        <div className="h-0.5 w-full rounded-full bg-foreground" />
+        <div className="bg-foreground h-0.5 w-full rounded-full" />
       </div>
 
       <div className="flex flex-col gap-3">
