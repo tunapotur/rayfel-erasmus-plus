@@ -28,7 +28,7 @@ export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
         {article.description}
       </div>
 
-      {/* TODO: Bu Image üzerinde çalış. Slug değeri değiştirilecek */}
+      {/* TODO: Bu Image üzerinde çalış. */}
       {/* Hero image placeholder */}
       <div className="mb-7 flex overflow-hidden shadow-lg">
         {article.headline_image && (

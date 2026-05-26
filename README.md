@@ -1,5 +1,5 @@
-http://localhost:3000/tr/news/surdurulebilir-egitim-modelleri
-http://localhost:3000/tr/announcements/bilim-senligi-proje-basvurulari-basladi
+TODO: Projede ki tüm resimler elden geçirilecek
+TODO: Örnek verileri arttır
 
 shadcn
 --preset b1YmuKsHg

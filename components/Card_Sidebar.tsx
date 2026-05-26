@@ -20,6 +20,7 @@ export function Card_Sidebar({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
           className="w-24 shrink-0 bg-linear-to-br from-gray-900 to-slate-700"
           aria-label={card.title}
         >
+          {/* TODO: bu image'de sorun var düzeltilecek */}
           <Image
             src={announcement.headline_image}
             alt={card.title}
