@@ -1,5 +1,4 @@
-http://localhost:3000/tr/content
-http://localhost:3000/tr/haberler/surdurulebilir-egitim-modelleri
+http://localhost:3000/tr/news/surdurulebilir-egitim-modelleri
 
 shadcn
 --preset b1YmuKsHg

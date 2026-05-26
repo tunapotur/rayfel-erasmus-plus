@@ -1,10 +1,12 @@
 import type { ANNOUNCEMENT, NEWS } from "@/lib/types/DataTypes";
+import { isNEWS } from "@/lib/types/DataTypes";
 import { NewsBadge } from "../NewsBadge";
 import ArrowLink from "../ArrowLink";
 import Image from "next/image";
 
 export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
-  // TODO: burada duyuru ve haber ayrımını yap
+  const news = isNEWS(article) ? article : null;
+
   return (
     <article>
       {/* Date + NewsBadge */}
@@ -13,7 +15,7 @@ export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
         <span className="text-primary text-xs font-bold tracking-widest uppercase">
           {article.date}
         </span>
-        <NewsBadge BADGE_NEWS_TYPE={article.type} />
+        {news?.type && <NewsBadge BADGE_NEWS_TYPE={news.type} />}
       </div>
 
       {/* Title */}
