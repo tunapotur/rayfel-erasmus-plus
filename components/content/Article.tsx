@@ -1,9 +1,10 @@
-import type { NEWS } from "@/lib/types/DataTypes";
+import type { ANNOUNCEMENT, NEWS } from "@/lib/types/DataTypes";
 import { NewsBadge } from "../NewsBadge";
 import ArrowLink from "../ArrowLink";
 import Image from "next/image";
 
-export function Article({ article }: { article: NEWS }) {
+export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
+  // TODO: burada duyuru ve haber ayrımını yap
   return (
     <article>
       {/* Date + NewsBadge */}

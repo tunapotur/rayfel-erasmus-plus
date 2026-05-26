@@ -1,7 +1,4 @@
 {
-  "HomePage": {
-    "title": "Merhaba Dünya!"
-  },
   "LocaleLayout": {
     "title": "Rayfel Erasmus+ Web Sayfası"
   },
@@ -57,12 +54,14 @@
   "AnnouncementsPage": {
     "topHeader": "Platform Duyuruları",
     "header": "Duyurular",
-    "content": "Proje başvuruları ve platformumuzdaki en yeni gelişmeleri buradan takip edebilirsiniz."
+    "content": "Proje başvuruları ve platformumuzdaki en yeni gelişmeleri buradan takip edebilirsiniz.",
+    "href": "/announcement"
   },
   "NewsPage": {
     "topHeader": "Platform Haberleri",
     "header": "Haberler",
-    "content": "Projelerimizden en son gelişmeleri ve başarı hikayelerimizi buradan takip edebilirsiniz."
+    "content": "Projelerimizden en son gelişmeleri ve başarı hikayelerimizi buradan takip edebilirsiniz.",
+    "href": "/news"
   },
   "pagination": { "previous": "Önceki", "next": "İleri" },
   "ContentSidebarHeader": {

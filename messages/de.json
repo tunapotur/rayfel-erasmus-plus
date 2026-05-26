@@ -1,7 +1,4 @@
 {
-  "HomePage": {
-    "title": "Hallo Welt!"
-  },
   "LocaleLayout": {
     "title": "Rayfel Erasmus+ Webseite"
   },
@@ -57,12 +54,14 @@
   "AnnouncementsPage": {
     "topHeader": "Plattform-Ankündigungen",
     "header": "Ankündigungen",
-    "content": "Hier können Sie Projektanträge und die neuesten Entwicklungen auf unserer Plattform mitverfolgen."
+    "content": "Hier können Sie Projektanträge und die neuesten Entwicklungen auf unserer Plattform mitverfolgen.",
+    "href": "/announcement"
   },
   "NewsPage": {
     "topHeader": "Plattform-Neuigkeiten",
     "header": "Neuigkeiten",
-    "content": "Hier können Sie die neuesten Entwicklungen und Erfolgsgeschichten aus unseren Projekten mitverfolgen."
+    "content": "Hier können Sie die neuesten Entwicklungen und Erfolgsgeschichten aus unseren Projekten mitverfolgen.",
+    "href": "/news"
   },
   "pagination": { "previous": "Vorherige", "next": "Nächste" },
   "ContentSidebarHeader": {

@@ -1,7 +1,4 @@
 {
-  "HomePage": {
-    "title": "Hello world!"
-  },
   "LocaleLayout": {
     "title": "Rayfel Erasmus+ Web Page"
   },
@@ -57,12 +54,14 @@
   "AnnouncementsPage": {
     "topHeader": "Platform Announcements",
     "header": "Announcements",
-    "content": "You can follow project applications and the latest developments on our platform here."
+    "content": "You can follow project applications and the latest developments on our platform here.",
+    "href": "/announcement"
   },
   "NewsPage": {
     "topHeader": "Platform News",
     "header": "News",
-    "content": "You can follow the latest developments and success stories from our projects here."
+    "content": "You can follow the latest developments and success stories from our projects here.",
+    "href": "/news"
   },
   "pagination": { "previous": "Previous", "next": "Next" },
   "ContentSidebarHeader": {
