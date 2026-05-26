@@ -8,10 +8,12 @@ interface PageProps {
 }
 
 // Generate static params for SSG (expand with real data source as needed)
+// TODO: tüm sayfaların bu şekilde olması için çalışma yap
 export async function generateStaticParams() {
   return contents_news.map((item) => ({ slug: item.slug }));
 }
 
+// TODO: bu alanı tüm sayfalar için ayarla
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
