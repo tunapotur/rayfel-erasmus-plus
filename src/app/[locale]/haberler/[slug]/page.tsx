@@ -3,7 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Article } from "@/components/news/Article";
 import { NewsSidebar } from "@/components/news/NewsSidebar";
-import { articleData, sidebarNews } from "@/lib/data";
+import { sidebarNews } from "@/lib/data";
+import contents_news from "@/sample_data/contents_news";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -11,17 +12,17 @@ interface PageProps {
 
 // Generate static params for SSG (expand with real data source as needed)
 export async function generateStaticParams() {
-  return [{ slug: articleData.slug }];
+  return [{ slug: contents_news[0].slug }];
 }
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  if (slug !== articleData.slug) return {};
+  if (slug !== contents_news[0].slug) return {};
   return {
-    title: `${articleData.title} – Haberler`,
-    description: articleData.leadText,
+    title: `${contents_news[0].title} – Haberler`,
+    description: contents_news[0].description,
   };
 }
 
@@ -54,7 +55,7 @@ export default async function HaberDetayPage({ params }: PageProps) {
   const { slug } = await params;
 
   // In a real app, fetch article by slug from a CMS / DB
-  if (slug !== articleData.slug) notFound();
+  if (slug !== contents_news[0].slug) notFound();
 
   return (
     <div className="bg-background mb-auto min-h-screen">
@@ -63,12 +64,12 @@ export default async function HaberDetayPage({ params }: PageProps) {
           href: "/news",
           text: "Haberler",
         }}
-        article_title={articleData.title}
+        article_title={contents_news[0].title}
       />
 
       {/* Page body */}
       <div className="grid grid-cols-1 gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_22rem] lg:items-start lg:px-8">
-        <Article article={articleData} />
+        <Article article={contents_news[0]} />
         <NewsSidebar items={sidebarNews} />
       </div>
     </div>

@@ -16,7 +16,7 @@ export interface INFO {
 export interface ANNOUNCEMENT extends INFO {
   slug: string;
   date: string;
-  mainText: string;
+  mainText: Array<string>;
   headline_image?: string;
   images?: Array<string>;
   videos?: Array<string>;
