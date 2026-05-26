@@ -1,44 +1,39 @@
 import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { NewsBadge } from "./NewsBadge";
 import type { INFO, ANNOUNCEMENT, NEWS } from "@/lib/types/DataTypes";
 import { isANNOUNCEMENT, isNEWS } from "@/lib/types/DataTypes";
+import Image from "next/image";
 
 export function Card_Sidebar({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
   const announcement = isANNOUNCEMENT(card) || isNEWS(card) ? card : null;
   const news = isNEWS(card) ? card : null;
 
-  const imagePlaceholders: Array<string> = [
-    "from-blue-700 to-blue-400",
-    "from-slate-700 to-slate-500",
-    "from-gray-900 to-gray-700",
-    "from-green-700 to-green-500",
-    "from-gray-900 to-slate-700",
-    "from-violet-800 to-purple-600",
-  ];
-
   return (
     <Link
       href={card.href}
-      className={cn(
-        "group bg-card text-card-foreground flex overflow-hidden rounded-xl",
-        "border-border border shadow-sm",
-        "transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md",
-      )}
+      className="bg-card text-card-foreground border-border flex overflow-hidden rounded-xl border shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
     >
       {/* Image */}
       {announcement?.headline_image && (
         <div
-          className={cn(
-            "w-[90px] shrink-0 bg-gradient-to-br",
-            imagePlaceholders[2],
-          )}
+          className="w-24 shrink-0 bg-linear-to-br from-gray-900 to-slate-700"
           aria-label={card.title}
-        />
+        >
+          <Image
+            src={announcement.headline_image}
+            alt={card.title}
+            width={360}
+            height={120}
+            loading="eager"
+            className="object-cover object-center"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
+        </div>
       )}
 
       {/* Body */}
       <div className="flex flex-col gap-1 p-3">
+        {/* Date & Badge */}
         <div className="flex items-center gap-2">
           {/* Date */}
           {announcement?.date && (
