@@ -3,6 +3,7 @@ import { NewsBadge } from "./NewsBadge";
 import type { INFO, ANNOUNCEMENT, NEWS } from "@/lib/types/DataTypes";
 import { isANNOUNCEMENT, isNEWS } from "@/lib/types/DataTypes";
 import Image from "next/image";
+import getHref from "@/lib/getHref";
 
 export function Card_Sidebar({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
   const announcement = isANNOUNCEMENT(card) || isNEWS(card) ? card : null;
@@ -10,7 +11,7 @@ export function Card_Sidebar({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
 
   return (
     <Link
-      href={card.href}
+      href={getHref(card)}
       className="bg-card text-card-foreground border-border flex overflow-hidden rounded-xl border shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
     >
       {/* Image */}

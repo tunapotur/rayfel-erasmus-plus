@@ -7,7 +7,6 @@ const announcement: Array<ANNOUNCEMENT> = [
     slug: "bilim-senligi-proje-basvurulari-basladi",
     description:
       "Yılın en büyük bilim şenliğinde yerinizi almak için projelerinizi sisteme yükleyebilirsiniz.",
-    href: "#",
     language: "tr",
     date: "12 Ocak 2024",
     mainText: [
@@ -22,7 +21,6 @@ const announcement: Array<ANNOUNCEMENT> = [
     slug: "yeni-mentorluk-programi-basvurulari-acildi",
     description:
       "Proje ekiplerimizin profesyonel isimlerden alacağı mentörlük eğitimleri haftaya başlıyor.",
-    href: "#",
     language: "tr",
     date: "16 Ocak 2024",
     mainText: [
@@ -37,7 +35,6 @@ const announcement: Array<ANNOUNCEMENT> = [
     slug: "bolgesel-robotik-turnuvasi-kayitlari-acildi",
     description:
       "Bu yılki robotik turnuvasında okulumuzun temsil etmek isteyen takımlar için başvurular açıldı.",
-    href: "#",
     language: "tr",
     date: "18 Ocak 2024",
     mainText: [
@@ -52,7 +49,6 @@ const announcement: Array<ANNOUNCEMENT> = [
     slug: "kutuphane-calisma-saatleri-guncellendi",
     description:
       "Sınav dönemi boyunca kütüphanemiz haftalık olarak gece 22:00'ye kadar hizmet verecektir.",
-    href: "#",
     language: "tr",
     date: "20 Ocak 2024",
     mainText: [
@@ -67,7 +63,6 @@ const announcement: Array<ANNOUNCEMENT> = [
     slug: "erasmus-bilgilendirme-toplantisi-duzenlendi",
     description:
       "Avrupa'daki ortak okullarımızla gerçekleştirilen çevrimiçi toplantıda proje takvimi belirlendi.",
-    href: "#",
     language: "tr",
     date: "25 Ocak 2024",
     mainText: [
@@ -82,7 +77,6 @@ const announcement: Array<ANNOUNCEMENT> = [
     slug: "yesil-okul-sertifikasi-basvurusu-yapildi",
     description:
       "Okulumuz, çevre dostu uygulamalarıyla Yeşil Okul sertifikası almaya hak kazandı.",
-    href: "#",
     language: "tr",
     date: "28 Ocak 2024",
     mainText: [
@@ -97,7 +91,6 @@ const announcement: Array<ANNOUNCEMENT> = [
     slug: "gunes-enerjisi-paneli-kurulumu-tamamlandi",
     description:
       "Sürdürülebilir kampüs projemizin ilk adımı olarak laboratuvar binasının çatısına güneş panelleri yerleştirildi.",
-    href: "#",
     language: "tr",
     date: "19 Nisan 2024",
     mainText: [
@@ -112,7 +105,6 @@ const announcement: Array<ANNOUNCEMENT> = [
     slug: "3d-tasarim-yarismasi-basvurulari",
     description:
       "Tasarım ve inovasyon odaklı düşünen öğrencilerimiz için ödüllü katı modelleme ve 3D tasarım yarışması açıldı.",
-    href: "#",
     language: "tr",
     date: "24 Nisan 2024",
     mainText: [
@@ -127,7 +119,6 @@ const announcement: Array<ANNOUNCEMENT> = [
     slug: "kariyer-gunleri-etkinlik-programi",
     description:
       "Gelecek ay kampüsümüzde ağırlayacağımız farklı sektörlerden lider firmaların katılım takvimi netleşti.",
-    href: "#",
     language: "tr",
     date: "28 Nisan 2024",
     mainText: [

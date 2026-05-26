@@ -6,6 +6,7 @@ import ArrowLink from "./ArrowLink";
 import type { INFO, ANNOUNCEMENT, NEWS } from "@/lib/types/DataTypes";
 import { isANNOUNCEMENT, isNEWS } from "@/lib/types/DataTypes";
 import { NewsBadge } from "./NewsBadge";
+import getHref from "@/lib/getHref";
 
 export default function Card({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
   const t = useTranslations("CardLinkText");
@@ -52,7 +53,7 @@ export default function Card({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
         </p>
       </div>
 
-      <ArrowLink text={t("readMore")} href={card.href} />
+      <ArrowLink text={t("readMore")} href={getHref(card)} />
     </div>
   );
 }

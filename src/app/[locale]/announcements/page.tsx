@@ -28,7 +28,7 @@ export default async function AnnouncementsPage({
       {/* Announcements Cards List */}
       <div className="col3-cards-grid">
         {currentAnnouncements.map((item) => (
-          <Card key={item.title} card={item} />
+          <Card key={item.id} card={item} />
         ))}
       </div>
 
