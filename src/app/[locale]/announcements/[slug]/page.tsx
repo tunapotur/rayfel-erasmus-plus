@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Article } from "@/components/content/Article";
 import { ContentSidebar } from "@/components/content/ContentSidebar";
 import contents_news from "@/sample_data/contents_news";
+import contents_announcements from "@/sample_data/contents_announcements";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -54,22 +55,22 @@ export default async function ContentDetailPage({ params }: PageProps) {
   const { slug } = await params;
 
   // In a real app, fetch article by slug from a CMS / DB
-  if (slug !== contents_news[0].slug) notFound();
+  if (slug !== contents_announcements[0].slug) notFound();
 
   return (
     <div className="bg-background mb-auto min-h-screen">
       <BreadCrumbNav
         content_source_link={{
-          href: "/news",
+          href: "/announcements",
           text: "Haberler",
         }}
-        article_title={contents_news[0].title}
+        article_title={contents_announcements[0].title}
       />
 
       {/* Page body */}
       <div className="grid grid-cols-1 gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_22rem] lg:items-start lg:px-8">
-        <Article article={contents_news[0]} />
-        <ContentSidebar items={contents_news.slice(0, 6)} />
+        <Article article={contents_announcements[0]} />
+        <ContentSidebar items={contents_announcements.slice(0, 6)} />
       </div>
     </div>
   );

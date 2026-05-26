@@ -1,4 +1,5 @@
 http://localhost:3000/tr/news/surdurulebilir-egitim-modelleri
+http://localhost:3000/tr/announcements/bilim-senligi-proje-basvurulari-basladi
 
 shadcn
 --preset b1YmuKsHg
