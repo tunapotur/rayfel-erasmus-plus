@@ -1,4 +1,4 @@
-import { NewsCard } from "./NewsCard";
+import { Card_Sidebar } from "../Card_Sidebar";
 import type { NEWS } from "@/lib/types/DataTypes";
 
 interface NewsSidebarProps {
@@ -18,7 +18,7 @@ export function NewsSidebar({ items }: NewsSidebarProps) {
 
       <div className="flex flex-col gap-3">
         {items.map((item) => (
-          <NewsCard key={item.id} item={item} />
+          <Card_Sidebar key={item.id} card={item} />
         ))}
       </div>
     </aside>
