@@ -1,5 +1,6 @@
 TODO: Projede ki tüm resimler elden geçirilecek
 TODO: Örnek verileri arttır
+TODO: bu readme file düzenlenecek
 
 shadcn
 --preset b1YmuKsHg
