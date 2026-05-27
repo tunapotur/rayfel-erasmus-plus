@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { ANNOUNCEMENT, NEWS, isANNOUNCEMENT } from "@/lib/types/DataTypes";
-import BreadCrumbNav from "@/components/content_detail/BreadCrumbNav";
+import BreadCrumbNav from "@/components/content/BreadCrumbNav";
 import { Article } from "./Article";
 import { ContentSidebar } from "./ContentSidebar";
 

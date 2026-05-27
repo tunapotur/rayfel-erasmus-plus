@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import ContentDetail from "@/components/content_detail/ContentDetail";
+import ContentDetail from "@/components/content/ContentDetail";
 import contents_news from "@/sample_data/contents_news";
 
 interface PageProps {
