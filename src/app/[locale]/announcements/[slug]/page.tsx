@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import ContentDetail from "@/components/content/ContentDetail";
+import ContentWrapper from "@/components/content/ContentWrapper";
 import contents_announcements from "@/sample_data/contents_announcements";
 
 interface PageProps {
@@ -35,5 +35,5 @@ export default async function ContentDetailPage({ params }: PageProps) {
     .filter((item) => item.slug !== slug)
     .slice(0, 6);
 
-  return <ContentDetail content={content} other_contents={other_contents} />;
+  return <ContentWrapper content={content} other_contents={other_contents} />;
 }

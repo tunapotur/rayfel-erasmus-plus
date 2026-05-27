@@ -4,7 +4,7 @@ import { NewsBadge } from "../NewsBadge";
 import ArrowLink from "../ArrowLink";
 import Image from "next/image";
 
-export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
+export function ContentArticle({ article }: { article: ANNOUNCEMENT | NEWS }) {
   const news = isNEWS(article) ? article : null;
 
   return (

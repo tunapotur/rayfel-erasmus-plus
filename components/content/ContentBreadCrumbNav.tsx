@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function BreadCrumbNav({
+export default function ContentBreadCrumbNav({
   content_source_link,
   article_title,
 }: {
