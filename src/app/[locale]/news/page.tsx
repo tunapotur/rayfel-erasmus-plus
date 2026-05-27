@@ -1,11 +1,32 @@
 import PageWrapper from "@/components/PageWrapper";
 import PaginationOperations from "@/components/PaginationOperations";
-import type { SearchParamsPageProps } from "@/lib/types/DataTypes";
+import type {
+  LocalePageProps,
+  SearchParamsPageProps,
+} from "@/lib/types/DataTypes";
 import resolvePagination from "@/lib/resolvePagination";
 import Card from "@/components/Card";
 import contents_news from "@/sample_data/contents_news";
+import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 
 const ITEMS_PER_PAGE = 6;
+
+export async function generateMetadata({
+  params,
+}: LocalePageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  const t = await getTranslations({
+    locale,
+    namespace: "pages",
+  });
+
+  return {
+    title: `${t("news")} ${" - "} Rayfel Erasmus+`,
+    description: `t("news")} ${" - "} Rayfel Erasmus+`,
+  };
+}
 
 export default async function NewsPage({
   searchParams,
