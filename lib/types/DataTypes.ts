@@ -2,6 +2,10 @@ export interface SearchParamsPageProps {
   searchParams: Promise<{ page?: string }>;
 }
 
+export interface LocalePageProps {
+  params: Promise<{ locale: string }>;
+}
+
 export type LANGUAGE_TYPE = "en" | "de" | "tr";
 export type NEWS_TYPE = "news" | "mobility" | "dissemination";
 

@@ -4,13 +4,10 @@ import InfoCards from "@/components/homepage/InfoCards";
 import About from "@/components/homepage/About";
 import Announcements from "@/components/homepage/Announcements";
 import News from "@/components/homepage/News";
-
-interface PageProps {
-  params: Promise<{ locale: string }>;
-}
+import { LocalePageProps } from "@/lib/types/DataTypes";
 
 // Statik Render edilecek Async HomePage Bileşeni
-export default async function HomePage({ params }: PageProps) {
+export default async function HomePage({ params }: LocalePageProps) {
   const { locale } = await params;
 
   // ÇOK ÖNEMLİ: Üst layout'ta tanımladığın generateStaticParams ile bu sayfanın
