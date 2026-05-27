@@ -8,7 +8,13 @@ import { isANNOUNCEMENT, isNEWS } from "@/lib/types/DataTypes";
 import { NewsBadge } from "./NewsBadge";
 import getHref from "@/lib/getHref";
 
-export default function Card({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
+export default function Card({
+  card,
+  priority,
+}: {
+  card: INFO | ANNOUNCEMENT | NEWS;
+  priority?: boolean;
+}) {
   const t = useTranslations("CardLinkText");
 
   const announcement = isANNOUNCEMENT(card) || isNEWS(card) ? card : null;
@@ -24,7 +30,9 @@ export default function Card({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
             alt={card.title}
             fill
             className="object-cover"
-            sizes="(max-width: 1024px) 100vw, 1024px"
+            sizes="(max-width: 768px) 100vw, 33vw"
+            loading={priority ? "eager" : "lazy"}
+            preload={priority ? true : undefined}
           />
 
           {news?.type && (

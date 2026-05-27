@@ -51,7 +51,7 @@ export default function About() {
           height={240}
           className="order-first rounded-2xl shadow-xl md:order-last"
           style={{ width: "24rem", height: "auto", objectFit: "cover" }}
-          sizes="(max-width: 768px) 100vw, 33vw"
+          sizes="(max-width: 768px) 100vw, 384px"
         />
       </div>
     </SectionTemplate>

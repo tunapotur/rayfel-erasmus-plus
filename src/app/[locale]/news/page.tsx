@@ -24,8 +24,8 @@ export default async function NewsPage({
     <PageWrapper pageText="NewsPage">
       {/* News Cards List */}
       <div className="col3-cards-grid">
-        {currentNews.map((item) => (
-          <Card key={item.title} card={item} />
+        {currentNews.map((item, index) => (
+          <Card key={item.id} card={item} priority={index === 0} />
         ))}
       </div>
 

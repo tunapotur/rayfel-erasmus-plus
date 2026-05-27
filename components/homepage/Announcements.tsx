@@ -16,8 +16,8 @@ export default function Announcements() {
       href="/announcements"
     >
       <div className="flex w-full flex-col gap-4 md:flex-row">
-        {contents_announcements.slice(0, 4).map((item) => (
-          <Card key={item.title} card={item} />
+        {contents_announcements.slice(0, 4).map((item, index) => (
+          <Card key={item.title} card={item} priority={index === 0} />
         ))}
       </div>
     </SectionTemplate>

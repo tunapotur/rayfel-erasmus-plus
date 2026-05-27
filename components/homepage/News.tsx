@@ -17,8 +17,8 @@ export default function News() {
       href="/news"
     >
       <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-3 md:grid-rows-2">
-        {contents_news.slice(0, 6).map((item) => (
-          <Card key={item.title} card={item} />
+        {contents_news.slice(0, 6).map((item, index) => (
+          <Card key={item.title} card={item} priority={index === 0} />
         ))}
       </div>
     </SectionTemplate>
