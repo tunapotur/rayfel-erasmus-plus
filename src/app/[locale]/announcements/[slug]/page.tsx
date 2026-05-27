@@ -25,7 +25,7 @@ export async function generateMetadata({
   if (!content) return {};
 
   return {
-    title: `${content.title} – ${t("announcement")}`,
+    title: `${content.title} ${" - "} ${t("announcement")}`,
     description: content.description,
   };
 }
