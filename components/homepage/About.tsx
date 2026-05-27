@@ -49,8 +49,9 @@ export default function About() {
           alt={t("imageAltText")}
           width={320}
           height={240}
-          className="orter-first rounded-2xl object-cover shadow-xl md:order-last"
-          sizes="(max-width: 1024px) 100vw, 1024px"
+          className="order-first rounded-2xl shadow-xl md:order-last"
+          style={{ width: "24rem", height: "auto", objectFit: "cover" }}
+          sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
     </SectionTemplate>

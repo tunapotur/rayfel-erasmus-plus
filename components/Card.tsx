@@ -23,9 +23,8 @@ export default function Card({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
             src={announcement.headline_image}
             alt={card.title}
             fill
-            loading="eager"
-            className="object-cover object-center"
-            sizes="(max-width: 768px) 100vw, 33vw"
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 1024px"
           />
 
           {news?.type && (
