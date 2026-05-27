@@ -28,18 +28,15 @@ export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
         {article.description}
       </div>
 
-      {/* TODO: Bu Image üzerinde çalış. */}
       {/* Hero image placeholder */}
-      <div className="mb-7 flex overflow-hidden shadow-lg">
+      <div className="relative mb-7 flex h-96 w-full rounded-xl shadow-lg">
         {article.headline_image && (
           <Image
             src={article.headline_image}
             alt={article.title}
-            loading="eager"
-            className="rounded-xl object-cover object-center"
-            sizes="(max-width: 768px) 100vw, 33vw"
-            width={640}
-            height={640}
+            className="rounded-xl object-cover"
+            sizes="(max-width: 1024px) 100vw, 1024px"
+            fill
           />
         )}
       </div>

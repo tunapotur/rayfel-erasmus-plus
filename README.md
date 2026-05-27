@@ -1,3 +1,21 @@
+``
+
+  <div className="relative h-96 w-full">
+    <Image
+      src="/background.jpg"
+      alt="Arkaplan"
+      fill
+      className="object-cover"
+      sizes="(max-width: 1024px) 100vw, 1024px"
+    />
+  </div>
+
+NextJs Image özelliği resimleri ekran boyutuna göre gerekli boyutta oluşturuyor.
+fill özelliğinin kullanılabilmesi için parent elementin relative ve sabit bir hight değerine sahip olması gerekiyor.
+sizes="(max-width: 1024px) 100vw, 1024px"
+Ekran 1024px veya daha dar → görselin tam viewport genişliğinde (100vw) olduğunu söyler, tarayıcı ekran genişliği kadar görsel indirir.
+Ekran 1024px'den geniş → içerik maksimum 1024px sabit olduğu için tarayıcı her zaman 1024px genişliğinde görsel indirir, daha fazlasını indirip boşa harcamaz.
+
 TODO: Projede ki tüm resimler elden geçirilecek
 TODO: Örnek verileri arttır
 TODO: bu readme file düzenlenecek
