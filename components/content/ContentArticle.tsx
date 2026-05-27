@@ -29,8 +29,8 @@ export function ContentArticle({ article }: { article: ANNOUNCEMENT | NEWS }) {
       </div>
 
       {/* Hero image placeholder */}
-      <div className="relative mb-7 flex h-96 w-full rounded-xl shadow-lg md:h-128 lg:h-96">
-        {article.headline_image && (
+      {article.headline_image && (
+        <div className="relative mb-7 flex h-96 w-full rounded-xl shadow-lg md:h-128 lg:h-96">
           <Image
             src={article.headline_image}
             alt={article.title}
@@ -38,8 +38,8 @@ export function ContentArticle({ article }: { article: ANNOUNCEMENT | NEWS }) {
             sizes="(max-width: 1024px) 100vw, 1024px"
             fill
           />
-        )}
-      </div>
+        </div>
+      )}
 
       {/* Body */}
       <div className="space-y-4">

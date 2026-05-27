@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ContentWrapper from "@/components/content/ContentWrapper";
 import contents_news from "@/sample_data/contents_news";
+import { getTranslations } from "next-intl/server";
 
 interface PageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }
 
 // Generate static params for SSG (expand with real data source as needed)
@@ -17,18 +18,22 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const content = contents_news.find((item) => item.slug === slug);
+  const t = await getTranslations({
+    locale,
+    namespace: "NewsSection",
+  });
 
   if (!content) return {};
 
   return {
-    title: `${content.title} – Haberler`,
+    title: `${content.title} – ${t("header")}`,
     description: content.description,
   };
 }
 
-export default async function ContentDetailPage({ params }: PageProps) {
+export default async function NewsDetailPage({ params }: PageProps) {
   const { slug } = await params;
   const content = contents_news.find((item) => item.slug === slug);
 

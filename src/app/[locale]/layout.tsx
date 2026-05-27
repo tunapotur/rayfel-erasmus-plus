@@ -8,10 +8,6 @@ import { routing } from "@/src/i18n/routing";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-// type Props = {
-//   children: React.ReactNode;
-// };
-
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 const geistSans = Geist({
@@ -75,7 +71,7 @@ export default async function LocaleLayout({
         inter.variable,
       )}
     >
-      <body className="flex flex-col lg:items-center bg-background">
+      <body className="bg-background flex flex-col lg:items-center">
         <NextIntlClientProvider locale={locale}>
           <ThemeProvider
             attribute="class"
@@ -83,7 +79,7 @@ export default async function LocaleLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="max-w-5xl min-h-screen flex flex-col justify-between">
+            <div className="flex min-h-screen max-w-5xl flex-col justify-between">
               <Navbar />
               {children}
               <Footer />
