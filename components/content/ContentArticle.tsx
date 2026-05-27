@@ -29,7 +29,7 @@ export function ContentArticle({ article }: { article: ANNOUNCEMENT | NEWS }) {
       </div>
 
       {/* Hero image placeholder */}
-      <div className="relative mb-7 flex h-96 w-full rounded-xl shadow-lg">
+      <div className="relative mb-7 flex h-96 w-full rounded-xl shadow-lg md:h-128 lg:h-96">
         {article.headline_image && (
           <Image
             src={article.headline_image}
