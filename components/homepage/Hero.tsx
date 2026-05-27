@@ -9,38 +9,43 @@ import { useTranslations } from "next-intl";
 
 export default function Hero() {
   const t = useTranslations("HeroSection");
+  const sectionSize = "h-72 w-full sm:h-96 md:h-120 lg:h-144";
 
   return (
-    <section className="h-72 w-full sm:h-96 md:h-120 lg:h-144 flex flex-col items-center relative z-15">
-      <div className="relative size-full z-5 overflow-hidden">
-        {/* Background Image */}
+    <section
+      className={`relative z-15 flex flex-col items-center ${sectionSize}`}
+    >
+      {/* Hero Image */}
+      <div className="relative z-5 size-full overflow-hidden">
+        {/* Image */}
         <div className="absolute inset-0">
-          <Image
-            src={HeroPic}
-            alt={t("imageAltText")}
-            fill
-            loading="eager"
-            className="w-full object-cover object-center z-2"
-            sizes="100vw"
-          />
+          <div className={`relative ${sectionSize}`}>
+            <Image
+              src={HeroPic}
+              alt={t("imageAltText")}
+              fill
+              className="rounded-b-xl object-cover"
+              sizes="(max-width: 1024px) 100vw, 1024px"
+            />
+          </div>
 
           {/* Gradient overlay*/}
-          <div className="absolute inset-0 bg-linear-to-r from-black/75 via-black/50 to-black/20 z-3" />
+          <div className="absolute inset-0 z-3 bg-linear-to-r from-black/75 via-black/50 to-black/20" />
         </div>
 
         {/* Content */}
-        <div className="absolute z-10 h-full sm:pt-18 sm:pl-9 md:pt-18 md:pl-12 flex flex-col sm:max-w-160 sm:gap-8 p-8 gap-3 w-full sm:w-[90%] max-[400px]:p-4">
-          <h1 className="text-bright-header text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold leading-tight drop-shadow-sm">
+        <div className="absolute z-10 flex h-full w-full flex-col gap-3 p-8 max-[400px]:p-4 sm:w-[90%] sm:max-w-160 sm:gap-8 sm:pt-18 sm:pl-9 md:pt-18 md:pl-12">
+          <h1 className="text-bright-header text-xl leading-tight font-bold drop-shadow-sm sm:text-2xl md:text-3xl lg:text-5xl">
             {t("header")}
           </h1>
 
-          <p className="text-bright-header md:text-base lg:text-lg leading-relaxed text-sm w-full sm:w-[75%]">
+          <p className="text-bright-header w-full text-sm leading-relaxed sm:w-[75%] md:text-base lg:text-lg">
             {t("content")}
           </p>
 
           <Button
             asChild
-            className="md:p-6 p-4 w-fit font-semibold md:text-base text-xs"
+            className="w-fit p-4 text-xs font-semibold md:p-6 md:text-base"
           >
             <Link href="/about">
               <span>{t("linkText")}</span>
@@ -50,7 +55,7 @@ export default function Hero() {
         </div>
 
         {/* Bottom effect */}
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-white to-transparent z-4" />
+        <div className="absolute right-0 bottom-0 left-0 z-4 h-16 bg-linear-to-t from-white to-transparent" />
       </div>
     </section>
   );

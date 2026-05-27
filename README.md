@@ -1,4 +1,5 @@
 ``
+import Image from "next/image";
 
   <div className="relative h-96 w-full">
     <Image

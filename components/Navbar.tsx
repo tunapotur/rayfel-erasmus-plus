@@ -46,14 +46,20 @@ function useNavbarAction(): NavbarActionContextType {
 
 function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-1 shrink-0">
+    <Link href="/" className="flex shrink-0 items-center gap-1">
       {/* image */}
-      <div className="size-3.5 sm:size-7.5 flex items-center justify-center">
-        <Image src={logo} alt="Rayfel Logo" />
+      <div className="relative flex size-3.5 items-center justify-center sm:size-7.5">
+        <Image
+          src={logo}
+          alt="Rayfel Logo"
+          fill
+          className="object-cover"
+          sizes="(max-width: 1024px) 100vw, 1024px"
+        />
       </div>
 
       {/* text */}
-      <div className="font-semibold flex sm:gap-0 gap-1 sm:flex-col items-start leading-tight">
+      <div className="flex items-start gap-1 leading-tight font-semibold sm:flex-col sm:gap-0">
         <div>Rayfel</div>
         <div className="text-primary font-bold dark:text-blue-700">
           Erasmus+
@@ -77,7 +83,7 @@ function Navigation() {
   ];
 
   return (
-    <nav className="flex flex-col gap-2 py-4 px-2 sm:grid md:grid-cols-4 sm:grid-cols-3 lg:flex lg:flex-row sm:items-center">
+    <nav className="flex flex-col gap-2 px-2 py-4 sm:grid sm:grid-cols-3 sm:items-center md:grid-cols-4 lg:flex lg:flex-row">
       {navLinks.map((link) => {
         const isActive =
           link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
@@ -86,10 +92,10 @@ function Navigation() {
           <Link
             key={link.href}
             href={link.href}
-            className={`px-3 py-1.5 rounded-md transition-colors sm:text-center sm:truncate sm:max-w-28 ${
+            className={`rounded-md px-3 py-1.5 transition-colors sm:max-w-28 sm:truncate sm:text-center ${
               isActive
-                ? "text-primary dark:text-blue-600 font-semibold bg-primary/10 dark:bg-primary/30 sm:bg-background"
-                : "hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-500/30 dark:hover:text-gray-200"
+                ? "text-primary bg-primary/10 dark:bg-primary/30 sm:bg-background font-semibold dark:text-blue-600"
+                : "hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-500/30 dark:hover:text-gray-200"
             }`}
             onClick={() => setMobilMenuOpen(false)}
           >
@@ -106,7 +112,7 @@ function AuthButtons() {
   const { setMobilMenuOpen } = useNavbarAction();
 
   return (
-    <div className="flex items-center justify-between gap-4 sm:gap-2 sm:flex-col lg:flex-row flex-row">
+    <div className="flex flex-row items-center justify-between gap-4 sm:flex-col sm:gap-2 lg:flex-row">
       <Button
         variant="outline"
         asChild
@@ -125,7 +131,7 @@ function AuthButtons() {
 
 function LocalModeButtons() {
   return (
-    <div className="flex items-center justify-between gap-2 sm:gap-2 sm:flex-col lg:flex-row flex-row">
+    <div className="flex flex-row items-center justify-between gap-2 sm:flex-col sm:gap-2 lg:flex-row">
       <ModeToggle></ModeToggle>
       <LocalOperation />
     </div>
@@ -161,10 +167,10 @@ function NavbarOperations() {
     <>
       <header
         ref={ref}
-        className="sticky top-0 z-50 w-full shadow-sm sm:px-4 bg-background lg:min-w-5xl"
+        className="bg-background sticky top-0 z-50 w-full shadow-sm sm:px-4 lg:min-w-5xl"
       >
         {/* Web page menu */}
-        <div className="hidden sm:flex items-center justify-between min-h-18 gap-1 sm:py-3 lg:py-0">
+        <div className="hidden min-h-18 items-center justify-between gap-1 sm:flex sm:py-3 lg:py-0">
           <Logo />
           <Navigation />
 
@@ -175,8 +181,8 @@ function NavbarOperations() {
         </div>
 
         {/* Mobil Menu */}
-        <div className="sm:hidden mx-auto px-4">
-          <div className="flex flex-row justify-between min-h-18">
+        <div className="mx-auto px-4 sm:hidden">
+          <div className="flex min-h-18 flex-row justify-between">
             <Logo />
 
             <div className="flex items-center">
@@ -185,7 +191,7 @@ function NavbarOperations() {
             </div>
           </div>
           {isMobilMenuOpen && (
-            <div className="absolute bg-background pb-4 flex flex-col left-0 right-0 px-4">
+            <div className="bg-background absolute right-0 left-0 flex flex-col px-4 pb-4">
               <div className="flex flex-col border-t border-gray-200 dark:border-gray-800">
                 <Navigation />
                 <AuthButtons />
