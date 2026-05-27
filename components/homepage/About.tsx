@@ -18,9 +18,9 @@ export default function About() {
       href="/about"
       hasBackground
     >
-      <div className="flex flex-col md:flex-row items-center gap-4 md:gap-0">
+      <div className="flex flex-col items-center gap-4 md:flex-row md:gap-0">
         {/* Content */}
-        <div className="order-last md:order-first md:w-2/3 flex flex-col gap-4 md:pr-6">
+        <div className="order-last flex flex-col gap-4 md:order-first md:w-2/3 md:pr-6">
           {/* Explanation - 2 paragraph */}
           <p className="text-muted-foreground text-base leading-relaxed">
             {about_section.description}
@@ -31,7 +31,7 @@ export default function About() {
             {about_section.highlights.map((item, index) => (
               <li
                 key={index}
-                className="flex items-start gap-3 text-muted-foreground text-sm"
+                className="text-muted-foreground flex items-start gap-3 text-sm"
               >
                 <CheckCircle2
                   className="text-primary mt-0.5 shrink-0"
@@ -47,10 +47,10 @@ export default function About() {
         <Image
           src={about}
           alt={t("imageAltText")}
-          // fill
-          loading="eager"
-          className="orter-first md:order-last md:w-1/3 object-contain object-center rounded-2xl shadow-xl"
-          sizes="100vw"
+          width={320}
+          height={240}
+          className="orter-first rounded-2xl object-cover shadow-xl md:order-last"
+          sizes="(max-width: 1024px) 100vw, 1024px"
         />
       </div>
     </SectionTemplate>
