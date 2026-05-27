@@ -26,6 +26,8 @@ export default function Hero() {
               fill
               className="rounded-b-xl object-cover"
               sizes="(max-width: 1024px) 100vw, 1024px"
+              loading="eager"
+              preload
             />
           </div>
 
