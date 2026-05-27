@@ -67,5 +67,11 @@
   "ContentSidebarHeader": {
     "news": "Other News",
     "announcement": "Other Announcements"
+  },
+  "pages": {
+    "home": "Home",
+    "about": "About Us",
+    "announcement": "Announcements",
+    "news": "News"
   }
 }

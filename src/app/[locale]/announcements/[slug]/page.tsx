@@ -19,13 +19,13 @@ export async function generateMetadata({
   const content = contents_announcements.find((item) => item.slug === slug);
   const t = await getTranslations({
     locale,
-    namespace: "AnnouncementsSection",
+    namespace: "pages",
   });
 
   if (!content) return {};
 
   return {
-    title: `${content.title} – ${t("header")}`,
+    title: `${content.title} – ${t("announcement")}`,
     description: content.description,
   };
 }

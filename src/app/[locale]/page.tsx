@@ -1,10 +1,22 @@
+import { setRequestLocale } from "next-intl/server";
 import Hero from "@/components/homepage/Hero";
 import InfoCards from "@/components/homepage/InfoCards";
 import About from "@/components/homepage/About";
 import Announcements from "@/components/homepage/Announcements";
 import News from "@/components/homepage/News";
 
-export default function HomePage() {
+interface PageProps {
+  params: Promise<{ locale: string }>;
+}
+
+// Statik Render edilecek Async HomePage Bileşeni
+export default async function HomePage({ params }: PageProps) {
+  const { locale } = await params;
+
+  // ÇOK ÖNEMLİ: Üst layout'ta tanımladığın generateStaticParams ile bu sayfanın
+  // eşleşmesi ve build anında statikleştirilmesi (Static Rendering) için bu metot şarttır.
+  setRequestLocale(locale);
+
   return (
     <div className="flex flex-col">
       <Hero />

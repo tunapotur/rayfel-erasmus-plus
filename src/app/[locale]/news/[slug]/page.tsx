@@ -22,13 +22,13 @@ export async function generateMetadata({
   const content = contents_news.find((item) => item.slug === slug);
   const t = await getTranslations({
     locale,
-    namespace: "NewsSection",
+    namespace: "pages",
   });
 
   if (!content) return {};
 
   return {
-    title: `${content.title} – ${t("header")}`,
+    title: `${content.title} – ${t("news")}`,
     description: content.description,
   };
 }

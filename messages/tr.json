@@ -67,5 +67,11 @@
   "ContentSidebarHeader": {
     "news": "Diğer Haberler",
     "announcement": "Diğer Duyurular"
+  },
+  "pages": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "announcement": "Duyurular",
+    "news": "Haberler"
   }
 }
