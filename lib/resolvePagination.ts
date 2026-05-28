@@ -1,18 +1,14 @@
-import { redirect } from "next/navigation";
-
+// resolvePagination.ts — static uyumlu hali
 export default async function resolvePagination(
-  pageLink: string,
-  searchParams: Promise<{ page?: string }>,
+  pageParam: string | undefined,
   itemsPerPage: number,
   dataLength: number,
 ): Promise<number[]> {
-  const { page } = await searchParams;
-
   const totalPages = Math.ceil(dataLength / itemsPerPage);
-  const pageNumber = parseInt(page ?? "");
-
-  if (!page || isNaN(pageNumber) || pageNumber < 1 || pageNumber > totalPages)
-    redirect(`/${pageLink}?page=1`);
+  const pageNumber = Math.max(
+    1,
+    Math.min(Number(pageParam ?? 1) || 1, totalPages),
+  );
 
   const startIndex = (pageNumber - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;

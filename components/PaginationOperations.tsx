@@ -24,7 +24,7 @@ export default function PaginationOperations({
 }: PaginationOperationsProps) {
   const t = useTranslations("pagination");
 
-  const buildHref = (pageNumber: number) => `/${pageLink}?page=${pageNumber}`;
+  const buildHref = (pageNumber: number) => `/${pageLink}/${pageNumber}`;
 
   /**
    * shadcn pagination şekillendirmesi için kullanılacak

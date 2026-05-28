@@ -1,7 +1,7 @@
 import PageWrapper from "@/components/PageWrapper";
-import PaginationOperations_v2 from "@/components/PaginationOperations_v2";
+import PaginationOperations_v2 from "@/components/PaginationOperations";
 import type { LocalePageProps } from "@/lib/types/DataTypes";
-import resolvePagination_v2 from "@/lib/resolvePagination_v2";
+import resolvePagination_v2 from "@/lib/resolvePagination";
 import Card from "@/components/Card";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
