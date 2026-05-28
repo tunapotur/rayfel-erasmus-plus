@@ -3,9 +3,10 @@ import PaginationOperations_v2 from "@/components/PaginationOperations_v2";
 import type { LocalePageProps } from "@/lib/types/DataTypes";
 import resolvePagination_v2 from "@/lib/resolvePagination_v2";
 import Card from "@/components/Card";
-import contents_announcements from "@/sample_data/contents_announcements";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
+
+import contents_announcements from "@/sample_data/contents_announcements";
 
 const ITEMS_PER_PAGE = 9;
 
@@ -39,7 +40,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function TestPage({ params }: PageProps) {
+export default async function AnnouncementPage({ params }: PageProps) {
   const { locale, page } = await params;
   setRequestLocale(locale);
 
@@ -57,6 +58,7 @@ export default async function TestPage({ params }: PageProps) {
 
   return (
     <PageWrapper pageText="AnnouncementsPage">
+      {/* Announcements Cards List */}
       <div className="col3-cards-grid">
         {currentAnnouncements.map((item, index) => (
           <Card key={item.id} card={item} priority={index === 0} />

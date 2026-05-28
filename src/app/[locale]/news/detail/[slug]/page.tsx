@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ContentWrapper from "@/components/content/ContentWrapper";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+
 import contents_news from "@/sample_data/contents_news";
-import { getTranslations } from "next-intl/server";
 
 interface PageProps {
   params: Promise<{ slug: string; locale: string }>;
 }
 
 // Generate static params for SSG (expand with real data source as needed)
-// TODO: tüm sayfaların bu şekilde olması için çalışma yap
 export async function generateStaticParams() {
   return contents_news.map((item) => ({ slug: item.slug }));
 }
 
-// TODO: bu alanı tüm sayfalar için ayarla
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -34,7 +33,9 @@ export async function generateMetadata({
 }
 
 export default async function NewsDetailPage({ params }: PageProps) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
+
   const content = contents_news.find((item) => item.slug === slug);
 
   // In a real app, fetch article by slug from a CMS / DB

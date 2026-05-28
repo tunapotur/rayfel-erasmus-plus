@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ContentWrapper from "@/components/content/ContentWrapper";
-import contents_announcements from "@/sample_data/contents_announcements";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+
+import contents_announcements from "@/sample_data/contents_announcements";
 
 interface PageProps {
   params: Promise<{ slug: string; locale: string }>;

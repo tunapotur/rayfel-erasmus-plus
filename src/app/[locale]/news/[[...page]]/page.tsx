@@ -1,16 +1,28 @@
 import PageWrapper from "@/components/PageWrapper";
-import PaginationOperations from "@/components/PaginationOperations";
-import type {
-  LocalePageProps,
-  SearchParamsPageProps,
-} from "@/lib/types/DataTypes";
-import resolvePagination from "@/lib/resolvePagination";
+import PaginationOperations_v2 from "@/components/PaginationOperations_v2";
+import type { LocalePageProps } from "@/lib/types/DataTypes";
+import resolvePagination_v2 from "@/lib/resolvePagination_v2";
 import Card from "@/components/Card";
-import contents_news from "@/sample_data/contents_news";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+
+import contents_news from "@/sample_data/contents_news";
 
 const ITEMS_PER_PAGE = 6;
+
+interface PageProps {
+  params: Promise<{ locale: string; page?: string[] }>;
+}
+
+export async function generateStaticParams() {
+  const totalPages = Math.ceil(contents_news.length / ITEMS_PER_PAGE);
+  return [
+    { page: [] }, // /news → sayfa 1
+    ...Array.from({ length: totalPages }, (_, i) => ({
+      page: [String(i + 1)], // /news/1, /news/2 ...
+    })),
+  ];
+}
 
 export async function generateMetadata({
   params,
@@ -24,17 +36,17 @@ export async function generateMetadata({
 
   return {
     title: `${t("news")} ${" - "} Rayfel Erasmus+`,
-    description: `t("news")} ${" - "} Rayfel Erasmus+`,
+    description: `${t("news")} ${" - "} Rayfel Erasmus+`,
   };
 }
 
-export default async function NewsPage({
-  searchParams,
-}: SearchParamsPageProps) {
+export default async function NewsPage({ params }: PageProps) {
+  const { locale, page } = await params;
+  setRequestLocale(locale);
+
   const [totalPages, pageNumber, startIndex, endIndex] =
-    await resolvePagination(
-      "news",
-      searchParams,
+    await resolvePagination_v2(
+      page?.[0], // page segment'i
       ITEMS_PER_PAGE,
       contents_news.length,
     );
@@ -52,7 +64,7 @@ export default async function NewsPage({
 
       {/* Pagination  */}
       {contents_news.length > ITEMS_PER_PAGE && (
-        <PaginationOperations
+        <PaginationOperations_v2
           currentPage={pageNumber}
           totalPages={totalPages}
           pageLink="news"
