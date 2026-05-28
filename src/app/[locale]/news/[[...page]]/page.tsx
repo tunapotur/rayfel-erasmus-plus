@@ -1,5 +1,5 @@
-import PageWrapper from "@/components/PageWrapper";
-import PaginationOperations_v2 from "@/components/PaginationOperations";
+import ContentPageWrapper from "@/components/content/ContentPageWrapper";
+import PaginationOperations_v2 from "@/components/content/ContentPagePaginationOperations";
 import type { LocalePageProps } from "@/lib/types/DataTypes";
 import resolvePagination_v2 from "@/lib/resolvePagination";
 import Card from "@/components/Card";
@@ -54,7 +54,7 @@ export default async function NewsPage({ params }: PageProps) {
   const currentNews = contents_news.slice(startIndex, endIndex);
 
   return (
-    <PageWrapper pageText="NewsPage">
+    <ContentPageWrapper pageText="NewsPage">
       {/* News Cards List */}
       <div className="col3-cards-grid">
         {currentNews.map((item, index) => (
@@ -70,6 +70,6 @@ export default async function NewsPage({ params }: PageProps) {
           pageLink="news"
         />
       )}
-    </PageWrapper>
+    </ContentPageWrapper>
   );
 }

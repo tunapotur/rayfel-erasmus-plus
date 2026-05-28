@@ -1,7 +1,7 @@
-import PageWrapper from "@/components/PageWrapper";
-import PaginationOperations_v2 from "@/components/PaginationOperations";
+import ContentPageWrapper from "@/components/content/ContentPageWrapper";
+import PaginationOperations from "@/components/content/ContentPagePaginationOperations";
 import type { LocalePageProps } from "@/lib/types/DataTypes";
-import resolvePagination_v2 from "@/lib/resolvePagination";
+import resolvePagination from "@/lib/resolvePagination";
 import Card from "@/components/Card";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
@@ -45,7 +45,7 @@ export default async function AnnouncementPage({ params }: PageProps) {
   setRequestLocale(locale);
 
   const [totalPages, pageNumber, startIndex, endIndex] =
-    await resolvePagination_v2(
+    await resolvePagination(
       page?.[0], // page segment'i
       ITEMS_PER_PAGE,
       contents_announcements.length,
@@ -57,7 +57,7 @@ export default async function AnnouncementPage({ params }: PageProps) {
   );
 
   return (
-    <PageWrapper pageText="AnnouncementsPage">
+    <ContentPageWrapper pageText="AnnouncementsPage">
       {/* Announcements Cards List */}
       <div className="col3-cards-grid">
         {currentAnnouncements.map((item, index) => (
@@ -66,12 +66,12 @@ export default async function AnnouncementPage({ params }: PageProps) {
       </div>
 
       {contents_announcements.length > ITEMS_PER_PAGE && (
-        <PaginationOperations_v2
+        <PaginationOperations
           currentPage={pageNumber}
           totalPages={totalPages}
           pageLink="announcements"
         />
       )}
-    </PageWrapper>
+    </ContentPageWrapper>
   );
 }

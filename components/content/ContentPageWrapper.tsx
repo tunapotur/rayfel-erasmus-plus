@@ -1,10 +1,10 @@
 "use client";
 
 import { ReactNode } from "react";
-import PageBadgeHeader from "@/components/PageBadgeHeader";
+import ContentPageBadgeHeader from "@/components/content/ContentPageBadgeHeader";
 import { useTranslations } from "next-intl";
 
-export default function PageWrapper({
+export default function ContentPageWrapper({
   children,
   pageText,
 }: {
@@ -14,8 +14,8 @@ export default function PageWrapper({
   const t = useTranslations(pageText);
 
   return (
-    <div className="flex flex-col items-center mb-auto min-h-screen">
-      <PageBadgeHeader
+    <div className="mb-auto flex min-h-screen flex-col items-center">
+      <ContentPageBadgeHeader
         topHeader={t("topHeader")}
         header={t("header")}
         content={t("content")}
