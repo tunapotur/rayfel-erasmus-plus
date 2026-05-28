@@ -1,7 +1,7 @@
 import ContentPageWrapper from "@/components/content/ContentPageWrapper";
-import PaginationOperations_v2 from "@/components/content/ContentPagePaginationOperations";
+import PaginationOperations from "@/components/content/ContentPagePaginationOperations";
 import type { LocalePageProps } from "@/lib/types/DataTypes";
-import resolvePagination_v2 from "@/lib/resolvePagination";
+import resolvePagination from "@/lib/resolvePagination";
 import Card from "@/components/Card";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
@@ -45,7 +45,7 @@ export default async function NewsPage({ params }: PageProps) {
   setRequestLocale(locale);
 
   const [totalPages, pageNumber, startIndex, endIndex] =
-    await resolvePagination_v2(
+    await resolvePagination(
       page?.[0], // page segment'i
       ITEMS_PER_PAGE,
       contents_news.length,
@@ -64,7 +64,7 @@ export default async function NewsPage({ params }: PageProps) {
 
       {/* Pagination  */}
       {contents_news.length > ITEMS_PER_PAGE && (
-        <PaginationOperations_v2
+        <PaginationOperations
           currentPage={pageNumber}
           totalPages={totalPages}
           pageLink="news"
