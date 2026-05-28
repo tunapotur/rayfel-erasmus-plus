@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import ContentWrapper from "@/components/content/ContentWrapper";
+import ContentDetailWrapper from "@/components/content/ContentDetailWrapper";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import contents_news from "@/sample_data/contents_news";
@@ -45,5 +45,7 @@ export default async function NewsDetailPage({ params }: PageProps) {
     .filter((item) => item.slug !== slug)
     .slice(0, 6);
 
-  return <ContentWrapper content={content} other_contents={other_contents} />;
+  return (
+    <ContentDetailWrapper content={content} other_contents={other_contents} />
+  );
 }

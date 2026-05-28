@@ -9,7 +9,7 @@ import {
   isNEWS,
 } from "@/lib/types/DataTypes";
 
-export function ContentSidebar({
+export function ContentDetailSidebar({
   items,
 }: {
   items: Array<ANNOUNCEMENT | NEWS>;
