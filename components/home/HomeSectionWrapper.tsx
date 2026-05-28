@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export default function SectionWrapper({
+export default function HomeSectionWrapper({
   children,
   hasBackground,
 }: {

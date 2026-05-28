@@ -1,9 +1,9 @@
 import { setRequestLocale } from "next-intl/server";
-import Hero from "@/components/homepage/Hero";
-import InfoCards from "@/components/homepage/InfoCards";
-import About from "@/components/homepage/About";
-import Announcements from "@/components/homepage/Announcements";
-import News from "@/components/homepage/News";
+import HomeSectionHero from "@/components/home/section/HomeSectionHero";
+import HomeSectionInfoCards from "@/components/home/section/HomeSectionInfoCards";
+import HomeSectionAbout from "@/components/home/section/HomeSectionAbout";
+import HomeSectionAnnouncements from "@/components/home/section/HomeSectionAnnouncements";
+import HomeSectionNews from "@/components/home/section/HomeSectionNews";
 import { LocalePageProps } from "@/lib/types/DataTypes";
 
 // Statik Render edilecek Async HomePage Bileşeni
@@ -16,12 +16,12 @@ export default async function HomePage({ params }: LocalePageProps) {
 
   return (
     <div className="flex flex-col">
-      <Hero />
+      <HomeSectionHero />
       <div className="mt-8 flex flex-col gap-8">
-        <InfoCards />
-        <About />
-        <Announcements />
-        <News />
+        <HomeSectionInfoCards />
+        <HomeSectionAbout />
+        <HomeSectionAnnouncements />
+        <HomeSectionNews />
       </div>
     </div>
   );

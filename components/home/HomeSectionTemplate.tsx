@@ -3,7 +3,7 @@
 import { ReactNode } from "react";
 import ArrowLink from "../ArrowLink";
 import { usePathname } from "@/src/i18n/navigation";
-import SectionWrapper from "./SectionWrapper";
+import HomeSectionWrapper from "./HomeSectionWrapper";
 
 interface SectionProps {
   children: ReactNode;
@@ -16,7 +16,7 @@ interface SectionProps {
 
 function SectionName({ text }: { text: string }) {
   return (
-    <h2 className="text-primary text-base font-bold uppercase tracking-widest">
+    <h2 className="text-primary text-base font-bold tracking-widest uppercase">
       {text}
     </h2>
   );
@@ -24,13 +24,13 @@ function SectionName({ text }: { text: string }) {
 
 function SectionHeader({ text }: { text: string }) {
   return (
-    <h3 className="text-3xl font-bold leading-tight text-gray-800 dark:text-gray-200 ">
+    <h3 className="text-3xl leading-tight font-bold text-gray-800 dark:text-gray-200">
       {text}
     </h3>
   );
 }
 
-export default function SectionTemplate({
+export default function HomeSectionTemplate({
   children,
   name,
   header,
@@ -42,14 +42,14 @@ export default function SectionTemplate({
   const isActive = pathname.startsWith(href);
 
   return (
-    <SectionWrapper hasBackground={hasBackground}>
-      <div className="flex flex-row justify-between items-center">
+    <HomeSectionWrapper hasBackground={hasBackground}>
+      <div className="flex flex-row items-center justify-between">
         <SectionName text={name} />
         {!isActive && <ArrowLink text={linkText} href={href} />}
       </div>
 
       <SectionHeader text={header} />
       {children}
-    </SectionWrapper>
+    </HomeSectionWrapper>
   );
 }

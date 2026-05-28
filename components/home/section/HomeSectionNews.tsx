@@ -1,15 +1,15 @@
 "use client";
 
-import SectionTemplate from "./SectionTemplate";
+import HomeSectionTemplate from "../HomeSectionTemplate";
 import { useTranslations } from "next-intl";
 import Card from "@/components/Card";
 import contents_news from "@/sample_data/contents_news";
 
-export default function News() {
+export default function HomeSectionNews() {
   const t = useTranslations("NewsSection");
 
   return (
-    <SectionTemplate
+    <HomeSectionTemplate
       name={t("name")}
       header={t("header")}
       hasBackground
@@ -21,6 +21,6 @@ export default function News() {
           <Card key={item.title} card={item} priority={index === 0} />
         ))}
       </div>
-    </SectionTemplate>
+    </HomeSectionTemplate>
   );
 }

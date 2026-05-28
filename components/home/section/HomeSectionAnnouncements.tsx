@@ -1,15 +1,15 @@
 "use client";
 
-import SectionTemplate from "./SectionTemplate";
+import HomeSectionTemplate from "../HomeSectionTemplate";
 import { useTranslations } from "next-intl";
-import Card from "../Card";
+import Card from "../../Card";
 import contents_announcements from "@/sample_data/contents_announcements";
 
-export default function Announcements() {
+export default function HomeSectionAnnouncements() {
   const t = useTranslations("AnnouncementsSection");
 
   return (
-    <SectionTemplate
+    <HomeSectionTemplate
       name={t("name")}
       header={t("header")}
       linkText={t("linkText")}
@@ -20,6 +20,6 @@ export default function Announcements() {
           <Card key={item.title} card={item} priority={index === 0} />
         ))}
       </div>
-    </SectionTemplate>
+    </HomeSectionTemplate>
   );
 }

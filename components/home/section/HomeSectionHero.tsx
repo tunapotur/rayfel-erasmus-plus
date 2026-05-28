@@ -4,10 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import HeroPic from "@/public/hero_pic.jpg";
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { useTranslations } from "next-intl";
 
-export default function Hero() {
+export default function HomeSectionHero() {
   const t = useTranslations("HeroSection");
   const sectionSize = "h-72 w-full sm:h-96 md:h-120 lg:h-144";
 

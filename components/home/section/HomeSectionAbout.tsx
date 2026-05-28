@@ -3,15 +3,15 @@
 import about from "@/public/about.png";
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
-import SectionTemplate from "./SectionTemplate";
+import HomeSectionTemplate from "../HomeSectionTemplate";
 import about_section from "@/sample_data/about_section";
 import { useTranslations } from "next-intl";
 
-export default function About() {
+export default function HomeSectionAbout() {
   const t = useTranslations("AboutSection");
 
   return (
-    <SectionTemplate
+    <HomeSectionTemplate
       name={t("name")}
       header={t("header")}
       linkText={t("linkText")}
@@ -54,6 +54,6 @@ export default function About() {
           sizes="(max-width: 768px) 100vw, 384px"
         />
       </div>
-    </SectionTemplate>
+    </HomeSectionTemplate>
   );
 }
