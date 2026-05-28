@@ -1,7 +1,7 @@
 import type { ANNOUNCEMENT, NEWS } from "@/lib/types/DataTypes";
 import { isNEWS } from "@/lib/types/DataTypes";
 import { NewsBadge } from "../NewsBadge";
-import ArrowLink from "../ArrowLink";
+import ArrowLinkBack from "../ArrowLinkBack";
 import Image from "next/image";
 
 export function ContentArticle({ article }: { article: ANNOUNCEMENT | NEWS }) {
@@ -52,7 +52,7 @@ export function ContentArticle({ article }: { article: ANNOUNCEMENT | NEWS }) {
 
       {/* Divider + Back link */}
       <hr className="border-border my-8" />
-      <ArrowLink text={"Geri Dön"} href="/news" isArrowLeft />
+      <ArrowLinkBack />
     </article>
   );
 }

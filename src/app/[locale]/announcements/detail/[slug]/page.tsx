@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ContentWrapper from "@/components/content/ContentWrapper";
 import contents_announcements from "@/sample_data/contents_announcements";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 interface PageProps {
   params: Promise<{ slug: string; locale: string }>;
@@ -31,7 +31,9 @@ export async function generateMetadata({
 }
 
 export default async function AnnouncementDetailPage({ params }: PageProps) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
+
   const content = contents_announcements.find((item) => item.slug === slug);
 
   if (!content) notFound();
