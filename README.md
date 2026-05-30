@@ -24,4 +24,3 @@ This project uses [`next/font`](https://nextjs.org/docs/app/building-your-applic
 
 TODO: Notfound sayfası yapılacak
 TODO: Sayfa canlıda çalıştığında dil değiştiğinde faklı sayfalara geçince dil değişimi devre dışı kalıyor
-Bu sorun dil değiştirildiğinde sayfa bir kere refresh edilirse düzelir gibi.
