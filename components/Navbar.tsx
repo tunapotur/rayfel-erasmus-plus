@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/src/i18n/navigation";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ModeToggle";

@@ -36,8 +36,6 @@ export default function LocalSelect({ children, defaultValue, label }: Props) {
         { locale: nextLocale },
       );
     });
-
-    router.refresh();
   }
 
   return (
