@@ -36,6 +36,8 @@ export default function LocalSelect({ children, defaultValue, label }: Props) {
         { locale: nextLocale },
       );
     });
+
+    router.refresh();
   }
 
   return (
@@ -44,7 +46,7 @@ export default function LocalSelect({ children, defaultValue, label }: Props) {
       onValueChange={onSelectChange}
       disabled={isPending}
     >
-      <SelectTrigger className="max-w-48 bg-background">
+      <SelectTrigger className="bg-background max-w-48">
         <SelectValue>{defaultValue}</SelectValue>
       </SelectTrigger>
       <SelectContent>

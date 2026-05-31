@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/ModeToggle";
 import logo from "@/public/logo_rayfel.png";
-import LocalOperation from "@/components/LocaleSwitch";
+import LocalOperation from "@/components/LocalOperation";
 import { useTranslations } from "next-intl";
 import { usePathname } from "@/src/i18n/navigation";
 import { createContext, useContext, useState } from "react";
