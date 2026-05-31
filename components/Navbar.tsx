@@ -80,7 +80,7 @@ function Navigation() {
     { label: t("announcements"), href: "/announcements" },
     { label: t("news"), href: "/news" },
     // { label: t("eTwinning"), href: "/etwinning" },
-  ];
+  ] as const;
 
   return (
     <nav className="flex flex-col gap-2 px-2 py-4 sm:grid sm:grid-cols-3 sm:items-center md:grid-cols-4 lg:flex lg:flex-row">
