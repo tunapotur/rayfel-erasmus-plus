@@ -1,3 +1,6 @@
+import { Link } from "@/src/i18n/navigation";
+import type { ComponentProps } from "react";
+
 export interface SearchParamsPageProps {
   searchParams: Promise<{ page?: string }>;
 }
@@ -49,3 +52,5 @@ export function isANNOUNCEMENT(
 ): item is ANNOUNCEMENT {
   return "slug" in item && !("type" in item);
 }
+
+export type AppHref = ComponentProps<typeof Link>["href"];

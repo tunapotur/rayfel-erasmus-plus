@@ -1,10 +1,11 @@
-import Link from "next/link";
+import { Link } from "@/src/i18n/navigation";
+import { AppHref } from "@/lib/types/DataTypes";
 
 export default function ContentDetailBreadCrumbNav({
   content_source_link,
   article_title,
 }: {
-  content_source_link: { href: string; text: string };
+  content_source_link: { href: AppHref; text: string };
   article_title: string;
 }) {
   return (

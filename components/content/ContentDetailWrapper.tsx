@@ -5,6 +5,7 @@ import { ANNOUNCEMENT, NEWS, isANNOUNCEMENT } from "@/lib/types/DataTypes";
 import ContentDetailBreadCrumbNav from "@/components/content/ContentDetailBreadCrumbNav";
 import { ContentDetailArticle } from "./ContentDetailArticle";
 import { ContentDetailSidebar } from "./ContentDetailSidebar";
+import type { AppHref } from "@/lib/types/DataTypes";
 
 interface ContentWrapperProps {
   content: ANNOUNCEMENT | NEWS;
@@ -18,14 +19,19 @@ export default function ContentDetailWrapper({
   const t_announcement = useTranslations("AnnouncementsPage");
   const t_news = useTranslations("NewsPage");
 
-  const breadCrumbInfo: { href: string; text: string } = isANNOUNCEMENT(content)
-    ? { href: t_announcement("href"), text: t_announcement("header") }
-    : { href: t_news("href"), text: t_news("header") };
+  const breadCrumbInfo: { href: AppHref; text: string } = isANNOUNCEMENT(
+    content,
+  )
+    ? { href: "/announcements", text: t_announcement("header") }
+    : { href: "/news", text: t_news("header") };
 
   return (
     <div className="bg-background mb-auto min-h-screen">
       <ContentDetailBreadCrumbNav
-        content_source_link={breadCrumbInfo}
+        content_source_link={{
+          href: breadCrumbInfo.href,
+          text: breadCrumbInfo.text,
+        }}
         article_title={content.title}
       />
 
