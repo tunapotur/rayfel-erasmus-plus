@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/src/i18n/navigation"; // next/link → next-intl Link
 import { NewsBadge } from "./NewsBadge";
 import type { INFO, ANNOUNCEMENT, NEWS } from "@/lib/types/DataTypes";
 import { isANNOUNCEMENT, isNEWS } from "@/lib/types/DataTypes";

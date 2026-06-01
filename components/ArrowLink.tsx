@@ -1,12 +1,15 @@
-import Link from "next/link";
+import { Link } from "@/src/i18n/navigation"; // next/link → next-intl Link
+import type { ComponentProps } from "react";
 import { ArrowRight } from "lucide-react";
+
+type AppHref = ComponentProps<typeof Link>["href"];
 
 export default function ArrowLink({
   text,
   href,
 }: {
   text: string;
-  href: string;
+  href: AppHref; // string → AppHref
 }) {
   return (
     <Link
