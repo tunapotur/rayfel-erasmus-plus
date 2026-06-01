@@ -4,13 +4,14 @@ import { ReactNode } from "react";
 import ArrowLink from "../ArrowLink";
 import { usePathname } from "@/src/i18n/navigation";
 import HomeSectionWrapper from "./HomeSectionWrapper";
+import { AppHref } from "@/lib/types/DataTypes";
 
 interface SectionProps {
   children: ReactNode;
   name: string;
   header: string;
   linkText: string;
-  href: string;
+  href: AppHref;
   hasBackground?: boolean;
 }
 
@@ -39,7 +40,7 @@ export default function HomeSectionTemplate({
   hasBackground,
 }: SectionProps) {
   const pathname = usePathname();
-  const isActive = pathname.startsWith(href);
+  const isActive = pathname.startsWith(href.toString());
 
   return (
     <HomeSectionWrapper hasBackground={hasBackground}>
