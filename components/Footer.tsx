@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+// Sayfa dışına link verildiği için next-intl Link kullanımına gerek yok
 import Link from "next/link";
 // 1. Lucide ikonlarının tamamını Icons takma adıyla import ediyoruz
 import { icons } from "lucide-react";
