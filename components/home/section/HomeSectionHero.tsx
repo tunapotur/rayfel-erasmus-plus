@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/src/i18n/navigation";
 import { ArrowRight } from "lucide-react";
 import HeroPic from "@/public/hero_pic.jpg";
 import { Button } from "../../ui/button";

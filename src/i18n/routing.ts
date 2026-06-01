@@ -10,13 +10,16 @@ export const routing = defineRouting({
     "/news": "/news",
     "/login": "/login",
     "/signup": "/signup",
+
     // 🚀 Dinamik Rotalar (Köşe parantez yapıları)
-    "/news/detail/[slug]": "/news/detail/[slug]",
     "/announcements/detail/[slug]": "/announcements/detail/[slug]",
-    // Sayfalama (Pagination: /announcements/1, /announcements/2 vb.) için:
+    "/news/detail/[slug]": "/news/detail/[slug]",
+
+    // 🗒️ Sayfalama (Pagination: /announcements/1, /announcements/2 vb.) için:
     "/announcements/[page]": "/announcements/[page]",
     "/news/[page]": "/news/[page]",
 
+    // url dil değişimi örneği
     "/pathnames": {
       de: "/pfadnamen",
     },
