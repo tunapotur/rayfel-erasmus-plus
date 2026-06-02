@@ -73,5 +73,12 @@
     "about": "Hakkımızda",
     "announcement": "Duyurular",
     "news": "Haberler"
-  }
+  },
+  "NotFoundPage": {
+    "header": "Sayfa bulunamadı",
+    "text": " Aradığınız sayfa taşınmış, silinmiş ya da hiç var olmamış olabilir. URL'yi kontrol edip tekrar deneyin.",
+    "btnGoHome": "Ana Sayfaya Dön",
+    "btnGoBack": "Geri Dön"
+  },
+  "ArrowLinkBack": { "btnText": "Geri Dön" }
 }

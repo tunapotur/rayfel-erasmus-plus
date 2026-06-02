@@ -73,5 +73,12 @@
     "about": "Über uns",
     "announcement": "Ankündigungen",
     "news": "Neuigkeiten"
-  }
+  },
+  "NotFoundPage": {
+    "header": "Seite nicht gefunden",
+    "text": "Die von Ihnen gesuchte Seite wurde möglicherweise verschoben, gelöscht oder hat nie existiert. Bitte überprüfen Sie die URL und versuchen Sie es erneut.",
+    "btnGoHome": "Zur Startseite",
+    "btnGoBack": "Zurück"
+  },
+  "ArrowLinkBack": { "btnText": "Zurück" }
 }
