@@ -12,10 +12,25 @@ export default function NotFound() {
 
   return (
     <main className="bg-background relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
+      {/* Decorative background grid */}
+      <div
+        aria-hidden="true"
+        className="not-found-grid pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, var(--border) 1px, transparent 1px), linear-gradient(to bottom, var(--border) 1px, transparent 1px)",
+          backgroundSize: "72px 72px",
+          maskImage:
+            "radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%)",
+        }}
+      />
+
       {/* Glowing orb behind 404 */}
       <div
         aria-hidden="true"
-        className="bg-primary/10 pointer-events-none absolute top-1/2 left-1/2 size-120 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
+        className="bg-primary/10 dark:bg-primary/20 pointer-events-none absolute top-1/2 left-1/2 size-120 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
       />
 
       {/* Content */}

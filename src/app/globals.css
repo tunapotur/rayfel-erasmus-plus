@@ -139,6 +139,12 @@
   html {
     @apply font-sans;
   }
+  .not-found-grid {
+    opacity: 0.4;
+  }
+  .dark .not-found-grid {
+    opacity: 1;
+  }
 }
 
 @utility col3-cards-grid {
