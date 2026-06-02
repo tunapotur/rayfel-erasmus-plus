@@ -15,8 +15,7 @@ export default function NotFound() {
       {/* Glowing orb behind 404 */}
       <div
         aria-hidden="true"
-        className="bg-primary/10 pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
-        style={{ width: 480, height: 480 }}
+        className="bg-primary/10 pointer-events-none absolute top-1/2 left-1/2 size-120 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
       />
 
       {/* Content */}
