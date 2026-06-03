@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/pagination";
 import { useTranslations } from "next-intl";
 
-interface ContentPagePaginationOperationsProps {
+interface PaginationOperationsProps {
   currentPage: number;
   totalPages: number;
   pageLink: string;
@@ -21,7 +21,7 @@ export default function PaginationOperations({
   currentPage,
   totalPages,
   pageLink,
-}: ContentPagePaginationOperationsProps) {
+}: PaginationOperationsProps) {
   const t = useTranslations("pagination");
 
   const buildHref = (pageNumber: number) => `/${pageLink}/${pageNumber}`;

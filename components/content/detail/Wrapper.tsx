@@ -2,20 +2,17 @@
 
 import { useTranslations } from "next-intl";
 import { ANNOUNCEMENT, NEWS, isANNOUNCEMENT } from "@/lib/types/DataTypes";
-import ContentDetailBreadCrumbNav from "@/components/content/ContentDetailBreadCrumbNav";
-import { ContentDetailArticle } from "./ContentDetailArticle";
-import { ContentDetailSidebar } from "./ContentDetailSidebar";
+import BreadCrumbNav from "./BreadCrumbNav";
+import Article from "./Article";
+import Sidebar from "./Sidebar";
 import type { AppHref } from "@/lib/types/DataTypes";
 
-interface ContentWrapperProps {
+interface WrapperProps {
   content: ANNOUNCEMENT | NEWS;
   other_contents: Array<ANNOUNCEMENT | NEWS>;
 }
 
-export default function ContentDetailWrapper({
-  content,
-  other_contents,
-}: ContentWrapperProps) {
+export default function Wrapper({ content, other_contents }: WrapperProps) {
   const t_announcement = useTranslations("AnnouncementsPage");
   const t_news = useTranslations("NewsPage");
 
@@ -27,7 +24,7 @@ export default function ContentDetailWrapper({
 
   return (
     <div className="bg-background mb-auto min-h-screen">
-      <ContentDetailBreadCrumbNav
+      <BreadCrumbNav
         content_source_link={{
           href: breadCrumbInfo.href,
           text: breadCrumbInfo.text,
@@ -37,8 +34,8 @@ export default function ContentDetailWrapper({
 
       {/* Page body */}
       <div className="grid grid-cols-1 gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_22rem] lg:items-start lg:px-8">
-        <ContentDetailArticle article={content} />
-        <ContentDetailSidebar items={other_contents} />
+        <Article article={content} />
+        <Sidebar items={other_contents} />
       </div>
     </div>
   );

@@ -1,16 +1,16 @@
-interface PageBadgeHeaderProps {
+interface HeaderProps {
   topHeader: string;
   header: string;
   content: string;
   news?: boolean;
 }
 
-export default function ContentPageBadgeHeader({
+export default function BadgeHeader({
   topHeader,
   header,
   content,
   news,
-}: PageBadgeHeaderProps) {
+}: HeaderProps) {
   return (
     <div className="w-full px-4 py-6">
       <div

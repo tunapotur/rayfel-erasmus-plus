@@ -1,14 +1,10 @@
 import type { ANNOUNCEMENT, NEWS } from "@/lib/types/DataTypes";
 import { isNEWS } from "@/lib/types/DataTypes";
-import { NewsBadge } from "../NewsBadge";
-import ArrowLinkBack from "../ArrowLinkBack";
+import { NewsBadge } from "@/components/NewsBadge";
+import ArrowLinkBack from "@/components/ArrowLinkBack";
 import Image from "next/image";
 
-export function ContentDetailArticle({
-  article,
-}: {
-  article: ANNOUNCEMENT | NEWS;
-}) {
+export default function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
   const news = isNEWS(article) ? article : null;
 
   return (

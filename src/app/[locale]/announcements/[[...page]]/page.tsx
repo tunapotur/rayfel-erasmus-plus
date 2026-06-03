@@ -1,10 +1,9 @@
-import ContentPageWrapper from "@/components/content/ContentPageWrapper";
-import PaginationOperations from "@/components/content/ContentPagePaginationOperations";
 import type { LocalePageProps } from "@/lib/types/DataTypes";
 import resolvePagination from "@/lib/resolvePagination";
 import Card from "@/components/Card";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Metadata } from "next";
+import { Wrapper, PaginationOperations } from "@/components/content/page";
 
 import contents_announcements from "@/sample_data/contents_announcements";
 
@@ -57,7 +56,7 @@ export default async function AnnouncementPage({ params }: PageProps) {
   );
 
   return (
-    <ContentPageWrapper pageText="AnnouncementsPage">
+    <Wrapper pageText="AnnouncementsPage">
       {/* Announcements Cards List */}
       <div className="col3-cards-grid">
         {currentAnnouncements.map((item, index) => (
@@ -72,6 +71,6 @@ export default async function AnnouncementPage({ params }: PageProps) {
           pageLink="announcements"
         />
       )}
-    </ContentPageWrapper>
+    </Wrapper>
   );
 }

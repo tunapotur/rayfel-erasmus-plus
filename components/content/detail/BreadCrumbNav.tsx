@@ -1,7 +1,7 @@
 import { Link } from "@/src/i18n/navigation";
 import type { AppHref } from "@/lib/types/DataTypes";
 
-export default function ContentDetailBreadCrumbNav({
+export default function BreadCrumbNav({
   content_source_link,
   article_title,
 }: {

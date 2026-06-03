@@ -1,6 +1,6 @@
 "use client";
 
-import { Card_Sidebar } from "../Card_Sidebar";
+import { Card_Sidebar } from "@/components/Card_Sidebar";
 import { useTranslations } from "next-intl";
 import {
   ANNOUNCEMENT,
@@ -9,7 +9,7 @@ import {
   isNEWS,
 } from "@/lib/types/DataTypes";
 
-export function ContentDetailSidebar({
+export default function Sidebar({
   items,
 }: {
   items: Array<ANNOUNCEMENT | NEWS>;
