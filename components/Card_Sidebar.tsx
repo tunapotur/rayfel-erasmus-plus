@@ -3,7 +3,6 @@ import { Link } from '@/src/i18n/navigation';
 import getHref from '@/lib/getHref';
 import type { ANNOUNCEMENT, INFO, NEWS } from '@/lib/types/DataTypes';
 import { isANNOUNCEMENT, isNEWS } from '@/lib/types/check';
-// next/link → next-intl Link
 import { NewsBadge } from './NewsBadge';
 
 export function Card_Sidebar({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {

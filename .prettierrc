@@ -12,6 +12,7 @@
     "importOrder": [
         "^(react|next)(.*)$",
         "<THIRD_PARTY_MODULES>",
+        "^@/src/(.*)$",
         "^@/lib/(.*)$",
         "^@/components/(.*)$",
         "^[./]",
