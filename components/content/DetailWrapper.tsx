@@ -1,8 +1,10 @@
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+
 import { Link } from '@/src/i18n/navigation';
+
+import { isANNOUNCEMENT, isNEWS } from '@/lib/types/check_functions';
 import type { ANNOUNCEMENT, AppHref, NEWS } from '@/lib/types/DataTypes';
-import { isANNOUNCEMENT, isNEWS } from '@/lib/types/check';
 import ArrowLinkBack from '@/components/ArrowLinkBack';
 import { Card_Sidebar } from '@/components/Card_Sidebar';
 import { NewsBadge } from '@/components/NewsBadge';

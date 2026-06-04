@@ -1,5 +1,11 @@
 "use client";
 
+import { ReactNode, useTransition } from "react";
+import { useParams } from "next/navigation";
+import { Locale } from "next-intl";
+
+import { usePathname, useRouter } from "@/src/i18n/navigation";
+
 import {
   Select,
   SelectContent,
@@ -8,10 +14,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useParams } from "next/navigation";
-import { Locale } from "next-intl";
-import { ReactNode, useTransition } from "react";
-import { usePathname, useRouter } from "@/src/i18n/navigation";
 
 type Props = {
   children: ReactNode;

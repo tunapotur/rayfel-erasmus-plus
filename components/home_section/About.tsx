@@ -1,9 +1,13 @@
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import about from '@/public/about.png';
+import { useTranslations } from 'next-intl';
+
 import { CheckCircle2 } from 'lucide-react';
-import Wrapper from './Wrapper';
+
 import about_section from '@/sample_data/about_section';
+
+import Wrapper from './Wrapper';
+
+import about from '@/public/about.png';
 
 export default function About({
     hideSectionLink,

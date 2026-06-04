@@ -1,4 +1,5 @@
 import type { ComponentProps } from 'react';
+
 import { Link } from '@/src/i18n/navigation';
 
 export interface SearchParamsPageProps {

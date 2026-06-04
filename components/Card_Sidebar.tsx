@@ -1,8 +1,11 @@
 import Image from 'next/image';
+
 import { Link } from '@/src/i18n/navigation';
+
 import getHref from '@/lib/getHref';
+import { isANNOUNCEMENT, isNEWS } from '@/lib/types/check_functions';
 import type { ANNOUNCEMENT, INFO, NEWS } from '@/lib/types/DataTypes';
-import { isANNOUNCEMENT, isNEWS } from '@/lib/types/check';
+
 import { NewsBadge } from './NewsBadge';
 
 export function Card_Sidebar({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {

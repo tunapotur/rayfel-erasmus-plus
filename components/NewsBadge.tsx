@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+
 import type { NEWS_TYPE } from '@/lib/types/DataTypes';
 import { cn } from '@/lib/utils';
 

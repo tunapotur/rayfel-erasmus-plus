@@ -1,8 +1,10 @@
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+
 import getHref from '@/lib/getHref';
+import { isANNOUNCEMENT, isNEWS } from '@/lib/types/check_functions';
 import type { ANNOUNCEMENT, INFO, NEWS } from '@/lib/types/DataTypes';
-import { isANNOUNCEMENT, isNEWS } from '@/lib/types/check';
+
 import ArrowLink from './ArrowLink';
 import { NewsBadge } from './NewsBadge';
 

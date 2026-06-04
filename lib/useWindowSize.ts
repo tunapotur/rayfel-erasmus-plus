@@ -3,7 +3,7 @@
 // Posted by Darryl RN, modified by community. See post 'Timeline' for change history
 // Retrieved 2026-05-12, License - CC BY-SA 4.0
 
-import { useState, useEffect } from "react";
+import { useEffect,useState } from "react";
 
 interface WindowSize {
   width: number | undefined;

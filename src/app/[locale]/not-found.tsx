@@ -1,7 +1,9 @@
 // Note that `app/[locale]/[...rest]/page.tsx`
 // is necessary for this page to render.
 import { useTranslations } from 'next-intl';
+
 import { Link } from '@/src/i18n/navigation';
+
 import GoBackButton from '@/components/GoBackButton';
 import { Button } from '@/components/ui/button';
 

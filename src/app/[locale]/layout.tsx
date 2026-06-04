@@ -1,8 +1,10 @@
-import { Locale, NextIntlClientProvider, hasLocale } from 'next-intl';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
+import { hasLocale,Locale, NextIntlClientProvider } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+
 import { routing } from '@/src/i18n/routing';
+
 import { cn } from '@/lib/utils';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';

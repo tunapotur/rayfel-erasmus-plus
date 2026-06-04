@@ -1,4 +1,5 @@
 import { setRequestLocale } from 'next-intl/server';
+
 import type { LocalePageProps } from '@/lib/types/DataTypes';
 import { About } from '@/components/home_section';
 

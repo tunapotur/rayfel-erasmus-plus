@@ -1,9 +1,13 @@
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import HeroPic from '@/public/hero_pic.jpg';
-import { Link } from '@/src/i18n/navigation';
+import { useTranslations } from 'next-intl';
+
 import { ArrowRight } from 'lucide-react';
+
+import { Link } from '@/src/i18n/navigation';
+
 import { Button } from '../ui/button';
+
+import HeroPic from '@/public/hero_pic.jpg';
 
 export default function Hero() {
     const t = useTranslations('HeroSection');

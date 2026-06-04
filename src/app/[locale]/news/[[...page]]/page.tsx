@@ -1,9 +1,11 @@
 import { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+
 import resolvePagination from '@/lib/resolvePagination';
 import type { LocalePageProps } from '@/lib/types/DataTypes';
 import Card from '@/components/Card';
 import { PaginationOperations, Wrapper } from '@/components/content/page';
+
 import contents_news from '@/sample_data/contents_news';
 
 const ITEMS_PER_PAGE = 6;

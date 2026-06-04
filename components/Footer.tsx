@@ -1,11 +1,14 @@
-import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 // Sayfa dışına link verildiği için next-intl Link kullanımına gerek yok
 import Link from 'next/link';
-import logo from '@/public/logo_rayfel.png';
+import { useTranslations } from 'next-intl';
+
 // 1. Lucide ikonlarının tamamını Icons takma adıyla import ediyoruz
 import { icons } from 'lucide-react';
+
 import footer_data from '@/sample_data/footer';
+
+import logo from '@/public/logo_rayfel.png';
 
 export default function Footer() {
     const t = useTranslations('footer');

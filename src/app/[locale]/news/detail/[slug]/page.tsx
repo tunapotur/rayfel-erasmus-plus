@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+
 import DetailWrapper from '@/components/content/DetailWrapper';
+
 import contents_news from '@/sample_data/contents_news';
 
 interface PageProps {

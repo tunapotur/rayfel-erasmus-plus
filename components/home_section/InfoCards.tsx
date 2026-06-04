@@ -1,5 +1,6 @@
-import Card from '../Card';
 import contents_info from '@/sample_data/contents_info';
+
+import Card from '../Card';
 
 export default function InfoCards() {
     return (

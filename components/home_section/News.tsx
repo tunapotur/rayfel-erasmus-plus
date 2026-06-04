@@ -1,7 +1,10 @@
 import { useTranslations } from 'next-intl';
+
 import Card from '@/components/Card';
-import Wrapper from './Wrapper';
+
 import contents_news from '@/sample_data/contents_news';
+
+import Wrapper from './Wrapper';
 
 export default function News() {
     const t = useTranslations('NewsSection');
