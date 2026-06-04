@@ -3,7 +3,7 @@ import Card from '../../Card';
 import HomeSectionTemplate from '../HomeSectionTemplate';
 import contents_announcements from '@/sample_data/contents_announcements';
 
-export default function HomeSectionAnnouncements() {
+export default function Announcements() {
     const t = useTranslations('AnnouncementsSection');
 
     return (

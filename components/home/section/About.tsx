@@ -5,7 +5,7 @@ import { CheckCircle2 } from 'lucide-react';
 import HomeSectionTemplate from '../HomeSectionTemplate';
 import about_section from '@/sample_data/about_section';
 
-export default function HomeSectionAbout() {
+export default function About() {
     const t = useTranslations('AboutSection');
 
     return (

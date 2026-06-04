@@ -5,7 +5,7 @@ import { Link } from '@/src/i18n/navigation';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '../../ui/button';
 
-export default function HomeSectionHero() {
+export default function Hero() {
     const t = useTranslations('HeroSection');
     const sectionSize = 'h-72 w-full sm:h-96 md:h-120 lg:h-144';
 

@@ -1,0 +1,12 @@
+import Card from '../../Card';
+import contents_info from '@/sample_data/contents_info';
+
+export default function InfoCards() {
+    return (
+        <section className="flex w-full flex-col gap-6 px-4 md:flex-row">
+            {contents_info.map((card) => (
+                <Card key={card.id} card={card} />
+            ))}
+        </section>
+    );
+}
