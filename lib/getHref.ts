@@ -1,5 +1,4 @@
-import type { ANNOUNCEMENT, INFO, NEWS } from '@/lib/types/DataTypes';
-import { AppHref } from '@/lib/types/DataTypes';
+import type { ANNOUNCEMENT, AppHref, INFO, NEWS } from '@/lib/types/DataTypes';
 import { isInfo, isNEWS } from '@/lib/types/check';
 
 export default function getHref(card: INFO | ANNOUNCEMENT | NEWS): AppHref {

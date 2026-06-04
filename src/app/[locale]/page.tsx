@@ -1,12 +1,12 @@
 import { setRequestLocale } from 'next-intl/server';
-import { LocalePageProps } from '@/lib/types/DataTypes';
+import type { LocalePageProps } from '@/lib/types/DataTypes';
 import {
     About,
     Announcements,
     Hero,
     InfoCards,
     News,
-} from '@/components/home/section';
+} from '@/components/home_section';
 
 // Statik Render edilecek Async HomePage Bileşeni
 export default async function HomePage({ params }: LocalePageProps) {
@@ -21,7 +21,7 @@ export default async function HomePage({ params }: LocalePageProps) {
             <Hero />
             <div className="mt-8 flex flex-col gap-8">
                 <InfoCards />
-                <About />
+                <About hideSectionLink={false} />
                 <Announcements />
                 <News />
             </div>

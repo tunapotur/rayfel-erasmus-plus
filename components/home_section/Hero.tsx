@@ -3,7 +3,7 @@ import Image from 'next/image';
 import HeroPic from '@/public/hero_pic.jpg';
 import { Link } from '@/src/i18n/navigation';
 import { ArrowRight } from 'lucide-react';
-import { Button } from '../../ui/button';
+import { Button } from '../ui/button';
 
 export default function Hero() {
     const t = useTranslations('HeroSection');

@@ -1,6 +1,6 @@
 import { setRequestLocale } from 'next-intl/server';
-import { LocalePageProps } from '@/lib/types/DataTypes';
-import HomeSectionAbout from '@/components/home/section/About';
+import type { LocalePageProps } from '@/lib/types/DataTypes';
+import { About } from '@/components/home_section';
 
 export default async function AboutPage({ params }: LocalePageProps) {
     const { locale } = await params;
@@ -8,7 +8,7 @@ export default async function AboutPage({ params }: LocalePageProps) {
 
     return (
         <div className="mt-12 mb-auto min-h-screen">
-            <HomeSectionAbout />
+            <About hideSectionLink={true} />
         </div>
     );
 }

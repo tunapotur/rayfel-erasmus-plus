@@ -2,19 +2,24 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import about from '@/public/about.png';
 import { CheckCircle2 } from 'lucide-react';
-import HomeSectionTemplate from '../HomeSectionTemplate';
+import Wrapper from './Wrapper';
 import about_section from '@/sample_data/about_section';
 
-export default function About() {
+export default function About({
+    hideSectionLink,
+}: {
+    hideSectionLink: boolean;
+}) {
     const t = useTranslations('AboutSection');
 
     return (
-        <HomeSectionTemplate
+        <Wrapper
             name={t('name')}
             header={t('header')}
             linkText={t('linkText')}
             href="/about"
             hasBackground
+            hidePageLink={hideSectionLink}
         >
             <div className="flex flex-col items-center gap-4 md:flex-row md:gap-0">
                 {/* Content */}
@@ -56,6 +61,6 @@ export default function About() {
                     sizes="(max-width: 768px) 100vw, 384px"
                 />
             </div>
-        </HomeSectionTemplate>
+        </Wrapper>
     );
 }

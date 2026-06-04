@@ -1,13 +1,13 @@
 import { useTranslations } from 'next-intl';
-import Card from '../../Card';
-import HomeSectionTemplate from '../HomeSectionTemplate';
+import Card from '../Card';
+import Wrapper from './Wrapper';
 import contents_announcements from '@/sample_data/contents_announcements';
 
 export default function Announcements() {
     const t = useTranslations('AnnouncementsSection');
 
     return (
-        <HomeSectionTemplate
+        <Wrapper
             name={t('name')}
             header={t('header')}
             linkText={t('linkText')}
@@ -18,6 +18,6 @@ export default function Announcements() {
                     <Card key={item.title} card={item} priority={index === 0} />
                 ))}
             </div>
-        </HomeSectionTemplate>
+        </Wrapper>
     );
 }

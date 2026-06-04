@@ -1,10 +1,6 @@
-'use client';
-
 import { ReactNode } from 'react';
-import { usePathname } from '@/src/i18n/navigation';
-import { AppHref } from '@/lib/types/DataTypes';
+import type { AppHref } from '@/lib/types/DataTypes';
 import ArrowLink from '../ArrowLink';
-import HomeSectionWrapper from './HomeSectionWrapper';
 
 interface SectionProps {
     children: ReactNode;
@@ -13,6 +9,7 @@ interface SectionProps {
     linkText: string;
     href: AppHref;
     hasBackground?: boolean;
+    hidePageLink?: boolean;
 }
 
 function SectionName({ text }: { text: string }) {
@@ -31,26 +28,26 @@ function SectionHeader({ text }: { text: string }) {
     );
 }
 
-export default function HomeSectionTemplate({
+export default function Wrapper({
     children,
     name,
     header,
     href,
     linkText,
     hasBackground,
+    hidePageLink,
 }: SectionProps) {
-    const pathname = usePathname();
-    const isActive = pathname.startsWith(href.toString());
-
     return (
-        <HomeSectionWrapper hasBackground={hasBackground}>
+        <section
+            className={`flex flex-col gap-6 px-4 py-6 lg:rounded-md ${hasBackground ? 'bg-background-gray' : ''}`}
+        >
             <div className="flex flex-row items-center justify-between">
                 <SectionName text={name} />
-                {!isActive && <ArrowLink text={linkText} href={href} />}
+                {!hidePageLink && <ArrowLink text={linkText} href={href} />}
             </div>
 
             <SectionHeader text={header} />
             {children}
-        </HomeSectionWrapper>
+        </section>
     );
 }

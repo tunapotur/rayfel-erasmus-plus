@@ -1,13 +1,13 @@
 import { useTranslations } from 'next-intl';
 import Card from '@/components/Card';
-import HomeSectionTemplate from '../HomeSectionTemplate';
+import Wrapper from './Wrapper';
 import contents_news from '@/sample_data/contents_news';
 
 export default function News() {
     const t = useTranslations('NewsSection');
 
     return (
-        <HomeSectionTemplate
+        <Wrapper
             name={t('name')}
             header={t('header')}
             hasBackground
@@ -19,6 +19,6 @@ export default function News() {
                     <Card key={item.title} card={item} priority={index === 0} />
                 ))}
             </div>
-        </HomeSectionTemplate>
+        </Wrapper>
     );
 }
