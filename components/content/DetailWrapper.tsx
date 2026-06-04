@@ -7,11 +7,6 @@ import ArrowLinkBack from '@/components/ArrowLinkBack';
 import { Card_Sidebar } from '@/components/Card_Sidebar';
 import { NewsBadge } from '@/components/NewsBadge';
 
-interface DetailWrapperProps {
-    content: ANNOUNCEMENT | NEWS;
-    other_contents: Array<ANNOUNCEMENT | NEWS>;
-}
-
 function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
     const news = isNEWS(article) ? article : null;
 
@@ -119,7 +114,10 @@ function Sidebar({ items }: { items: Array<ANNOUNCEMENT | NEWS> }) {
 export default function DetailWrapper({
     content,
     other_contents,
-}: DetailWrapperProps) {
+}: {
+    content: ANNOUNCEMENT | NEWS;
+    other_contents: Array<ANNOUNCEMENT | NEWS>;
+}) {
     const t_announcement = useTranslations('AnnouncementsPage');
     const t_news = useTranslations('NewsPage');
 
