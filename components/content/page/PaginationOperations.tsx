@@ -1,5 +1,4 @@
-'use client';
-
+import { useTranslations } from 'next-intl';
 import {
     Pagination,
     PaginationContent,
@@ -9,7 +8,6 @@ import {
     PaginationNext,
     PaginationPrevious,
 } from '@/components/ui/pagination';
-import { useTranslations } from 'next-intl';
 
 interface PaginationOperationsProps {
     currentPage: number;

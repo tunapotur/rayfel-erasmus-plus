@@ -1,49 +1,48 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import Wrapper from "@/components/content/detail/Wrapper";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-
-import contents_news from "@/sample_data/contents_news";
+import type { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import DetailWrapper from '@/components/content/DetailWrapper';
+import contents_news from '@/sample_data/contents_news';
 
 interface PageProps {
-  params: Promise<{ slug: string; locale: string }>;
+    params: Promise<{ slug: string; locale: string }>;
 }
 
 // Generate static params for SSG (expand with real data source as needed)
 export async function generateStaticParams() {
-  return contents_news.map((item) => ({ slug: item.slug }));
+    return contents_news.map((item) => ({ slug: item.slug }));
 }
 
 export async function generateMetadata({
-  params,
+    params,
 }: PageProps): Promise<Metadata> {
-  const { slug, locale } = await params;
-  const content = contents_news.find((item) => item.slug === slug);
-  const t = await getTranslations({
-    locale,
-    namespace: "pages",
-  });
+    const { slug, locale } = await params;
+    const content = contents_news.find((item) => item.slug === slug);
+    const t = await getTranslations({
+        locale,
+        namespace: 'pages',
+    });
 
-  if (!content) return {};
+    if (!content) return {};
 
-  return {
-    title: `${content.title} ${" - "} ${t("news")}`,
-    description: content.description,
-  };
+    return {
+        title: `${content.title} ${' - '} ${t('news')}`,
+        description: content.description,
+    };
 }
 
 export default async function NewsDetailPage({ params }: PageProps) {
-  const { slug, locale } = await params;
-  setRequestLocale(locale);
+    const { slug, locale } = await params;
+    setRequestLocale(locale);
 
-  const content = contents_news.find((item) => item.slug === slug);
+    const content = contents_news.find((item) => item.slug === slug);
 
-  // In a real app, fetch article by slug from a CMS / DB
-  if (!content) notFound();
+    // In a real app, fetch article by slug from a CMS / DB
+    if (!content) notFound();
 
-  const other_contents = contents_news
-    .filter((item) => item.slug !== slug)
-    .slice(0, 6);
+    const other_contents = contents_news
+        .filter((item) => item.slug !== slug)
+        .slice(0, 6);
 
-  return <Wrapper content={content} other_contents={other_contents} />;
+    return <DetailWrapper content={content} other_contents={other_contents} />;
 }

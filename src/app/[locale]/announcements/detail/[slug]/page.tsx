@@ -1,47 +1,46 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import Wrapper from "@/components/content/detail/Wrapper";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-
-import contents_announcements from "@/sample_data/contents_announcements";
+import type { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import DetailWrapper from '@/components/content/DetailWrapper';
+import contents_announcements from '@/sample_data/contents_announcements';
 
 interface PageProps {
-  params: Promise<{ slug: string; locale: string }>;
+    params: Promise<{ slug: string; locale: string }>;
 }
 
 export async function generateStaticParams() {
-  return contents_announcements.map((item) => ({ slug: item.slug }));
+    return contents_announcements.map((item) => ({ slug: item.slug }));
 }
 
 export async function generateMetadata({
-  params,
+    params,
 }: PageProps): Promise<Metadata> {
-  const { slug, locale } = await params;
-  const content = contents_announcements.find((item) => item.slug === slug);
-  const t = await getTranslations({
-    locale,
-    namespace: "pages",
-  });
+    const { slug, locale } = await params;
+    const content = contents_announcements.find((item) => item.slug === slug);
+    const t = await getTranslations({
+        locale,
+        namespace: 'pages',
+    });
 
-  if (!content) return {};
+    if (!content) return {};
 
-  return {
-    title: `${content.title} ${" - "} ${t("announcement")}`,
-    description: content.description,
-  };
+    return {
+        title: `${content.title} ${' - '} ${t('announcement')}`,
+        description: content.description,
+    };
 }
 
 export default async function AnnouncementDetailPage({ params }: PageProps) {
-  const { slug, locale } = await params;
-  setRequestLocale(locale);
+    const { slug, locale } = await params;
+    setRequestLocale(locale);
 
-  const content = contents_announcements.find((item) => item.slug === slug);
+    const content = contents_announcements.find((item) => item.slug === slug);
 
-  if (!content) notFound();
+    if (!content) notFound();
 
-  const other_contents = contents_announcements
-    .filter((item) => item.slug !== slug)
-    .slice(0, 6);
+    const other_contents = contents_announcements
+        .filter((item) => item.slug !== slug)
+        .slice(0, 6);
 
-  return <Wrapper content={content} other_contents={other_contents} />;
+    return <DetailWrapper content={content} other_contents={other_contents} />;
 }

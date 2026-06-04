@@ -12,9 +12,10 @@
     "importOrder": [
         "^(react|next)(.*)$",
         "<THIRD_PARTY_MODULES>",
-        "^@/components/(.*)$",
         "^@/lib/(.*)$",
-        "^[./]"
+        "^@/components/(.*)$",
+        "^[./]",
+        "^@/sample_data/(.*)$"
     ],
     "importOrderSeparation": false,
     "importOrderSortSpecifiers": true
