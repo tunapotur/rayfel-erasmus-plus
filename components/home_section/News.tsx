@@ -10,7 +10,6 @@ export default function News() {
         <Wrapper
             name={t('name')}
             header={t('header')}
-            hasBackground
             linkText={t('linkText')}
             href="/news"
         >

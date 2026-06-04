@@ -12,6 +12,7 @@ export default function Announcements() {
             header={t('header')}
             linkText={t('linkText')}
             href="/announcements"
+            hasBackground
         >
             <div className="flex w-full flex-col gap-4 md:flex-row">
                 {contents_announcements.slice(0, 4).map((item, index) => (
