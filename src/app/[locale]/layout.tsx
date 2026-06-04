@@ -1,23 +1,23 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google";
-import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/providers/theme-provider";
-import { notFound } from "next/navigation";
-import { Locale, hasLocale, NextIntlClientProvider } from "next-intl";
-import { getTranslations, setRequestLocale } from "next-intl/server";
-import { routing } from "@/src/i18n/routing";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { Locale, NextIntlClientProvider, hasLocale } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Geist, Geist_Mono, Inter } from 'next/font/google';
+import { notFound } from 'next/navigation';
+import { routing } from '@/src/i18n/routing';
+import { cn } from '@/lib/utils';
+import Footer from '@/components/Footer';
+import Navbar from '@/components/Navbar';
+import { ThemeProvider } from '@/components/providers/theme-provider';
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+    variable: '--font-geist-sans',
+    subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+    variable: '--font-geist-mono',
+    subsets: ['latin'],
 });
 
 // import type { Metadata } from "next";
@@ -27,66 +27,67 @@ const geistMono = Geist_Mono({
 // };
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+    return routing.locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata(
-  props: Omit<LayoutProps<"/[locale]">, "children">,
+    props: Omit<LayoutProps<'/[locale]'>, 'children'>,
 ) {
-  const { locale } = await props.params;
+    const { locale } = await props.params;
 
-  const t = await getTranslations({
-    locale: locale as Locale,
-    namespace: "LocaleLayout",
-  });
+    const t = await getTranslations({
+        locale: locale as Locale,
+        namespace: 'LocaleLayout',
+    });
 
-  return {
-    title: t("title"),
-  };
+    return {
+        title: t('title'),
+        description: t('description'),
+    };
 }
 
 export default async function LocaleLayout({
-  children,
-  params,
-}: LayoutProps<"/[locale]">) {
-  // Ensure that the incoming `locale` is valid
-  const { locale } = await params;
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
+    children,
+    params,
+}: LayoutProps<'/[locale]'>) {
+    // Ensure that the incoming `locale` is valid
+    const { locale } = await params;
+    if (!hasLocale(routing.locales, locale)) {
+        notFound();
+    }
 
-  // Enable static rendering
-  setRequestLocale(locale);
+    // Enable static rendering
+    setRequestLocale(locale);
 
-  return (
-    <html
-      lang={locale}
-      suppressHydrationWarning
-      className={cn(
-        "h-full",
-        "antialiased",
-        geistSans.variable,
-        geistMono.variable,
-        "font-sans",
-        inter.variable,
-      )}
-    >
-      <body className="bg-background flex flex-col lg:items-center">
-        <NextIntlClientProvider locale={locale}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <div className="flex min-h-screen max-w-5xl flex-col justify-between">
-              <Navbar />
-              {children}
-              <Footer />
-            </div>
-          </ThemeProvider>
-        </NextIntlClientProvider>
-      </body>
-    </html>
-  );
+    return (
+        <html
+            lang={locale}
+            suppressHydrationWarning
+            className={cn(
+                'h-full',
+                'antialiased',
+                geistSans.variable,
+                geistMono.variable,
+                'font-sans',
+                inter.variable,
+            )}
+        >
+            <body className="bg-background flex flex-col lg:items-center">
+                <NextIntlClientProvider locale={locale}>
+                    <ThemeProvider
+                        attribute="class"
+                        defaultTheme="system"
+                        enableSystem
+                        disableTransitionOnChange
+                    >
+                        <div className="flex min-h-screen max-w-5xl flex-col justify-between">
+                            <Navbar />
+                            {children}
+                            <Footer />
+                        </div>
+                    </ThemeProvider>
+                </NextIntlClientProvider>
+            </body>
+        </html>
+    );
 }

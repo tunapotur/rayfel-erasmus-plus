@@ -1,84 +1,86 @@
 {
-  "LocaleLayout": {
-    "title": "Rayfel Erasmus+ Web Page"
-  },
-  "LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "{locale, select, de {Deutsch} en {English} tr {Turkish} other {Unknown}}"
-  },
-  "NavLinks": {
-    "home": "Home",
-    "about": "About",
-    "announcements": "Announcements",
-    "news": "News",
-    "eTwinning": "eTwinning"
-  },
-  "AuthButtons": { "login": "Log In", "signup": "Sign Up" },
-  "NewsType": {
-    "news": "news",
-    "mobility": "mobility",
-    "dissemination": "dissemination"
-  },
-  "CardLinkText": { "readMore": "Read More" },
-  "HeroSection": {
-    "header": "Digital School Green Education The Learning Model for Future Generations",
-    "content": "Welcome to our website, which we use to share the activities of our Erasmus+ project titled 'Digital School Green Education: The Learning Model for Future Generations'.",
-    "linkText": "Learn more",
-    "imageAltText": "Erasmus+ event image"
-  },
-  "AboutSection": {
-    "name": "About Us",
-    "header": "Digital School Green Education The Learning Model for Future Generations",
-    "linkText": "About Us Page",
-    "imageAltText": "Digital School Green Education project visual"
-  },
-  "AnnouncementsSection": {
-    "name": "Current Announcements",
-    "header": "Announcements",
-    "linkText": "View All"
-  },
-  "NewsSection": {
-    "name": "News Feed",
-    "header": "News",
-    "linkText": "View All"
-  },
-  "footer": {
-    "rayfelProjectsHeader": "Rayfel Projects",
-    "rayfelProjectsContent": "The digital home of academic projects. Future: Digital School Green Education: The Learning Model for Future Generations",
-    "quickLinks": "Quick Access",
-    "institutions": "Institutions",
-    "followUs": "Follow Us",
-    "copyRight": "© 2026 Rayfel Projects. All rights reserved.",
-    "rayfelHighSchool": "Ramazan Yaman Science High School"
-  },
-  "AnnouncementsPage": {
-    "topHeader": "Platform Announcements",
-    "header": "Announcements",
-    "content": "You can follow project applications and the latest developments on our platform here.",
-    "href": "/announcements"
-  },
-  "NewsPage": {
-    "topHeader": "Platform News",
-    "header": "News",
-    "content": "You can follow the latest developments and success stories from our projects here.",
-    "href": "/news"
-  },
-  "pagination": { "previous": "Previous", "next": "Next" },
-  "ContentSidebarHeader": {
-    "news": "Other News",
-    "announcement": "Other Announcements"
-  },
-  "pages": {
-    "home": "Home",
-    "about": "About Us",
-    "announcement": "Announcements",
-    "news": "News"
-  },
-  "NotFoundPage": {
-    "header": "Page not found",
-    "text": "The page you are looking for might have been moved, deleted, or never existed. Please check the URL and try again.",
-    "btnGoHome": "Go to Home Page",
-    "btnGoBack": "Go Back"
-  },
-  "ArrowLinkBack": { "btnText": "Go Back" }
+    "LocaleLayout": {
+        "title": "Rayfel Erasmus+ Web Page",
+        "description": "Rayfel Erasmus+ Web Page"
+    },
+    "LocaleSwitcher": {
+        "label": "Change language",
+        "locale": "{locale, select, de {Deutsch} en {English} tr {Turkish} other {Unknown}}"
+    },
+    "NavLinks": {
+        "home": "Home",
+        "about": "About",
+        "announcements": "Announcements",
+        "news": "News",
+        "eTwinning": "eTwinning"
+    },
+    "AuthButtons": { "login": "Log In", "signup": "Sign Up" },
+    "NewsType": {
+        "news": "news",
+        "mobility": "mobility",
+        "dissemination": "dissemination"
+    },
+    "CardLinkText": { "readMore": "Read More" },
+    "HeroSection": {
+        "header": "Digital School Green Education The Learning Model for Future Generations",
+        "content": "Welcome to our website, which we use to share the activities of our Erasmus+ project titled 'Digital School Green Education: The Learning Model for Future Generations'.",
+        "linkText": "Learn more",
+        "imageAltText": "Erasmus+ event image"
+    },
+    "AboutSection": {
+        "name": "About Us",
+        "header": "Digital School Green Education The Learning Model for Future Generations",
+        "linkText": "About Us Page",
+        "imageAltText": "Digital School Green Education project visual"
+    },
+    "AnnouncementsSection": {
+        "name": "Current Announcements",
+        "header": "Announcements",
+        "linkText": "View All"
+    },
+    "NewsSection": {
+        "name": "News Feed",
+        "header": "News",
+        "linkText": "View All"
+    },
+    "footer": {
+        "rayfelProjectsHeader": "Rayfel Projects",
+        "rayfelProjectsContent": "The digital home of academic projects. Future: Digital School Green Education: The Learning Model for Future Generations",
+        "quickLinks": "Quick Access",
+        "institutions": "Institutions",
+        "followUs": "Follow Us",
+        "copyRight": "© 2026 Rayfel Projects. All rights reserved.",
+        "rayfelHighSchool": "Ramazan Yaman Science High School"
+    },
+    "AnnouncementsPage": {
+        "topHeader": "Platform Announcements",
+        "header": "Announcements",
+        "content": "You can follow project applications and the latest developments on our platform here.",
+        "href": "/announcements"
+    },
+    "NewsPage": {
+        "topHeader": "Platform News",
+        "header": "News",
+        "content": "You can follow the latest developments and success stories from our projects here.",
+        "href": "/news"
+    },
+    "pagination": { "previous": "Previous", "next": "Next" },
+    "ContentSidebarHeader": {
+        "news": "Other News",
+        "announcement": "Other Announcements"
+    },
+    "pages": {
+        "home": "Home",
+        "about": "About Us",
+        "announcement": "Announcements",
+        "news": "News",
+        "notFoundPage": "Page Not Found"
+    },
+    "NotFoundPage": {
+        "header": "Page not found",
+        "text": "The page you are looking for might have been moved, deleted, or never existed. Please check the URL and try again.",
+        "btnGoHome": "Go to Home Page",
+        "btnGoBack": "Go Back"
+    },
+    "ArrowLinkBack": { "btnText": "Go Back" }
 }

@@ -1,84 +1,86 @@
 {
-  "LocaleLayout": {
-    "title": "Rayfel Erasmus+ Webseite"
-  },
-  "LocaleSwitcher": {
-    "label": "Sprache ändern",
-    "locale": "{locale, select, de {Deutsch} en {English} tr {Turkish} other {Unknown}}"
-  },
-  "NavLinks": {
-    "home": "Startseite",
-    "about": "Über uns",
-    "announcements": "Ankündigungen",
-    "news": "Nachrichten",
-    "eTwinning": "eTwinning"
-  },
-  "AuthButtons": { "login": "Anmelden", "signup": "Registrieren" },
-  "NewsType": {
-    "news": "nachrichten",
-    "mobility": "mobilität",
-    "dissemination": "verbreitung"
-  },
-  "CardLinkText": { "readMore": "Weiterlesen" },
-  "HeroSection": {
-    "header": "Digitale Schule Grüne Bildung Das Lernmodell für zukünftige Generationen",
-    "content": "Willkommen auf unserer Website, auf der wir die Aktivitäten unseres Erasmus+-Projekts mit dem Titel Digitale Schule Grüne Bildung: Das Lernmodell für zukünftige Generationen teilen.",
-    "linkText": "Mehr erfahren",
-    "imageAltText": "Veranstaltungsbild"
-  },
-  "AboutSection": {
-    "name": "Über uns",
-    "header": "Digitale Schule Grüne Bildung Das Lernmodell für zukünftige Generationen",
-    "linkText": "Über uns Seite",
-    "imageAltText": "Visualisierung des Projekts Digitale Schule Grüne Bildung"
-  },
-  "AnnouncementsSection": {
-    "name": "Aktuelle Ankündigungen",
-    "header": "Ankündigungen",
-    "linkText": "Alle anzeigen"
-  },
-  "NewsSection": {
-    "name": "Newsfeed",
-    "header": "Neuigkeiten",
-    "linkText": "Alle anzeigen"
-  },
-  "footer": {
-    "rayfelProjectsHeader": "Rayfel Projekte",
-    "rayfelProjectsContent": "Das digitale Zuhause akademischer Projekte. Die Zukunft: Digitale Schule Grüne Bildung: Das Lernmodell für zukünftige Generationen",
-    "quickLinks": "Schnellzugriff",
-    "institutions": "Institutionen",
-    "followUs": "Folgen Sie uns",
-    "copyRight": "© 2026 Rayfel Projeler. Alle Rechte vorbehalten.",
-    "rayfelHighSchool": "Ramazan-Yaman-Naturwissenschaftliches Gymnasium"
-  },
-  "AnnouncementsPage": {
-    "topHeader": "Plattform-Ankündigungen",
-    "header": "Ankündigungen",
-    "content": "Hier können Sie Projektanträge und die neuesten Entwicklungen auf unserer Plattform mitverfolgen.",
-    "href": "/announcements"
-  },
-  "NewsPage": {
-    "topHeader": "Plattform-Neuigkeiten",
-    "header": "Neuigkeiten",
-    "content": "Hier können Sie die neuesten Entwicklungen und Erfolgsgeschichten aus unseren Projekten mitverfolgen.",
-    "href": "/news"
-  },
-  "pagination": { "previous": "Vorherige", "next": "Nächste" },
-  "ContentSidebarHeader": {
-    "news": "Weitere Nachrichten",
-    "announcement": "Weitere Ankündigungen"
-  },
-  "pages": {
-    "home": "Startseite",
-    "about": "Über uns",
-    "announcement": "Ankündigungen",
-    "news": "Neuigkeiten"
-  },
-  "NotFoundPage": {
-    "header": "Seite nicht gefunden",
-    "text": "Die von Ihnen gesuchte Seite wurde möglicherweise verschoben, gelöscht oder hat nie existiert. Bitte überprüfen Sie die URL und versuchen Sie es erneut.",
-    "btnGoHome": "Zur Startseite",
-    "btnGoBack": "Zurück"
-  },
-  "ArrowLinkBack": { "btnText": "Zurück" }
+    "LocaleLayout": {
+        "title": "Rayfel Erasmus+ Webseite",
+        "description": "Rayfel Erasmus+ Webseite"
+    },
+    "LocaleSwitcher": {
+        "label": "Sprache ändern",
+        "locale": "{locale, select, de {Deutsch} en {English} tr {Turkish} other {Unknown}}"
+    },
+    "NavLinks": {
+        "home": "Startseite",
+        "about": "Über uns",
+        "announcements": "Ankündigungen",
+        "news": "Nachrichten",
+        "eTwinning": "eTwinning"
+    },
+    "AuthButtons": { "login": "Anmelden", "signup": "Registrieren" },
+    "NewsType": {
+        "news": "nachrichten",
+        "mobility": "mobilität",
+        "dissemination": "verbreitung"
+    },
+    "CardLinkText": { "readMore": "Weiterlesen" },
+    "HeroSection": {
+        "header": "Digitale Schule Grüne Bildung Das Lernmodell für zukünftige Generationen",
+        "content": "Willkommen auf unserer Website, auf der wir die Aktivitäten unseres Erasmus+-Projekts mit dem Titel Digitale Schule Grüne Bildung: Das Lernmodell für zukünftige Generationen teilen.",
+        "linkText": "Mehr erfahren",
+        "imageAltText": "Veranstaltungsbild"
+    },
+    "AboutSection": {
+        "name": "Über uns",
+        "header": "Digitale Schule Grüne Bildung Das Lernmodell für zukünftige Generationen",
+        "linkText": "Über uns Seite",
+        "imageAltText": "Visualisierung des Projekts Digitale Schule Grüne Bildung"
+    },
+    "AnnouncementsSection": {
+        "name": "Aktuelle Ankündigungen",
+        "header": "Ankündigungen",
+        "linkText": "Alle anzeigen"
+    },
+    "NewsSection": {
+        "name": "Newsfeed",
+        "header": "Neuigkeiten",
+        "linkText": "Alle anzeigen"
+    },
+    "footer": {
+        "rayfelProjectsHeader": "Rayfel Projekte",
+        "rayfelProjectsContent": "Das digitale Zuhause akademischer Projekte. Die Zukunft: Digitale Schule Grüne Bildung: Das Lernmodell für zukünftige Generationen",
+        "quickLinks": "Schnellzugriff",
+        "institutions": "Institutionen",
+        "followUs": "Folgen Sie uns",
+        "copyRight": "© 2026 Rayfel Projeler. Alle Rechte vorbehalten.",
+        "rayfelHighSchool": "Ramazan-Yaman-Naturwissenschaftliches Gymnasium"
+    },
+    "AnnouncementsPage": {
+        "topHeader": "Plattform-Ankündigungen",
+        "header": "Ankündigungen",
+        "content": "Hier können Sie Projektanträge und die neuesten Entwicklungen auf unserer Plattform mitverfolgen.",
+        "href": "/announcements"
+    },
+    "NewsPage": {
+        "topHeader": "Plattform-Neuigkeiten",
+        "header": "Neuigkeiten",
+        "content": "Hier können Sie die neuesten Entwicklungen und Erfolgsgeschichten aus unseren Projekten mitverfolgen.",
+        "href": "/news"
+    },
+    "pagination": { "previous": "Vorherige", "next": "Nächste" },
+    "ContentSidebarHeader": {
+        "news": "Weitere Nachrichten",
+        "announcement": "Weitere Ankündigungen"
+    },
+    "pages": {
+        "home": "Startseite",
+        "about": "Über uns",
+        "announcement": "Ankündigungen",
+        "news": "Neuigkeiten",
+        "notFoundPage": "Seite Nicht Gefunden"
+    },
+    "NotFoundPage": {
+        "header": "Seite nicht gefunden",
+        "text": "Die von Ihnen gesuchte Seite wurde möglicherweise verschoben, gelöscht oder hat nie existiert. Bitte überprüfen Sie die URL und versuchen Sie es erneut.",
+        "btnGoHome": "Zur Startseite",
+        "btnGoBack": "Zurück"
+    },
+    "ArrowLinkBack": { "btnText": "Zurück" }
 }
