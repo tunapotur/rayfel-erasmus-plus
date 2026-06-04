@@ -1,22 +1,12 @@
 // Note that `app/[locale]/[...rest]/page.tsx`
 // is necessary for this page to render.
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { headers } from 'next/headers';
+import { useTranslations } from 'next-intl';
 import { Link } from '@/src/i18n/navigation';
 import GoBackButton from '@/components/GoBackButton';
 import { Button } from '@/components/ui/button';
 
-export default async function NotFound() {
-    // not-found.tsx params almaz, locale'i headers'dan çekiyoruz
-    const headersList = await headers();
-    const locale = headersList.get('x-locale') ?? 'tr'; // fallback locale
-
-    setRequestLocale(locale);
-
-    const t = await getTranslations({
-        locale,
-        namespace: 'NotFoundPage',
-    });
+export default function NotFound() {
+    const t = useTranslations('NotFoundPage');
 
     return (
         <main className="bg-background relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
