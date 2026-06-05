@@ -21,7 +21,7 @@ export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
             </div>
 
             {/* Title */}
-            <h1 className="font-heading text-foreground mb-6 text-3xl leading-[1.25] font-bold tracking-tight md:text-4xl lg:text-5xl">
+            <h1 className="font-heading text-foreground mb-6 text-3xl leading-tight font-bold tracking-tight md:text-4xl lg:text-5xl">
                 {article.title}
             </h1>
 
@@ -32,7 +32,7 @@ export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
 
             {/* Hero image */}
             {article.headline_image && (
-                <div className="relative mb-8 flex h-72 w-full rounded-xl shadow-md md:h-96 lg:h-[28rem]">
+                <div className="relative mb-8 flex h-72 w-full rounded-xl shadow-md md:h-96 lg:h-112">
                     <Image
                         src={article.headline_image}
                         alt={article.title}
