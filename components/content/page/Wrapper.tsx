@@ -14,13 +14,13 @@ function BadgeHeader({ topHeader, header, content, news }: HeaderProps) {
             <div
                 className={`rounded-xl px-6 py-12 shadow-sm ${news ? 'bg-blue-600 dark:bg-blue-700' : 'bg-amber-500 dark:bg-amber-600'}`}
             >
-                <h2 className="text-bright-header mb-2 text-xs font-bold tracking-widest uppercase sm:text-base dark:text-gray-200">
+                <p className="text-bright-header mb-3 text-xs font-semibold tracking-[0.15em] uppercase dark:text-gray-200">
                     {topHeader}
-                </h2>
-                <h1 className="text-bright-header mb-2 text-3xl leading-tight font-bold drop-shadow-sm md:text-5xl">
+                </p>
+                <h1 className="text-bright-header font-heading mb-3 text-3xl leading-tight font-bold drop-shadow-sm md:text-5xl">
                     {header}
                 </h1>
-                <p className="text-bright-header text-xs leading-tight md:w-[70%] md:text-base lg:w-[50%]">
+                <p className="text-bright-header/90 text-sm leading-relaxed md:w-[70%] md:text-base lg:w-[50%]">
                     {content}
                 </p>
             </div>

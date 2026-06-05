@@ -11,15 +11,15 @@ export function BreadCrumbNav({
 }) {
     return (
         <nav className="border-border bg-card border-b">
-            <div className="mx-auto flex h-14 items-center gap-2 px-4 sm:px-6">
+            <div className="mx-auto flex h-12 items-center gap-2 px-4 sm:px-6">
                 <Link
                     href={content_source_link.href}
-                    className="text-muted-foreground hover:text-primary text-[0.7rem] font-bold tracking-widest uppercase transition-colors"
+                    className="text-muted-foreground hover:text-primary text-xs font-semibold tracking-[0.1em] uppercase transition-colors"
                 >
                     {content_source_link.text}
                 </Link>
-                <span className="text-muted-foreground/40 text-xs">/</span>
-                <span className="text-primary truncate text-[0.7rem] font-bold tracking-widest uppercase">
+                <span className="text-muted-foreground/40 text-sm">/</span>
+                <span className="text-primary truncate text-xs font-semibold tracking-[0.1em] uppercase">
                     {article_title}
                 </span>
             </div>

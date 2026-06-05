@@ -21,7 +21,7 @@ export default function Card({
     const news = isNEWS(card) ? card : null;
 
     return (
-        <div className="bg-background flex flex-col gap-2 rounded-xl border border-gray-100 p-6 shadow-sm transition-shadow hover:shadow-md dark:border-gray-900 dark:bg-gray-900">
+        <div className="bg-background flex flex-col gap-3 rounded-xl border border-gray-100 p-5 shadow-sm transition-shadow hover:shadow-md dark:border-gray-800 dark:bg-gray-900">
             {/* Image */}
             {announcement?.headline_image && (
                 <div className="relative h-48 w-full overflow-hidden rounded-lg">
@@ -29,7 +29,7 @@ export default function Card({
                         src={announcement.headline_image}
                         alt={card.title}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-300 hover:scale-[1.02]"
                         sizes="(max-width: 768px) 100vw, 33vw"
                         priority={priority}
                     />
@@ -42,19 +42,20 @@ export default function Card({
                     )}
                 </div>
             )}
+
             {/* Date */}
             {announcement?.date && (
-                <div className="text-muted-foreground text-[0.65rem] leading-none font-light tracking-tight">
+                <p className="text-muted-foreground text-[0.7rem] font-medium tracking-wide uppercase">
                     {announcement.date}
-                </div>
+                </p>
             )}
 
             {/* Content */}
-            <div className="flex flex-col gap-2">
-                <h3 className="text-base font-semibold text-gray-800 dark:text-gray-200">
+            <div className="flex flex-col gap-1.5">
+                <h3 className="font-heading text-foreground text-[0.95rem] leading-snug font-semibold">
                     {card.title}
                 </h3>
-                <p className="text-muted-foreground line-clamp-4 text-sm leading-relaxed">
+                <p className="text-muted-foreground line-clamp-3 text-sm leading-relaxed">
                     {card.description}
                 </p>
             </div>

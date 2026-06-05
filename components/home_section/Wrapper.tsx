@@ -16,17 +16,17 @@ interface SectionProps {
 
 function SectionName({ text }: { text: string }) {
     return (
-        <h2 className="text-primary text-base font-bold tracking-widest uppercase">
+        <p className="text-primary text-xs font-semibold tracking-[0.15em] uppercase">
             {text}
-        </h2>
+        </p>
     );
 }
 
 function SectionHeader({ text }: { text: string }) {
     return (
-        <h3 className="text-3xl leading-tight font-bold text-gray-800 dark:text-gray-200">
+        <h2 className="font-heading text-foreground text-2xl leading-snug font-bold sm:text-3xl">
             {text}
-        </h3>
+        </h2>
     );
 }
 
@@ -41,7 +41,7 @@ export default function Wrapper({
 }: SectionProps) {
     return (
         <section
-            className={`flex flex-col gap-6 px-4 py-6 lg:rounded-md ${hasBackground ? 'bg-background-gray' : ''}`}
+            className={`flex flex-col gap-5 px-4 py-8 lg:rounded-md ${hasBackground ? 'bg-background-gray' : ''}`}
         >
             <div className="flex flex-row items-center justify-between">
                 <SectionName text={name} />

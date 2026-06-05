@@ -20,7 +20,7 @@ export function Navigation() {
     ] as const;
 
     return (
-        <nav className="flex flex-col gap-2 px-2 py-4 sm:grid sm:grid-cols-3 sm:items-center md:grid-cols-4 lg:flex lg:flex-row">
+        <nav className="flex flex-col gap-1 px-2 py-4 sm:grid sm:grid-cols-3 sm:items-center md:grid-cols-4 lg:flex lg:flex-row lg:gap-0.5">
             {navLinks.map((link) => {
                 const isActive =
                     link.href === '/'
@@ -31,10 +31,10 @@ export function Navigation() {
                     <Link
                         key={link.href}
                         href={link.href}
-                        className={`rounded-md px-3 py-1.5 transition-colors sm:max-w-28 sm:truncate sm:text-center ${
+                        className={`rounded-md px-3 py-1.5 text-sm transition-colors sm:max-w-28 sm:truncate sm:text-center ${
                             isActive
-                                ? 'text-primary bg-primary/10 dark:bg-primary/30 sm:bg-background font-semibold dark:text-blue-600'
-                                : 'hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-500/30 dark:hover:text-gray-200'
+                                ? 'text-primary bg-primary/10 font-semibold'
+                                : 'text-muted-foreground hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-700/40 dark:hover:text-gray-100'
                         }`}
                         onClick={() => setMobilMenuOpen(false)}
                     >

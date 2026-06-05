@@ -24,11 +24,11 @@ export default function About({
             href="/about"
             hidePageLink={hideSectionLink}
         >
-            <div className="flex flex-col items-center gap-4 md:flex-row md:gap-0">
+            <div className="flex flex-col items-center gap-6 md:flex-row md:gap-8">
                 {/* Content */}
-                <div className="order-last flex flex-col gap-4 md:order-first md:w-2/3 md:pr-6">
-                    {/* Explanation - 2 paragraph */}
-                    <p className="text-muted-foreground text-base leading-relaxed">
+                <div className="order-last flex flex-col gap-5 md:order-first md:w-2/3">
+                    {/* Explanation paragraph */}
+                    <p className="text-muted-foreground text-base leading-[1.75]">
                         {about_section.description}
                     </p>
 
@@ -37,11 +37,11 @@ export default function About({
                         {about_section.highlights.map((item, index) => (
                             <li
                                 key={index}
-                                className="text-muted-foreground flex items-start gap-3 text-sm"
+                                className="text-muted-foreground flex items-start gap-3 text-sm leading-relaxed"
                             >
                                 <CheckCircle2
                                     className="text-primary mt-0.5 shrink-0"
-                                    size={18}
+                                    size={16}
                                 />
                                 <span>{item}</span>
                             </li>
@@ -55,7 +55,7 @@ export default function About({
                     alt={t('imageAltText')}
                     width={320}
                     height={240}
-                    className="order-first rounded-2xl shadow-xl md:order-last"
+                    className="order-first rounded-2xl shadow-lg md:order-last"
                     style={{
                         width: '24rem',
                         height: 'auto',

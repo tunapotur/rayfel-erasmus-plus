@@ -20,7 +20,7 @@ export function NewsBadge({ BADGE_NEWS_TYPE, className }: BadgeProps) {
     return (
         <span
             className={cn(
-                'text-bright-header inline-block rounded-sm px-2.5 py-0.5 text-[0.625rem] font-bold tracking-widest uppercase',
+                'text-bright-header inline-block rounded-sm px-2 py-0.5 text-[0.6rem] font-semibold tracking-[0.1em] uppercase',
                 badge_className[BADGE_NEWS_TYPE],
                 className,
             )}

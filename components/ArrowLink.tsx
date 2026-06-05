@@ -14,10 +14,10 @@ export default function ArrowLink({
     return (
         <Link
             href={href}
-            className="text-primary hover:text-primary/75 mt-auto flex items-center gap-1.5 text-sm font-medium transition-colors"
+            className="text-primary hover:text-primary/75 mt-auto flex items-center gap-1 text-xs font-semibold tracking-wide uppercase transition-colors"
         >
             <span>{text}</span>
-            <ArrowRight size={14} />
+            <ArrowRight size={12} />
         </Link>
     );
 }

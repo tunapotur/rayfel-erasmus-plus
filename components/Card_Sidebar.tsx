@@ -15,7 +15,7 @@ export function Card_Sidebar({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
     return (
         <Link
             href={getHref(card)}
-            className="bg-card text-card-foreground border-border flex max-h-30 overflow-hidden rounded-xl border shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
+            className="bg-card text-card-foreground border-border flex max-h-30 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
         >
             {/* Image */}
             {announcement?.headline_image && (
@@ -32,12 +32,12 @@ export function Card_Sidebar({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
             )}
 
             {/* Body */}
-            <div className="flex flex-col justify-center gap-1 p-3">
+            <div className="flex flex-col justify-center gap-1.5 p-3">
                 {/* Date & Badge */}
                 {announcement?.date && (
                     <div className="flex items-center gap-2">
                         {/* Date */}
-                        <span className="text-muted-foreground text-[10px] font-semibold tracking-wide uppercase">
+                        <span className="text-muted-foreground text-[10px] font-medium tracking-wide uppercase">
                             {announcement.date}
                         </span>
 
@@ -48,11 +48,11 @@ export function Card_Sidebar({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
                     </div>
                 )}
 
-                <h3 className="text-foreground group-hover:text-primary line-clamp-1 text-[0.8rem] leading-snug font-semibold transition-colors">
+                <h3 className="font-heading text-foreground line-clamp-2 text-[0.8rem] leading-snug font-semibold">
                     {card.title}
                 </h3>
 
-                <p className="text-muted-foreground line-clamp-2 text-[0.75rem] leading-relaxed">
+                <p className="text-muted-foreground line-clamp-2 text-[0.72rem] leading-relaxed">
                     {card.description}
                 </p>
             </div>

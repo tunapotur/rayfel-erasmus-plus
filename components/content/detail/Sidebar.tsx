@@ -11,11 +11,11 @@ export function Sidebar({ items }: { items: Array<ANNOUNCEMENT | NEWS> }) {
         <aside className="w-full">
             {/* Sidebar title with decorative line */}
             <div className="mb-5 flex items-center gap-3">
-                <h2 className="text-foreground font-serif text-xl font-bold whitespace-nowrap">
+                <h2 className="font-heading text-foreground text-lg font-bold whitespace-nowrap">
                     {isANNOUNCEMENT(items[0]) && t('announcement')}
                     {isNEWS(items[0]) && t('news')}
                 </h2>
-                <div className="bg-foreground h-0.5 w-full rounded-full" />
+                <div className="bg-border h-px w-full rounded-full" />
             </div>
 
             <div className="flex flex-col gap-3">
