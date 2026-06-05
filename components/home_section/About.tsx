@@ -10,9 +10,9 @@ import Wrapper from './Wrapper';
 import about from '@/public/about.png';
 
 export default function About({
-    hideSectionLink,
+    hideSectionLink = false,
 }: {
-    hideSectionLink: boolean;
+    hideSectionLink?: boolean;
 }) {
     const t = useTranslations('AboutSection');
 
