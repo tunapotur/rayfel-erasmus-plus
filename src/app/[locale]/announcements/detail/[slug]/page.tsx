@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
-import DetailWrapper from '@/components/content/DetailWrapper';
+import Wrapper from '@/components/content/detail/Wrapper';
 
 import contents_announcements from '@/sample_data/contents_announcements';
 
@@ -44,5 +44,5 @@ export default async function AnnouncementDetailPage({ params }: PageProps) {
         .filter((item) => item.slug !== slug)
         .slice(0, 6);
 
-    return <DetailWrapper content={content} other_contents={other_contents} />;
+    return <Wrapper content={content} other_contents={other_contents} />;
 }

@@ -1,13 +1,13 @@
 import { Geist, Geist_Mono, Inter } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import { hasLocale,Locale, NextIntlClientProvider } from 'next-intl';
+import { hasLocale, Locale, NextIntlClientProvider } from 'next-intl';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { routing } from '@/src/i18n/routing';
 
 import { cn } from '@/lib/utils';
 import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/navbar';
 import { ThemeProvider } from '@/components/providers/theme-provider';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });

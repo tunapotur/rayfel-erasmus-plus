@@ -6,7 +6,7 @@ import { ArrowLeft } from 'lucide-react';
 
 import { useRouter } from '@/src/i18n/navigation';
 
-export default function ArrowLinkBack() {
+export function ArrowLinkBack() {
     const router = useRouter();
     const t = useTranslations('ArrowLinkBack');
     return (
