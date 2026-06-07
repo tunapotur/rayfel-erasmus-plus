@@ -1,3 +1,5 @@
-export default function NewsPage() {
-  return <div>Sign up Page Under Construction</div>;
+import UnderConstruction from '@/components/UnderConstruction';
+
+export default function SignupPage() {
+    return <UnderConstruction />;
 }

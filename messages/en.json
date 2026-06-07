@@ -14,13 +14,18 @@
         "news": "News",
         "eTwinning": "eTwinning"
     },
-    "AuthButtons": { "login": "Log In", "signup": "Sign Up" },
+    "AuthButtons": {
+        "login": "Log In",
+        "signup": "Sign Up"
+    },
     "NewsType": {
         "news": "news",
         "mobility": "mobility",
         "dissemination": "dissemination"
     },
-    "CardLinkText": { "readMore": "Read More" },
+    "CardLinkText": {
+        "readMore": "Read More"
+    },
     "HeroSection": {
         "header": "Digital School Green Education The Learning Model for Future Generations",
         "content": "Welcome to our website, which we use to share the activities of our Erasmus+ project titled 'Digital School Green Education: The Learning Model for Future Generations'.",
@@ -64,7 +69,10 @@
         "content": "You can follow the latest developments and success stories from our projects here.",
         "href": "/news"
     },
-    "pagination": { "previous": "Previous", "next": "Next" },
+    "pagination": {
+        "previous": "Previous",
+        "next": "Next"
+    },
     "ContentSidebarHeader": {
         "news": "Other News",
         "announcement": "Other Announcements"
@@ -82,5 +90,14 @@
         "btnGoHome": "Go to Home Page",
         "btnGoBack": "Go Back"
     },
-    "ArrowLinkBack": { "btnText": "Go Back" }
+    "ArrowLinkBack": {
+        "btnText": "Go Back"
+    },
+    "UnderConstructionPage": {
+        "bgText": "Soon",
+        "header": "Page Under Construction",
+        "text": "This page is not ready yet. It will be available shortly.",
+        "btnGoHome": "Go to Home Page",
+        "btnGoBack": "Go Back"
+    }
 }

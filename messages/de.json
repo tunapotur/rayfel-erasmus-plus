@@ -14,13 +14,18 @@
         "news": "Nachrichten",
         "eTwinning": "eTwinning"
     },
-    "AuthButtons": { "login": "Anmelden", "signup": "Registrieren" },
+    "AuthButtons": {
+        "login": "Anmelden",
+        "signup": "Registrieren"
+    },
     "NewsType": {
         "news": "nachrichten",
         "mobility": "mobilität",
         "dissemination": "verbreitung"
     },
-    "CardLinkText": { "readMore": "Weiterlesen" },
+    "CardLinkText": {
+        "readMore": "Weiterlesen"
+    },
     "HeroSection": {
         "header": "Digitale Schule Grüne Bildung Das Lernmodell für zukünftige Generationen",
         "content": "Willkommen auf unserer Website, auf der wir die Aktivitäten unseres Erasmus+-Projekts mit dem Titel Digitale Schule Grüne Bildung: Das Lernmodell für zukünftige Generationen teilen.",
@@ -64,7 +69,10 @@
         "content": "Hier können Sie die neuesten Entwicklungen und Erfolgsgeschichten aus unseren Projekten mitverfolgen.",
         "href": "/news"
     },
-    "pagination": { "previous": "Vorherige", "next": "Nächste" },
+    "pagination": {
+        "previous": "Vorherige",
+        "next": "Nächste"
+    },
     "ContentSidebarHeader": {
         "news": "Weitere Nachrichten",
         "announcement": "Weitere Ankündigungen"
@@ -82,5 +90,14 @@
         "btnGoHome": "Zur Startseite",
         "btnGoBack": "Zurück"
     },
-    "ArrowLinkBack": { "btnText": "Zurück" }
+    "ArrowLinkBack": {
+        "btnText": "Zurück"
+    },
+    "UnderConstructionPage": {
+        "bgText": "Bald",
+        "header": "Seite im Aufbau",
+        "text": "Diese Seite ist noch nicht fertig. Sie wird in Kürze verfügbar sein.",
+        "btnGoHome": "Zur Startseite",
+        "btnGoBack": "Zurück"
+    }
 }

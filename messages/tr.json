@@ -14,13 +14,18 @@
         "news": "Haberler",
         "eTwinning": "eTwinning"
     },
-    "AuthButtons": { "login": "Giriş", "signup": "Kayıt" },
+    "AuthButtons": {
+        "login": "Giriş",
+        "signup": "Kayıt"
+    },
     "NewsType": {
         "news": "haber",
         "mobility": "hareketlilik",
         "dissemination": "yaygınlaştırma"
     },
-    "CardLinkText": { "readMore": "Devamını Oku" },
+    "CardLinkText": {
+        "readMore": "Devamını Oku"
+    },
     "HeroSection": {
         "imageAltText": "Erasmus+ etkinlik görseli",
         "header": "Dijital Okul Yeşil Eğitim Gelecek Nesillerin Öğrenme Modeli",
@@ -64,7 +69,10 @@
         "content": "Projelerimizden en son gelişmeleri ve başarı hikayelerimizi buradan takip edebilirsiniz.",
         "href": "/news"
     },
-    "pagination": { "previous": "Önceki", "next": "İleri" },
+    "pagination": {
+        "previous": "Önceki",
+        "next": "İleri"
+    },
     "ContentSidebarHeader": {
         "news": "Diğer Haberler",
         "announcement": "Diğer Duyurular"
@@ -82,5 +90,14 @@
         "btnGoHome": "Ana Sayfaya Dön",
         "btnGoBack": "Geri Dön"
     },
-    "ArrowLinkBack": { "btnText": "Geri Dön" }
+    "ArrowLinkBack": {
+        "btnText": "Geri Dön"
+    },
+    "UnderConstructionPage": {
+        "bgText": "Yakında",
+        "header": "Sayfa Yapım Aşamasında",
+        "text": "Bu sayfa henüz tamamlanmadı. Kısa süre içinde hizmetinize sunulacak.",
+        "btnGoHome": "Ana Sayfaya Dön",
+        "btnGoBack": "Geri Dön"
+    }
 }
