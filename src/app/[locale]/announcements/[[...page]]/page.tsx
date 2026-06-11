@@ -6,7 +6,7 @@ import type { LocalePageProps } from '@/lib/types/DataTypes';
 import Card from '@/components/Card';
 import { PaginationOperations, Wrapper } from '@/components/content/page';
 
-import contents_announcements from '@/sample_data/contents_announcements';
+import contents_announcements from '@/data/contents_announcements';
 
 const ITEMS_PER_PAGE = 9;
 

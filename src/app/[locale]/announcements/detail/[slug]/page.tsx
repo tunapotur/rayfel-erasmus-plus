@@ -4,7 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 import Wrapper from '@/components/content/detail/Wrapper';
 
-import contents_announcements from '@/sample_data/contents_announcements';
+import contents_announcements from '@/data/contents_announcements';
 
 interface PageProps {
     params: Promise<{ slug: string; locale: string }>;

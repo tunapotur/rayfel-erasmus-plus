@@ -1,4 +1,4 @@
-import contents_info from '@/sample_data/contents_info';
+import contents_info from '@/data/contents_info';
 
 import Card from '../Card';
 

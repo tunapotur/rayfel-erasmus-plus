@@ -2,7 +2,7 @@
 
 import { useOutsideClick } from '@/lib/useOutsideClick';
 
-import { AuthButtons } from './AuthButtons';
+// import { AuthButtons } from './AuthButtons';
 import { LocalModeButtons } from './LocalModeButtons';
 import { Logo } from './Logo';
 import { MobilMenuButton } from './MobilMenuButton';
@@ -27,7 +27,7 @@ export function NavbarOperations() {
 
                     <div className="flex items-center gap-2">
                         <LocalModeButtons />
-                        <AuthButtons />
+                        {/* <AuthButtons /> */}
                     </div>
                 </div>
 
@@ -46,7 +46,7 @@ export function NavbarOperations() {
                         <div className="bg-background absolute right-0 left-0 flex flex-col px-4 pb-4">
                             <div className="flex flex-col border-t border-gray-200 dark:border-gray-800">
                                 <Navigation />
-                                <AuthButtons />
+                                {/* <AuthButtons /> */}
                             </div>
                         </div>
                     )}

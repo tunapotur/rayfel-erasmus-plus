@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 
 import { CheckCircle2 } from 'lucide-react';
 
-import about_section from '@/sample_data/about_section';
+import about_section from '@/data/about_section';
 
 import Wrapper from './Wrapper';
 
@@ -23,6 +23,7 @@ export default function About({
             linkText={t('linkText')}
             href="/about"
             hidePageLink={hideSectionLink}
+            hasBackground
         >
             <div className="flex flex-col items-center gap-6 md:flex-row md:gap-8">
                 {/* Content */}

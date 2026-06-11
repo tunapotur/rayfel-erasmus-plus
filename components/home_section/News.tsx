@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl';
 
 import Card from '@/components/Card';
 
-import contents_news from '@/sample_data/contents_news';
+import contents_news from '@/data/contents_news';
 
 import Wrapper from './Wrapper';
 

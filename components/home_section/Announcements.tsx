@@ -1,6 +1,6 @@
 import { useTranslations } from 'next-intl';
 
-import contents_announcements from '@/sample_data/contents_announcements';
+import contents_announcements from '@/data/contents_announcements';
 
 import Card from '../Card';
 import Wrapper from './Wrapper';

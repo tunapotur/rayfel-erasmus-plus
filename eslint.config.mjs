@@ -22,7 +22,7 @@ const eslintConfig = defineConfig([
                         ['^@?\\w'],
                         ['^@/src'],
                         ['^@/lib', '^@/components'],
-                        ['^@/sample_data'],
+                        ['^@/data'],
                         ['^\\.'],
                     ],
                 },

@@ -14,7 +14,7 @@ export function Navigation() {
     const navLinks = [
         { label: t('home'), href: '/' },
         { label: t('about'), href: '/about' },
-        { label: t('announcements'), href: '/announcements' },
+        // { label: t('announcements'), href: '/announcements' },
         { label: t('news'), href: '/news' },
         // { label: t("eTwinning"), href: "/etwinning" },
     ] as const;

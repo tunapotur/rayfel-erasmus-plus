@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 
 import { icons } from 'lucide-react';
 
-import footer_data from '@/sample_data/footer';
+import footer_data from '@/data/footer';
 
 import logo from '@/public/logo_rayfel.png';
 
