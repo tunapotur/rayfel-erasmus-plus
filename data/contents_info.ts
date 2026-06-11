@@ -2,7 +2,7 @@ import type { INFO } from "@/lib/types/DataTypes";
 
 const contents_info: Array<INFO> = [
   {
-    id: 0,
+    id: '0',
     title: "Rayfel",
     description:
       "Okulumuz Lüleburgaz Ramazan Yaman Fen Lisesi web sitesini inceleyebilirsiniz.",
@@ -10,7 +10,7 @@ const contents_info: Array<INFO> = [
     language: "tr",
   },
   {
-    id: 1,
+    id: '1',
     title: "Erasmus+",
     description:
       "Erasmus+ hakkında detaylı bilgi için Erasmus+ web sitesini inceleyebilirsiniz.",
@@ -18,7 +18,7 @@ const contents_info: Array<INFO> = [
     language: "tr",
   },
   {
-    id: 2,
+    id: '2',
     title: "eTwinning",
     description:
       "eTwinning projeleri hakkında detaylı bilgi için eTwinning web sitesini inceleyebilirsiniz.",

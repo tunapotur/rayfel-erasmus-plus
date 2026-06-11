@@ -2,7 +2,7 @@ import type { ANNOUNCEMENT } from '@/lib/types/DataTypes';
 
 const announcement: Array<ANNOUNCEMENT> = [
     {
-        id: 0,
+        id: '0',
         title: 'Announcement Section Under Construction',
         slug: 'announcement-section-under-construction',
         description: 'Announcement Section Under Construction',
@@ -15,7 +15,7 @@ const announcement: Array<ANNOUNCEMENT> = [
         ],
     },
     {
-        id: 1,
+        id: '1',
         title: 'Announcement Section Under Construction 2',
         slug: 'announcement-section-under-construction-2',
         description: 'Announcement Section Under Construction',

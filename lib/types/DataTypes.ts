@@ -11,10 +11,13 @@ export interface LocalePageProps {
 }
 
 export type LANGUAGE_TYPE = 'en' | 'de' | 'tr';
+
 export type NEWS_TYPE = 'news' | 'mobility' | 'dissemination';
 
+export type newsType = 'news' | 'mobility' | 'dissemination';
+
 export interface BASE {
-    id: number;
+    id: string;
     title: string;
     description: string;
     language: LANGUAGE_TYPE;
@@ -27,15 +30,23 @@ export interface INFO extends BASE {
 export interface ANNOUNCEMENT extends BASE {
     slug: string;
     date: string;
-    mainText: Array<string>;
+    mainText: string;
     headline_image?: string;
     images?: Array<string>;
     videos?: Array<string>;
-    files?: Array<string>;
+    files?: Array<file>;
 }
 
 export interface NEWS extends ANNOUNCEMENT {
     type: NEWS_TYPE;
+    newsType: newsType;
+}
+
+export interface file {
+    id: string;
+    name: string;
+    alt: string;
+    path: string;
 }
 
 export type AppHref = ComponentProps<typeof Link>['href'];
