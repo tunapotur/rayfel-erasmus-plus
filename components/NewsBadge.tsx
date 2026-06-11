@@ -1,17 +1,17 @@
 import { useTranslations } from 'next-intl';
 
-import type { NEWS_TYPE } from '@/lib/types/DataTypes';
+import type { newsType } from '@/lib/types/DataTypes';
 import { cn } from '@/lib/utils';
 
 interface BadgeProps {
-    BADGE_NEWS_TYPE: NEWS_TYPE;
+    BADGE_NEWS_TYPE: newsType;
     className?: string;
 }
 
 export function NewsBadge({ BADGE_NEWS_TYPE, className }: BadgeProps) {
     const t = useTranslations('NewsType');
 
-    const badge_className: Record<NEWS_TYPE, string> = {
+    const badge_className: Record<newsType, string> = {
         news: 'bg-blue-600 dark:bg-blue-700',
         mobility: 'bg-amber-600 dark:bg-amber-700',
         dissemination: 'bg-green-600 dark:bg-green-700',

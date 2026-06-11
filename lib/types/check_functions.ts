@@ -6,12 +6,12 @@ export function isInfo(item: INFO | ANNOUNCEMENT | NEWS): item is INFO {
 
 // card içinde type değeri varsa NEWS tipinde
 export function isNEWS(item: INFO | ANNOUNCEMENT | NEWS): item is NEWS {
-    return 'type' in item;
+    return 'newsType' in item;
 }
 
 // card içinde slug değeri var ve type değeri yoksa ANNOUNCEMENT
 export function isANNOUNCEMENT(
     item: INFO | ANNOUNCEMENT | NEWS,
 ): item is ANNOUNCEMENT {
-    return 'slug' in item && !('type' in item);
+    return 'slug' in item && !('newsType' in item);
 }

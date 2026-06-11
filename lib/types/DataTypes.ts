@@ -12,8 +12,6 @@ export interface LocalePageProps {
 
 export type LANGUAGE_TYPE = 'en' | 'de' | 'tr';
 
-export type NEWS_TYPE = 'news' | 'mobility' | 'dissemination';
-
 export type newsType = 'news' | 'mobility' | 'dissemination';
 
 export interface BASE {
@@ -30,6 +28,7 @@ export interface INFO extends BASE {
 export interface ANNOUNCEMENT extends BASE {
     slug: string;
     date: string;
+    type: 'news' | 'announcements';
     mainText: string;
     headline_image?: string;
     images?: Array<string>;
@@ -38,7 +37,6 @@ export interface ANNOUNCEMENT extends BASE {
 }
 
 export interface NEWS extends ANNOUNCEMENT {
-    type: NEWS_TYPE;
     newsType: newsType;
 }
 

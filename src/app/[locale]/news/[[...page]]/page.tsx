@@ -6,7 +6,7 @@ import type { LocalePageProps } from '@/lib/types/DataTypes';
 import Card from '@/components/Card';
 import { PaginationOperations, Wrapper } from '@/components/content/page';
 
-import contents_news from '@/data/contents_news';
+import contents_data from '@/data/content-data';
 
 const ITEMS_PER_PAGE = 6;
 
@@ -15,7 +15,10 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-    const totalPages = Math.ceil(contents_news.length / ITEMS_PER_PAGE);
+    const totalPages = Math.ceil(
+        contents_data.filter((item) => item.type === 'news').length /
+            ITEMS_PER_PAGE,
+    );
     return [
         { page: [] }, // /news → sayfa 1
         ...Array.from({ length: totalPages }, (_, i) => ({
@@ -48,10 +51,12 @@ export default async function NewsPage({ params }: PageProps) {
         await resolvePagination(
             page?.[0], // page segment'i
             ITEMS_PER_PAGE,
-            contents_news.length,
+            contents_data.length,
         );
 
-    const currentNews = contents_news.slice(startIndex, endIndex);
+    const currentNews = contents_data
+        .filter((item) => item.type === 'news')
+        .slice(startIndex, endIndex);
 
     return (
         <Wrapper pageText="NewsPage">
@@ -63,7 +68,8 @@ export default async function NewsPage({ params }: PageProps) {
             </div>
 
             {/* Pagination  */}
-            {contents_news.length > ITEMS_PER_PAGE && (
+            {contents_data.filter((item) => item.type === 'news').length >
+                ITEMS_PER_PAGE && (
                 <PaginationOperations
                     currentPage={pageNumber}
                     totalPages={totalPages}

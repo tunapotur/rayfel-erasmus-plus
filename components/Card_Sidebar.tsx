@@ -43,7 +43,7 @@ export function Card_Sidebar({ card }: { card: INFO | ANNOUNCEMENT | NEWS }) {
 
                         {/* Badge */}
                         {news?.type && (
-                            <NewsBadge BADGE_NEWS_TYPE={news.type} />
+                            <NewsBadge BADGE_NEWS_TYPE={news.newsType} />
                         )}
                     </div>
                 )}

@@ -17,7 +17,7 @@ export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
                 <span className="text-muted-foreground text-xs font-semibold tracking-[0.12em] uppercase">
                     {article.date}
                 </span>
-                {news?.type && <NewsBadge BADGE_NEWS_TYPE={news.type} />}
+                {news?.type && <NewsBadge BADGE_NEWS_TYPE={news.newsType} />}
             </div>
 
             {/* Title */}
@@ -45,15 +45,8 @@ export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
             )}
 
             {/* Body */}
-            <div className="space-y-5">
-                {article.mainText.map((paragraph, i) => (
-                    <p
-                        key={i}
-                        className="text-foreground/80 text-base leading-[1.85]"
-                    >
-                        {paragraph}
-                    </p>
-                ))}
+            <div className="text-foreground/80 space-y-5 text-base leading-[1.85]">
+                {article.mainText}
             </div>
 
             {/* Divider + Back link */}

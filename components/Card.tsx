@@ -36,7 +36,7 @@ export default function Card({
 
                     {news?.type && (
                         <NewsBadge
-                            BADGE_NEWS_TYPE={news.type}
+                            BADGE_NEWS_TYPE={news.newsType}
                             className={'absolute top-3 left-3'}
                         />
                     )}

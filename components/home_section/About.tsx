@@ -3,9 +3,9 @@ import { useTranslations } from 'next-intl';
 
 import { CheckCircle2 } from 'lucide-react';
 
-import about_section from '@/data/about_section';
-
 import Wrapper from './Wrapper';
+
+import about_section from '@/data/about_section';
 
 import about from '@/public/about.png';
 

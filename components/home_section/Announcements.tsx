@@ -1,9 +1,9 @@
 import { useTranslations } from 'next-intl';
 
-import contents_announcements from '@/data/contents_announcements';
-
 import Card from '../Card';
 import Wrapper from './Wrapper';
+
+import contents_announcements from '@/data/contents_announcements';
 
 export default function Announcements() {
     const t = useTranslations('AnnouncementsSection');
