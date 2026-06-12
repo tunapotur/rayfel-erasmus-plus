@@ -57,3 +57,5 @@ export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
         </article>
     );
 }
+
+//TODO: Article Hero Image ve content Image resimlerinde bir ayarsızlık var bunu ayarla
