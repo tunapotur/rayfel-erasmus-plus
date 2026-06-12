@@ -1,17 +1,18 @@
 import { ANNOUNCEMENT, INFO, NEWS } from './DataTypes';
 
+// item'ın INFO tipinde olup olmadığını kontrol eder
 export function isInfo(item: INFO | ANNOUNCEMENT | NEWS): item is INFO {
-    return 'href' in item;
+    return item.type === 'info';
 }
 
-// card içinde type değeri varsa NEWS tipinde
+// item'ın NEWS tipinde olup olmadığını kontrol eder
 export function isNEWS(item: INFO | ANNOUNCEMENT | NEWS): item is NEWS {
-    return 'newsType' in item;
+    return item.type === 'news';
 }
 
-// card içinde slug değeri var ve type değeri yoksa ANNOUNCEMENT
+// item'ın ANNOUNCEMENT tipinde olup olmadığını kontrol eder
 export function isANNOUNCEMENT(
     item: INFO | ANNOUNCEMENT | NEWS,
 ): item is ANNOUNCEMENT {
-    return 'slug' in item && !('newsType' in item);
+    return item.type === 'announcement';
 }

@@ -4,10 +4,11 @@ import Card from '@/components/Card';
 
 import Wrapper from './Wrapper';
 
-import contents_news from '@/data/content-data';
+import { getAllNews } from '@/data/contentsDataOperations';
 
 export default function News() {
     const t = useTranslations('NewsSection');
+    const contents_news = getAllNews();
 
     return (
         <Wrapper
@@ -17,16 +18,9 @@ export default function News() {
             href="/news"
         >
             <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-3 md:grid-rows-2">
-                {contents_news
-                    .filter((item) => item.type === 'news')
-                    .slice(0, 6)
-                    .map((item, index) => (
-                        <Card
-                            key={item.title}
-                            card={item}
-                            priority={index === 0}
-                        />
-                    ))}
+                {contents_news.slice(0, 6).map((item, index) => (
+                    <Card key={item.title} card={item} priority={index === 0} />
+                ))}
             </div>
         </Wrapper>
     );
