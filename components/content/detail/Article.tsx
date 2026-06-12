@@ -5,6 +5,7 @@ import type { ANNOUNCEMENT, NEWS } from '@/lib/types/DataTypes';
 import { NewsBadge } from '@/components/NewsBadge';
 
 import { ArrowLinkBack } from './ArrowLinkBack';
+import QuillContent from './QuillContent';
 
 export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
     const news = isNEWS(article) ? article : null;
@@ -46,7 +47,8 @@ export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
 
             {/* Body */}
             <div className="text-foreground/80 space-y-5 text-base leading-[1.85]">
-                {article.mainText}
+                {/* {article.mainText} */}
+                <QuillContent htmlContent={article.mainText} />
             </div>
 
             {/* Divider + Back link */}
