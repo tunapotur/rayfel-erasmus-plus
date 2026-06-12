@@ -23,7 +23,6 @@ export default function About({
             linkText={t('linkText')}
             href="/about"
             hidePageLink={hideSectionLink}
-            hasBackground
         >
             <div className="flex flex-col items-center gap-6 md:flex-row md:gap-8">
                 {/* Content */}
