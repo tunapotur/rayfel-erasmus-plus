@@ -17,7 +17,7 @@ export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
                 <span className="text-muted-foreground text-xs font-semibold tracking-[0.12em] uppercase">
                     {article.date}
                 </span>
-                {news?.type && <NewsBadge BADGE_NEWS_TYPE={news.newsType} />}
+                {news && <NewsBadge BADGE_NEWS_TYPE={news.newsType} />}
             </div>
 
             {/* Title */}
