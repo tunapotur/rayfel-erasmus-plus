@@ -220,5 +220,36 @@
     "headline_image": "",
     "mainText": "<p>Announcement&nbsp;Değişikliği&nbsp;yapılacak.&nbsp;Uzun&nbsp;metin&nbsp;için&nbsp;deneme&nbsp;girişi&nbsp;yapılıyor.&nbsp;Duruyu&nbsp;girişi.</p>",
     "files": []
+  },
+  {
+    "id": "announcement-2026-06-13_14-13-50-555",
+    "type": "announcement",
+    "title": "Resimli Duyuru Denemesi",
+    "description": "Resimli Duyuru Denemesi",
+    "language": "tr",
+    "date": "13 Haziran 2026",
+    "slug": "resimli-duyuru-denemesi",
+    "headline_image": "/uploads/announcement-2026-06-13_14-13-50-555/behlül.jpg",
+    "mainText": "<p><img src=\"/uploads/announcement-2026-06-13_14-13-50-555/elsa.jpg\"></p><p></p><p>Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet,&nbsp;consectetur&nbsp;adipiscing&nbsp;elit.&nbsp;Pellentesque&nbsp;eros&nbsp;risus,&nbsp;suscipit&nbsp;a&nbsp;dui&nbsp;vitae,&nbsp;maximus&nbsp;lobortis&nbsp;odio.&nbsp;Phasellus&nbsp;dui&nbsp;ligula,&nbsp;condimentum&nbsp;et&nbsp;fermentum&nbsp;dapibus,&nbsp;sodales&nbsp;id&nbsp;nunc.&nbsp;Aliquam&nbsp;blandit&nbsp;dui&nbsp;ante,&nbsp;condimentum&nbsp;finibus&nbsp;ante&nbsp;pharetra&nbsp;sed.&nbsp;In&nbsp;sodales&nbsp;lacinia&nbsp;tortor&nbsp;sit&nbsp;amet&nbsp;rutrum.&nbsp;Phasellus&nbsp;viverra&nbsp;elit&nbsp;nibh,&nbsp;eu&nbsp;placerat&nbsp;est&nbsp;condimentum&nbsp;in.&nbsp;Maecenas&nbsp;finibus&nbsp;pharetra&nbsp;enim&nbsp;sit&nbsp;amet&nbsp;malesuada.&nbsp;Quisque&nbsp;sed&nbsp;sem&nbsp;sed&nbsp;libero&nbsp;efficitur&nbsp;lacinia&nbsp;a&nbsp;id&nbsp;elit.&nbsp;Pellentesque&nbsp;ut&nbsp;arcu&nbsp;finibus&nbsp;mauris&nbsp;ornare&nbsp;luctus&nbsp;nec&nbsp;vel&nbsp;lorem.&nbsp;Morbi&nbsp;odio&nbsp;sapien,&nbsp;ullamcorper&nbsp;sit&nbsp;amet&nbsp;magna&nbsp;id,&nbsp;hendrerit&nbsp;condimentum&nbsp;mi.&nbsp;Nam&nbsp;vitae&nbsp;elit&nbsp;vestibulum,&nbsp;commodo&nbsp;metus&nbsp;sed,&nbsp;interdum&nbsp;lorem.&nbsp;Nullam&nbsp;tellus&nbsp;felis,&nbsp;pulvinar&nbsp;id&nbsp;aliquam&nbsp;ac,&nbsp;porttitor&nbsp;ac&nbsp;mi.</p><p></p><p><img src=\"/uploads/announcement-2026-06-13_14-13-50-555/icerik-resim.png\"></p><p></p><p>Ut&nbsp;non&nbsp;ipsum&nbsp;a&nbsp;lorem&nbsp;euismod&nbsp;volutpat.&nbsp;Sed&nbsp;aliquet&nbsp;semper&nbsp;purus&nbsp;id&nbsp;tincidunt.&nbsp;Vivamus&nbsp;ac&nbsp;mauris&nbsp;ut&nbsp;quam&nbsp;iaculis&nbsp;bibendum&nbsp;in&nbsp;sit&nbsp;amet&nbsp;magna.&nbsp;Donec&nbsp;euismod&nbsp;euismod&nbsp;lectus,&nbsp;et&nbsp;efficitur&nbsp;enim.&nbsp;Phasellus&nbsp;egestas&nbsp;mattis&nbsp;nulla,&nbsp;ac&nbsp;viverra&nbsp;quam&nbsp;bibendum&nbsp;eu.&nbsp;Ut&nbsp;tempus&nbsp;aliquet&nbsp;dolor&nbsp;quis&nbsp;pellentesque.&nbsp;In&nbsp;dignissim&nbsp;pharetra&nbsp;ornare.&nbsp;Sed&nbsp;egestas&nbsp;arcu&nbsp;hendrerit&nbsp;lectus&nbsp;consectetur&nbsp;sollicitudin.&nbsp;Nulla&nbsp;molestie&nbsp;urna&nbsp;vitae&nbsp;leo&nbsp;eleifend&nbsp;tincidunt.&nbsp;Sed&nbsp;ac&nbsp;urna&nbsp;pharetra,&nbsp;vulputate&nbsp;tortor&nbsp;in,&nbsp;vestibulum&nbsp;tellus.&nbsp;Integer&nbsp;placerat&nbsp;lorem&nbsp;et&nbsp;sem&nbsp;faucibus,&nbsp;a&nbsp;mattis&nbsp;massa&nbsp;sodales.&nbsp;Vestibulum&nbsp;ante&nbsp;ipsum&nbsp;primis&nbsp;in&nbsp;faucibus&nbsp;orci&nbsp;luctus&nbsp;et&nbsp;ultrices&nbsp;posuere&nbsp;cubilia&nbsp;curae;&nbsp;Ut&nbsp;porttitor&nbsp;lorem&nbsp;commodo&nbsp;ipsum&nbsp;faucibus,&nbsp;a&nbsp;ornare&nbsp;magna&nbsp;tincidunt.&nbsp;Curabitur&nbsp;scelerisque&nbsp;tristique&nbsp;lobortis.</p><p></p><p><img src=\"/uploads/announcement-2026-06-13_14-13-50-555/behlül.jpg\"></p><p></p><p>Sed&nbsp;dictum&nbsp;eleifend&nbsp;lectus,&nbsp;cursus&nbsp;placerat&nbsp;nisi&nbsp;posuere&nbsp;quis.&nbsp;Nullam&nbsp;tristique&nbsp;diam&nbsp;vitae&nbsp;orci&nbsp;vestibulum,&nbsp;vitae&nbsp;tristique&nbsp;nibh&nbsp;tempor.&nbsp;Maecenas&nbsp;suscipit&nbsp;mattis&nbsp;elit,&nbsp;sit&nbsp;amet&nbsp;dapibus&nbsp;nulla&nbsp;lobortis&nbsp;vel.&nbsp;Vestibulum&nbsp;ultricies&nbsp;rhoncus&nbsp;nisl,&nbsp;sed&nbsp;maximus&nbsp;eros&nbsp;gravida&nbsp;eu.&nbsp;Proin&nbsp;pellentesque&nbsp;nibh&nbsp;ipsum,&nbsp;vel&nbsp;bibendum&nbsp;nisi&nbsp;imperdiet&nbsp;nec.&nbsp;Curabitur&nbsp;pretium&nbsp;interdum&nbsp;viverra.&nbsp;Cras&nbsp;in&nbsp;dapibus&nbsp;sapien.&nbsp;Suspendisse&nbsp;non&nbsp;mi&nbsp;risus.</p><p></p><p>Sed&nbsp;ullamcorper,&nbsp;purus&nbsp;sed&nbsp;posuere&nbsp;mattis,&nbsp;odio&nbsp;lorem&nbsp;tristique&nbsp;libero,&nbsp;in&nbsp;placerat&nbsp;erat&nbsp;dolor&nbsp;consectetur&nbsp;ipsum.&nbsp;Ut&nbsp;quam&nbsp;ipsum,&nbsp;feugiat&nbsp;ultrices&nbsp;felis&nbsp;molestie,&nbsp;varius&nbsp;dapibus&nbsp;ipsum.&nbsp;Nam&nbsp;eget&nbsp;varius&nbsp;diam.&nbsp;Donec&nbsp;sodales&nbsp;odio&nbsp;vel&nbsp;justo&nbsp;bibendum,&nbsp;a&nbsp;vehicula&nbsp;libero&nbsp;consequat.&nbsp;Donec&nbsp;maximus&nbsp;scelerisque&nbsp;sem&nbsp;bibendum&nbsp;commodo.&nbsp;Praesent&nbsp;suscipit&nbsp;turpis&nbsp;sem,&nbsp;a&nbsp;laoreet&nbsp;urna&nbsp;semper&nbsp;convallis.&nbsp;Duis&nbsp;tempus&nbsp;aliquam&nbsp;mauris,&nbsp;in&nbsp;tristique&nbsp;lorem&nbsp;consequat&nbsp;in.&nbsp;Vestibulum&nbsp;vulputate&nbsp;mattis&nbsp;efficitur.&nbsp;Fusce&nbsp;volutpat&nbsp;dolor&nbsp;id&nbsp;odio&nbsp;venenatis&nbsp;facilisis.&nbsp;Cras&nbsp;eget&nbsp;bibendum&nbsp;leo,&nbsp;in&nbsp;ornare&nbsp;nisi.&nbsp;Curabitur&nbsp;ac&nbsp;lacus&nbsp;ornare,&nbsp;commodo&nbsp;neque&nbsp;ut,&nbsp;pulvinar&nbsp;mi.&nbsp;Morbi&nbsp;pellentesque&nbsp;eu&nbsp;velit&nbsp;vitae&nbsp;laoreet.&nbsp;Vestibulum&nbsp;neque&nbsp;metus,&nbsp;semper&nbsp;at&nbsp;justo&nbsp;sed,&nbsp;fringilla&nbsp;cursus&nbsp;urna.&nbsp;Etiam&nbsp;vulputate&nbsp;faucibus&nbsp;mi&nbsp;at&nbsp;elementum.</p>",
+    "files": [
+      {
+        "id": "file-2026-06-13_14-15-52-693-000",
+        "name": "behlül.jpg",
+        "alt": "Günümün Neşesi Behlül",
+        "path": "/uploads/announcement-2026-06-13_14-13-50-555/behlül.jpg"
+      },
+      {
+        "id": "file-2026-06-13_14-15-52-694-001",
+        "name": "icerik-resim.png",
+        "alt": "Deneme İçerik Resmi",
+        "path": "/uploads/announcement-2026-06-13_14-13-50-555/icerik-resim.png"
+      },
+      {
+        "id": "file-2026-06-13_14-15-52-695-002",
+        "name": "elsa.jpg",
+        "alt": "Elsa İçerik Deneme",
+        "path": "/uploads/announcement-2026-06-13_14-13-50-555/elsa.jpg"
+      }
+    ]
   }
 ]
