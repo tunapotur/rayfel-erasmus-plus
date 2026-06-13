@@ -46,8 +46,7 @@ export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
             )}
 
             {/* Body */}
-            <div className="text-foreground/80 space-y-5 text-base leading-[1.85]">
-                {/* {article.mainText} */}
+            <div className="text-foreground/80 text-base leading-[1.85]">
                 <QuillContent htmlContent={article.mainText} />
             </div>
 
