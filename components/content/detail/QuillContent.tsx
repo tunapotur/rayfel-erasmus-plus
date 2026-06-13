@@ -15,13 +15,13 @@ export default function QuillContent({ htmlContent }: QuillContentProps) {
                 const { src, alt } = domNode.attribs;
 
                 return (
-                    <span className="relative my-6 block h-62.5 w-full overflow-hidden rounded-xl border border-slate-100 sm:h-100 dark:border-slate-800">
+                    <span className="article-img">
                         <Image
                             src={src}
                             alt={alt || 'content image'}
+                            className="object-contain"
+                            sizes="(max-width: 1024px) 100vw, 1024px"
                             fill
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            className="object-cover"
                             loading="lazy"
                         />
                     </span>
@@ -36,5 +36,3 @@ export default function QuillContent({ htmlContent }: QuillContentProps) {
         </div>
     );
 }
-
-//TODO: Article Hero Image ve content Image resimlerinde bir ayarsızlık var bunu ayarla

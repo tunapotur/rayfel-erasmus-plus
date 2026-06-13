@@ -33,11 +33,11 @@ export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
 
             {/* Hero image */}
             {article.headline_image && (
-                <div className="relative mb-8 flex h-72 w-full rounded-xl shadow-md md:h-96 lg:h-112">
+                <div className="article-img">
                     <Image
                         src={article.headline_image}
-                        alt={article.title}
-                        className="rounded-xl object-cover"
+                        alt={article.title || 'content image'}
+                        className="rounded-xl object-contain"
                         sizes="(max-width: 1024px) 100vw, 1024px"
                         fill
                         priority
@@ -56,5 +56,3 @@ export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
         </article>
     );
 }
-
-//TODO: Article Hero Image ve content Image resimlerinde bir ayarsızlık var bunu ayarla

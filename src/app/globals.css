@@ -160,7 +160,15 @@
     @apply grid w-full grid-cols-1 gap-6 px-4 py-6 md:grid-cols-3;
 }
 
+@utility article-img {
+    @apply relative mb-8 flex h-72 w-full md:h-96 lg:h-112;
+}
+
 @utility prose {
     /* Quill 2 boşlukları için ekstra güvence */
     @apply whitespace-normal;
+
+    img {
+        @apply m-0;
+    }
 }
