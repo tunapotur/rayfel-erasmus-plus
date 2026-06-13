@@ -5,6 +5,7 @@ import type { ANNOUNCEMENT, NEWS } from '@/lib/types/DataTypes';
 import { NewsBadge } from '@/components/NewsBadge';
 
 import { ArrowLinkBack } from './ArrowLinkBack';
+import { ImageCarousel } from './ImageCarousel';
 import QuillContent from './QuillContent';
 
 export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
@@ -49,6 +50,11 @@ export function Article({ article }: { article: ANNOUNCEMENT | NEWS }) {
             <div className="text-foreground/80 text-base leading-[1.85]">
                 <QuillContent htmlContent={article.mainText} />
             </div>
+
+            {/* Photo gallery carousel */}
+            {article.files && article.files.length > 0 && (
+                <ImageCarousel files={article.files} />
+            )}
 
             {/* Divider + Back link */}
             <hr className="border-border my-10" />
