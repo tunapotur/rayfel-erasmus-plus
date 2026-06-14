@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import { Maximize2 } from 'lucide-react';
 
@@ -34,6 +35,8 @@ export function ImageCarousel({ files }: { files: ImageFile[] }) {
     const [modalOpen, setModalOpen] = useState(false);
     const [startIndex, setStartIndex] = useState(0);
 
+    const t = useTranslations('ContentCarousel');
+
     const images = files.filter(isImageFile);
 
     if (images.length === 0) return null;
@@ -48,8 +51,8 @@ export function ImageCarousel({ files }: { files: ImageFile[] }) {
             <div className="mb-8">
                 {/* Header */}
                 <div className="mb-3 flex items-center justify-between">
-                    <span className="text-muted-foreground text-xs font-semibold tracking-[0.1em] uppercase">
-                        Fotoğraflar ({images.length})
+                    <span className="text-muted-foreground text-xs font-semibold tracking-widest uppercase">
+                        {t('photos')} ({images.length})
                     </span>
                     <Button
                         variant="ghost"
@@ -58,7 +61,7 @@ export function ImageCarousel({ files }: { files: ImageFile[] }) {
                         onClick={() => handleOpenModal(0)}
                     >
                         <Maximize2 className="size-3.5" />
-                        Tam Ekran Göster
+                        {t('viewFullScreen')}
                     </Button>
                 </div>
 
@@ -83,7 +86,7 @@ export function ImageCarousel({ files }: { files: ImageFile[] }) {
                                     className="group focus-visible:ring-ring relative block w-full overflow-hidden rounded-xl focus:outline-none focus-visible:ring-2"
                                 >
                                     {/* Aspect ratio wrapper */}
-                                    <div className="relative aspect-[4/3] w-full">
+                                    <div className="relative aspect-4/3 w-full">
                                         <Image
                                             src={image.path}
                                             alt={image.alt || image.name}

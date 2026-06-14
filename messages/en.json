@@ -99,5 +99,9 @@
         "text": "This page is not ready yet. It will be available shortly.",
         "btnGoHome": "Go to Home Page",
         "btnGoBack": "Go Back"
+    },
+    "ContentCarousel": {
+        "photos": "Photos",
+        "viewFullScreen": "View Full Screen"
     }
 }

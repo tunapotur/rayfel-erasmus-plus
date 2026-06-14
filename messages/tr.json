@@ -99,5 +99,9 @@
         "text": "Bu sayfa henüz tamamlanmadı. Kısa süre içinde hizmetinize sunulacak.",
         "btnGoHome": "Ana Sayfaya Dön",
         "btnGoBack": "Geri Dön"
+    },
+    "ContentCarousel": {
+        "photos": "Fotoğraflar",
+        "viewFullScreen": "Tam Ekran Göster"
     }
 }

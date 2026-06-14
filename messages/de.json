@@ -99,5 +99,9 @@
         "text": "Diese Seite ist noch nicht fertig. Sie wird in Kürze verfügbar sein.",
         "btnGoHome": "Zur Startseite",
         "btnGoBack": "Zurück"
+    },
+    "ContentCarousel": {
+        "photos": "Fotos",
+        "viewFullScreen": "Im Vollbildmodus Anzeigen"
     }
 }
