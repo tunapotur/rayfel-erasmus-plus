@@ -1,19 +1,19 @@
 'use client';
 
+import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
-import { useCallback, useEffect } from 'react';
 
+import { X } from 'lucide-react';
+
+import { Button } from '@/components/ui/button';
 import {
     Carousel,
+    type CarouselApi,
     CarouselContent,
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-    type CarouselApi,
 } from '@/components/ui/carousel';
-import { Button } from '@/components/ui/button';
-import { X } from 'lucide-react';
-import { useState } from 'react';
 
 type ImageFile = {
     id: string;
@@ -86,7 +86,7 @@ export function ImageCarouselModal({
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Üst bar */}
-                <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between px-4 py-3">
+                <div className="absolute top-0 right-0 left-0 z-10 flex items-center justify-between px-4 py-3">
                     <span className="text-sm font-medium text-white/80">
                         {current + 1} / {images.length}
                     </span>
@@ -104,7 +104,11 @@ export function ImageCarouselModal({
                 {/* Carousel */}
                 <Carousel
                     setApi={setApi}
-                    opts={{ align: 'center', loop: images.length > 1, startIndex }}
+                    opts={{
+                        align: 'center',
+                        loop: images.length > 1,
+                        startIndex,
+                    }}
                     className="w-full max-w-5xl px-12"
                 >
                     <CarouselContent>
