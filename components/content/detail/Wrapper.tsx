@@ -34,7 +34,11 @@ export default function Wrapper({
             />
 
             {/* Page body */}
-            <div className="grid grid-cols-1 gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[1fr_22rem] lg:items-start lg:px-8">
+            {/* layout => max-w-5xl = 1024px = 64rem 
+                64rem - (gap-12(3rem) + lg:pl-4(1rem) 22rem)
+                64rem - 26rem = 38rem
+            */}
+            <div className="grid grid-cols-1 gap-12 px-4 py-10 sm:px-6 lg:grid-cols-[38rem_22rem] lg:items-start lg:pr-0 lg:pl-4">
                 <Article article={content} />
                 <Sidebar items={other_contents} />
             </div>
