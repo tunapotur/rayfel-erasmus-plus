@@ -7,6 +7,9 @@ import { getAllAnnouncements } from '@/data/contentsDataOperations';
 
 export default function Announcements() {
     const t = useTranslations('AnnouncementsSection');
+    const announcements = getAllAnnouncements();
+
+    if (announcements.length === 0) return null;
 
     return (
         <Wrapper
@@ -17,15 +20,9 @@ export default function Announcements() {
             hasBackground
         >
             <div className="flex w-full flex-col gap-4 md:flex-row">
-                {getAllAnnouncements()
-                    .slice(0, 4)
-                    .map((item, index) => (
-                        <Card
-                            key={item.title}
-                            card={item}
-                            priority={index === 0}
-                        />
-                    ))}
+                {announcements.slice(0, 4).map((item, index) => (
+                    <Card key={item.title} card={item} priority={index === 0} />
+                ))}
             </div>
         </Wrapper>
     );

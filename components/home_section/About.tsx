@@ -6,6 +6,7 @@ import { CheckCircle2 } from 'lucide-react';
 import Wrapper from './Wrapper';
 
 import about_section from '@/data/about_section';
+import { getAllAnnouncements } from '@/data/contentsDataOperations';
 
 import about from '@/public/about.png';
 
@@ -16,6 +17,8 @@ export default function About({
 }) {
     const t = useTranslations('AboutSection');
 
+    const announcements = getAllAnnouncements().length === 0 ? true : false;
+
     return (
         <Wrapper
             name={t('name')}
@@ -23,6 +26,7 @@ export default function About({
             linkText={t('linkText')}
             href="/about"
             hidePageLink={hideSectionLink}
+            hasBackground={announcements}
         >
             <div className="flex flex-col items-center gap-6 md:flex-row md:gap-8">
                 {/* Content */}
